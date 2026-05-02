@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Baby Shower de Aitana 🍯</title>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --pink: #f2c4ce;
+    --pink-dark: #e8a0b0;
+    --pink-light: #fce8ed;
+    --honey: #e8a020;
+    --honey-light: #f5c842;
+    --honey-dark: #c47c10;
+    --cream: #fdf6ee;
+    --text: #5a3e2b;
+    --text-light: #8a6a58;
+    --blue-balloon: #aecfe8;
+    --tan-balloon: #d4b896;
+  }
+
+  html, body {
+    margin: 0; padding: 0; overflow-x: hidden;
+    background: var(--pink-light);
+  }
+
+  body {
+    font-family: 'Quicksand', sans-serif;
+    color: var(--text);
+  }
+
+  /* ─── FONDO GENERAL ─── */
+  .bg-wrapper {
+    background: linear-gradient(180deg,
+      #fce8ef 0%,
+      #f9dde8 15%,
+      #fce4ec 30%,
+      #f7d9e5 50%,
+      #fce4ec 70%,
+      #f5d5e4 85%,
+      #fce0ea 100%);
+    min-height: 100vh;
+    position: relative;
+  }
+
+  /* ─── NUBES DECORATIVAS ─── */
+  .cloud {
+    position: absolute;
+    background: white;
+    border-radius: 50px;
+    opacity: 0.6;
+    pointer-events: none;
+  }
+  .cloud::before, .cloud::after {
+    content: '';
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+  }
+  .cloud-1 { width: 80px; height: 30px; top: 40px; left: 5%; }
+  .cloud-1::before { width: 40px; height: 40px; top: -20px; left: 10px; }
+  .cloud-1::after { width: 30px; height: 30px; top: -15px; left: 35px; }
+  .cloud-2 { width: 100px; height: 35px; top: 80px; right: 8%; }
+  .cloud-2::before { width: 50px; height: 50px; top: -25px; left: 15px; }
+  .cloud-2::after { width: 35px; height: 35px; top: -18px; left: 50px; }
+  .cloud-3 { width: 70px; height: 25px; top: 20px; right: 30%; opacity: 0.4; }
+  .cloud-3::before { width: 35px; height: 35px; top: -18px; left: 8px; }
+  .cloud-3::after { width: 25px; height: 25px; top: -12px; left: 35px; }
+
+  /* ─── SECCION ─── */
+  section {
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+    position: relative;
+  }
+
+  /* ─── ANIMACION SCROLL ─── */
+  .hidden {
+    opacity: 0;
+    transform: translateY(30px) scale(0.97);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  .show {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+
+  /* ═══════════════════════════════════════
+     SECCIÓN 1 — CABECERA / HERO
+  ═══════════════════════════════════════ */
+  .hero {
+    padding-top: 30px;
+    padding-bottom: 10px;
+    position: relative;
+    overflow: visible;
+  }
+
+  /* Globos decorativos SVG encima del Pooh */
+  .balloons-wrap {
+    display: flex;
+    justify-content: center;
+    margin-bottom: -10px;
+    position: relative;
+    z-index: 2;
+  }
+  .balloons-wrap svg {
+    width: 220px;
+    animation: float 3s ease-in-out infinite;
+  }
+
+  /* Pooh volando */
+  .pooh-flying {
+    width: 140px;
+    margin-top: -20px;
+    position: relative;
+    z-index: 3;
+    animation: float 3s ease-in-out infinite;
+    filter: drop-shadow(0 8px 12px rgba(0,0,0,0.12));
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+  }
+
+  /* Texto BABY SHOWER */
+  .title-baby {
+    font-family: 'Great Vibes', cursive;
+    font-size: 62px;
+    line-height: 1;
+    margin-top: 10px;
+    background: linear-gradient(135deg, #c2185b, #e91e8c, #ad1457);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: 2px;
+    text-shadow: none;
+  }
+  .title-shower {
+    font-family: 'Great Vibes', cursive;
+    font-size: 38px;
+    color: var(--text-light);
+    margin-top: -8px;
+    display: block;
+  }
+  .subtitle-princesa {
+    font-size: 15px;
+    color: var(--text-light);
+    font-style: italic;
+    margin: 8px 0 4px;
+    letter-spacing: 1px;
+  }
+  .nombre-bebe {
+    font-family: 'Great Vibes', cursive;
+    font-size: 56px;
+    color: var(--text);
+    text-shadow: 2px 3px 0px rgba(200,100,130,0.2);
+    margin: 4px 0 10px;
+  }
+
+  /* Pooh con miel */
+  .pooh-honey {
+    width: 160px;
+    filter: drop-shadow(2px 6px 8px rgba(0,0,0,0.1));
+    margin: 0 auto;
+    display: block;
+  }
+
+  /* Mensaje invitación */
+  .invite-msg {
+    font-size: 15px;
+    color: var(--text-light);
+    font-style: italic;
+    line-height: 1.7;
+    max-width: 280px;
+    margin: 12px auto 0;
+    text-align: right;
+    padding-right: 20px;
+  }
+
+  /* Rama con colmena */
+  .branch-wrap {
+    margin-top: 5px;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 10px;
+  }
+  .branch-img {
+    width: 100px;
+    opacity: 0.85;
+  }
+
+  /* ═══════════════════════════════════════
+     SECCIÓN 2 — FECHA
+  ═══════════════════════════════════════ */
+  .fecha-section {
+    padding: 30px 20px 20px;
+    position: relative;
+  }
+
+  /* Colmena decorativa arriba derecha */
+  .hive-deco {
+    position: absolute;
+    right: 10px;
+    top: -10px;
+    width: 70px;
+    opacity: 0.85;
+  }
+
+  .fecha-card {
+    background: rgba(255,255,255,0.55);
+    backdrop-filter: blur(10px);
+    border: 1.5px solid rgba(255,255,255,0.8);
+    border-radius: 24px;
+    padding: 22px 20px;
+    box-shadow: 0 8px 30px rgba(230,150,180,0.15);
+  }
+
+  .mes-label {
+    font-family: 'Great Vibes', cursive;
+    font-size: 36px;
+    color: #c2185b;
+    display: block;
+  }
+  .fecha-dividers {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin: 4px 0;
+  }
+  .divider-line {
+    flex: 1;
+    height: 1.5px;
+    background: linear-gradient(90deg, transparent, var(--pink-dark), transparent);
+    max-width: 80px;
+  }
+  .dia-label {
+    font-size: 13px;
+    color: var(--text-light);
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  .dia-num {
+    font-family: 'Great Vibes', cursive;
+    font-size: 72px;
+    color: var(--honey);
+    line-height: 0.9;
+    text-shadow: 2px 3px 0 rgba(200,120,0,0.15);
+  }
+  .hora-label {
+    font-size: 14px;
+    color: var(--text-light);
+    font-weight: 600;
+    letter-spacing: 2px;
+  }
+  .year-label {
+    font-size: 16px;
+    color: var(--text-light);
+    margin-top: 4px;
+    font-weight: 600;
+  }
+
+  /* ═══════════════════════════════════════
+     SECCIÓN 3 — DIRECCIÓN
+  ═══════════════════════════════════════ */
+  .lugar-section {
+    padding: 20px 20px 10px;
+    position: relative;
+  }
+
+  /* Abeja decorativa */
+  .bee-deco {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    width: 80px;
+    animation: bee-fly 4s ease-in-out infinite;
+    filter: drop-shadow(2px 3px 6px rgba(0,0,0,0.1));
+  }
+  @keyframes bee-fly {
+    0%, 100% { transform: translate(0, 0) rotate(-5deg); }
+    25% { transform: translate(5px, -8px) rotate(5deg); }
+    50% { transform: translate(10px, -4px) rotate(-3deg); }
+    75% { transform: translate(3px, -10px) rotate(4deg); }
+  }
+
+  .lugar-card {
+    background: rgba(255,255,255,0.55);
+    backdrop-filter: blur(10px);
+    border: 1.5px solid rgba(255,255,255,0.8);
+    border-radius: 24px;
+    padding: 22px 20px;
+    box-shadow: 0 8px 30px rgba(230,150,180,0.15);
+    text-align: center;
+  }
+  .lugar-nombre {
+    font-family: 'Great Vibes', cursive;
+    font-size: 26px;
+    color: #c2185b;
+    display: block;
+    margin-bottom: 4px;
+  }
+  .lugar-detalle {
+    font-size: 15px;
+    color: var(--text);
+    font-weight: 600;
+    line-height: 1.5;
+  }
+  .lugar-dir {
+    font-size: 14px;
+    color: var(--text-light);
+    font-style: italic;
+    margin-top: 6px;
+    line-height: 1.5;
+  }
+
+  /* Panal decorativo izquierda */
+  .honeycomb-deco {
+    position: absolute;
+    left: 10px;
+    bottom: 0px;
+    width: 60px;
+    opacity: 0.7;
+  }
+
+  /* ═══════════════════════════════════════
+     BOTÓN UBICACIÓN
+  ═══════════════════════════════════════ */
+  .btn-ubicacion-wrap {
+    text-align: center;
+    padding: 20px 0 10px;
+  }
+  .btn-honey {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(135deg, var(--honey-light), var(--honey));
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 1px;
+    padding: 13px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 6px 20px rgba(200,120,0,0.35);
+    transition: transform 0.2s, box-shadow 0.2s;
+    animation: bounce 1.4s ease-in-out infinite;
+  }
+  .btn-honey:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 28px rgba(200,120,0,0.45);
+  }
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+  }
+
+  /* ═══════════════════════════════════════
+     SECCIÓN 4 — CUENTA REGRESIVA
+  ═══════════════════════════════════════ */
+  .countdown-section {
+    padding: 20px 20px 10px;
+    text-align: center;
+  }
+  .solo-faltan {
+    font-size: 18px;
+    font-style: italic;
+    color: var(--text-light);
+    margin-bottom: 12px;
+    font-weight: 600;
+  }
+  .countdown-card {
+    background: rgba(255,255,255,0.6);
+    backdrop-filter: blur(10px);
+    border: 1.5px solid rgba(255,255,255,0.9);
+    border-radius: 24px;
+    padding: 18px 10px;
+    box-shadow: 0 8px 30px rgba(230,150,180,0.15);
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+  }
+  .cd-unit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 60px;
+  }
+  .cd-num {
+    font-family: 'Great Vibes', cursive;
+    font-size: 46px;
+    color: var(--honey);
+    line-height: 1;
+  }
+  .cd-label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--text-light);
+    font-weight: 700;
+    margin-top: 2px;
+  }
+  .cd-sep {
+    font-family: 'Great Vibes', cursive;
+    font-size: 36px;
+    color: var(--pink-dark);
+    align-self: flex-start;
+    margin-top: 8px;
+  }
+  #hoy-msg {
+    font-family: 'Great Vibes', cursive;
+    font-size: 42px;
+    color: #c2185b;
+    display: none;
+  }
+
+  /* ═══════════════════════════════════════
+     SECCIÓN 5 — REGALOS
+  ═══════════════════════════════════════ */
+  .regalos-section {
+    padding: 20px 20px 10px;
+    position: relative;
+  }
+
+  /* Personajes grupo */
+  .friends-img {
+    width: 90%;
+    max-width: 340px;
+    display: block;
+    margin: 0 auto 10px;
+    filter: drop-shadow(0 6px 12px rgba(0,0,0,0.1));
+  }
+
+  .regalo-card {
+    background: rgba(255,255,255,0.55);
+    backdrop-filter: blur(10px);
+    border: 1.5px solid rgba(255,255,255,0.8);
+    border-radius: 20px;
+    padding: 18px 20px;
+    box-shadow: 0 8px 30px rgba(230,150,180,0.15);
+    font-size: 15px;
+    color: var(--text);
+    line-height: 1.6;
+  }
+  .regalo-card strong {
+    color: #c2185b;
+  }
+
+  .btn-lista-wrap {
+    text-align: center;
+    padding: 16px 0 6px;
+  }
+  .btn-lista {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(135deg, #e91e8c, #c2185b);
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    padding: 13px 28px;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 6px 20px rgba(194,24,91,0.3);
+    transition: transform 0.2s, box-shadow 0.2s;
+    animation: bounce 1.4s ease-in-out infinite;
+  }
+  .btn-lista:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 28px rgba(194,24,91,0.4);
+  }
+
+  /* Piglet con regalo */
+  .piglet-wrap {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 14px;
+  }
+  .piglet-img {
+    width: 110px;
+    filter: drop-shadow(2px 4px 8px rgba(0,0,0,0.1));
+    flex-shrink: 0;
+  }
+  .piglet-msg {
+    font-size: 14px;
+    color: var(--text-light);
+    font-style: italic;
+    line-height: 1.6;
+    text-align: right;
+  }
+
+  /* ═══════════════════════════════════════
+     SECCIÓN 6 — CONFIRMAR
+  ═══════════════════════════════════════ */
+  .confirmar-section {
+    padding: 20px 20px 10px;
+    text-align: center;
+    position: relative;
+  }
+  .confirmar-titulo {
+    font-size: 15px;
+    color: var(--text-light);
+    font-style: italic;
+    margin-bottom: 16px;
+    line-height: 1.6;
+  }
+
+  .flor-deco {
+    font-size: 28px;
+    margin: 0 8px;
+  }
+
+  .btns-confirmar {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+  .btn-wp {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(135deg, var(--honey-light), var(--honey));
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 12px 22px;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 5px 18px rgba(200,120,0,0.3);
+    transition: transform 0.2s, box-shadow 0.2s;
+    animation: bounce 1.4s ease-in-out infinite;
+    white-space: nowrap;
+  }
+  .btn-wp:nth-child(2) { animation-delay: 0.3s; }
+  .btn-wp:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(200,120,0,0.4);
+  }
+
+  /* Florecita separadora */
+  .flor-sep {
+    margin: 20px auto;
+    font-size: 26px;
+    opacity: 0.7;
+  }
+
+  /* ═══════════════════════════════════════
+     SECCIÓN 7 — TE ESPERAMOS
+  ═══════════════════════════════════════ */
+  .footer-section {
+    padding: 20px 20px 50px;
+    text-align: center;
+    position: relative;
+  }
+  .te-esperamos {
+    font-family: 'Great Vibes', cursive;
+    font-size: 54px;
+    background: linear-gradient(135deg, #c2185b, #e91e8c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: none;
+    margin-bottom: 10px;
+  }
+
+  /* Pooh final */
+  .pooh-final-img {
+    width: 80px;
+    margin: 0 auto;
+    display: block;
+    filter: drop-shadow(1px 4px 6px rgba(0,0,0,0.12));
+    animation: float 3s ease-in-out infinite;
+  }
+
+  /* Pequeños globos decorativos CSS */
+  .balloons-footer {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 16px;
+    flex-wrap: wrap;
+  }
+  .bal {
+    width: 30px;
+    height: 38px;
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    position: relative;
+    animation: float 3s ease-in-out infinite;
+  }
+  .bal::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1px;
+    height: 12px;
+    background: #bbb;
+  }
+  .bal-1 { background: var(--blue-balloon); animation-delay: 0s; }
+  .bal-2 { background: var(--tan-balloon); animation-delay: 0.3s; }
+  .bal-3 { background: #f4a8c0; animation-delay: 0.6s; }
+  .bal-4 { background: var(--blue-balloon); animation-delay: 0.9s; }
+  .bal-5 { background: var(--tan-balloon); animation-delay: 0.15s; }
+
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 400px) {
+    .title-baby { font-size: 52px; }
+    .nombre-bebe { font-size: 46px; }
+    .dia-num { font-size: 60px; }
+    .cd-num { font-size: 38px; }
+    .te-esperamos { font-size: 44px; }
+    .btns-confirmar { flex-direction: column; align-items: center; }
+  }
+</style>
+</head>
+<body>
+<div class="bg-wrapper">
+
+  <!-- Nubes decorativas fijas -->
+  <div class="cloud cloud-1"></div>
+  <div class="cloud cloud-2"></div>
+  <div class="cloud cloud-3"></div>
+
+  <!-- ═══ SECCIÓN 1: HERO ═══ -->
+  <section class="hero hidden">
+
+    <!-- Globos SVG -->
+    <div class="balloons-wrap">
+      <svg viewBox="0 0 220 120" xmlns="http://www.w3.org/2000/svg">
+        <!-- Hilo central hacia Pooh -->
+        <line x1="110" y1="110" x2="110" y2="115" stroke="#bbb" stroke-width="1.2"/>
+        <!-- Globo azul izq grande -->
+        <line x1="110" y1="110" x2="72" y2="28" stroke="#bbb" stroke-width="1"/>
+        <ellipse cx="72" cy="20" rx="16" ry="20" fill="#aecfe8"/>
+        <ellipse cx="66" cy="14" rx="5" ry="6" fill="rgba(255,255,255,0.35)"/>
+        <!-- Globo crema centro -->
+        <line x1="110" y1="110" x2="110" y2="22" stroke="#bbb" stroke-width="1"/>
+        <ellipse cx="110" cy="14" rx="18" ry="22" fill="#d4b896"/>
+        <ellipse cx="103" cy="8" rx="6" ry="7" fill="rgba(255,255,255,0.35)"/>
+        <!-- Globo azul der grande -->
+        <line x1="110" y1="110" x2="148" y2="28" stroke="#bbb" stroke-width="1"/>
+        <ellipse cx="148" cy="20" rx="16" ry="20" fill="#aecfe8"/>
+        <ellipse cx="142" cy="14" rx="5" ry="6" fill="rgba(255,255,255,0.35)"/>
+        <!-- Globo rosa izq -->
+        <line x1="110" y1="110" x2="48" y2="50" stroke="#bbb" stroke-width="1"/>
+        <ellipse cx="48" cy="43" rx="13" ry="16" fill="#f4a8c0"/>
+        <ellipse cx="43" cy="38" rx="4" ry="5" fill="rgba(255,255,255,0.35)"/>
+        <!-- Globo crema der -->
+        <line x1="110" y1="110" x2="172" y2="50" stroke="#bbb" stroke-width="1"/>
+        <ellipse cx="172" cy="43" rx="13" ry="16" fill="#d4b896"/>
+        <ellipse cx="167" cy="38" rx="4" ry="5" fill="rgba(255,255,255,0.35)"/>
+        <!-- Globo pequeño extra izq -->
+        <line x1="110" y1="110" x2="30" y2="72" stroke="#bbb" stroke-width="0.8"/>
+        <ellipse cx="30" cy="66" rx="10" ry="12" fill="#aecfe8"/>
+        <!-- Globo pequeño extra der -->
+        <line x1="110" y1="110" x2="190" y2="72" stroke="#bbb" stroke-width="0.8"/>
+        <ellipse cx="190" cy="66" rx="10" ry="12" fill="#f4a8c0"/>
+      </svg>
+    </div>
+
+    <!-- Pooh volando (imagen pública oficial) -->
+    <img class="pooh-flying"
+      src="https://upload.wikimedia.org/wikipedia/en/1/10/Winnie_the_Pooh_with_honey.jpg"
+      alt="Winnie the Pooh"
+      onerror="this.style.display='none'; document.getElementById('pooh-fallback').style.display='block'">
+    <!-- Fallback SVG Pooh si la imagen no carga -->
+    <div id="pooh-fallback" style="display:none; font-size:80px; margin:-10px auto 0; width:140px; text-align:center;">🐻</div>
+
+    <div class="title-baby">Baby</div>
+    <span class="title-shower">shower</span>
+
+    <p class="subtitle-princesa">De nuestra princesa</p>
+    <div class="nombre-bebe">Aitana</div>
+
+    <!-- Pooh con miel (emoji fallback) -->
+    <div style="font-size:90px; margin: 0 auto; display:block; width:fit-content; filter: drop-shadow(2px 6px 8px rgba(0,0,0,0.1));">🐻</div>
+
+    <p class="invite-msg">Un dulce milagro viene en camino, acompáñanos a celebrar la llegada de nuestra bebé.</p>
+
+    <!-- Rama colmena decorativa -->
+    <div class="branch-wrap">
+      <span style="font-size:42px;">🍯🌸</span>
+    </div>
+
+  </section>
+
+  <!-- ═══ SECCIÓN 2: FECHA ═══ -->
+  <section class="fecha-section hidden">
+
+    <!-- Colmena deco -->
+    <div class="hive-deco" style="font-size:50px; position:absolute; right:18px; top:-5px;">🍯</div>
+
+    <div class="fecha-card">
+      <span class="mes-label">Julio</span>
+      <div class="fecha-dividers">
+        <div class="divider-line"></div>
+        <span class="dia-label">Sábado</span>
+        <div class="divider-line"></div>
+      </div>
+      <div class="dia-num">18</div>
+      <div class="fecha-dividers">
+        <div class="divider-line"></div>
+        <span class="hora-label">6:00 pm</span>
+        <div class="divider-line"></div>
+      </div>
+      <div class="year-label">2026</div>
+    </div>
+  </section>
+
+  <!-- ═══ SECCIÓN 3: LUGAR ═══ -->
+  <section class="lugar-section hidden">
+
+    <!-- Abeja animada -->
+    <div class="bee-deco" style="position:absolute; right:15px; top:10px; font-size:42px; animation: bee-fly 4s ease-in-out infinite;">🐝</div>
+
+    <div class="lugar-card">
+      <span class="lugar-nombre">Av. La Paz 1153</span>
+      <div class="lugar-detalle">San Miguel, Lima</div>
+      <div class="lugar-dir">Av. La Paz 1153, San Miguel</div>
+    </div>
+
+    <!-- Panal deco -->
+    <span style="position:absolute; left:12px; bottom:2px; font-size:38px; opacity:0.6;">🌼</span>
+
+  </section>
+
+  <!-- Botón ubicación -->
+  <section class="btn-ubicacion-wrap hidden">
+    <a class="btn-honey" href="https://maps.app.goo.gl/oxjN4sNinDL6gjnG9" target="_blank">
+      📍 Ver Ubicación
+    </a>
+  </section>
+
+  <!-- ═══ SECCIÓN 4: CUENTA REGRESIVA ═══ -->
+  <section class="countdown-section hidden">
+    <div class="solo-faltan">Sólo faltan...</div>
+    <div class="countdown-card">
+      <div class="cd-unit">
+        <span class="cd-num" id="cd-dias">--</span>
+        <span class="cd-label">días</span>
+      </div>
+      <span class="cd-sep">·</span>
+      <div class="cd-unit">
+        <span class="cd-num" id="cd-horas">--</span>
+        <span class="cd-label">horas</span>
+      </div>
+      <span class="cd-sep">·</span>
+      <div class="cd-unit">
+        <span class="cd-num" id="cd-min">--</span>
+        <span class="cd-label">min</span>
+      </div>
+      <span class="cd-sep">·</span>
+      <div class="cd-unit">
+        <span class="cd-num" id="cd-seg">--</span>
+        <span class="cd-label">seg</span>
+      </div>
+    </div>
+    <div id="hoy-msg">¡Es hoy! 🎉</div>
+  </section>
+
+  <!-- ═══ SECCIÓN 5: REGALOS ═══ -->
+  <section class="regalos-section hidden">
+
+    <!-- Personajes grupo emoji (fallback amigable) -->
+    <div style="font-size:64px; margin-bottom:12px; display:flex; justify-content:center; gap:8px;">
+      🐴🐯🐻🐷
+    </div>
+
+    <div class="regalo-card">
+      🎁 Te agradecemos mucho que nos regales <strong>pañales o pañitos (no etapa 0)</strong> + un regalito para la bebé.
+    </div>
+
+    <!-- Botón lista de regalos -->
+    <div class="btn-lista-wrap">
+      <a class="btn-lista" href="#" target="_blank" id="btn-lista-regalos">
+        🎀 Ver Lista de Regalos
+      </a>
+    </div>
+
+    <!-- Piglet con mensaje -->
+    <div class="piglet-wrap">
+      <div style="font-size:70px;">🐷</div>
+      <p class="piglet-msg">Por favor, confirma tu asistencia por WhatsApp y acompáñanos en este día tan especial.</p>
+    </div>
+
+  </section>
+
+  <!-- ═══ SECCIÓN 6: CONFIRMAR ═══ -->
+  <section class="confirmar-section hidden">
+    <p class="confirmar-titulo">
+      <span class="flor-deco">🌸</span>
+      Confirma tu asistencia
+      <span class="flor-deco">🌸</span>
+    </p>
+
+    <div class="btns-confirmar">
+      <a class="btn-wp"
+        href="https://wa.me/51900746481?text=Hola%20G%C3%A9nesis%20y%20David%2C%20confirmo%20mi%20asistencia%20al%20baby%20shower%20de%20Aitana%20%F0%9F%90%BB%F0%9F%8D%AF"
+        target="_blank">
+        💬 Confirmar con Génesis
+      </a>
+      <a class="btn-wp"
+        href="https://wa.me/51944038550?text=Hola%20G%C3%A9nesis%20y%20David%2C%20confirmo%20mi%20asistencia%20al%20baby%20shower%20de%20Aitana%20%F0%9F%90%BB%F0%9F%8D%AF"
+        target="_blank">
+        💬 Confirmar con David
+      </a>
+    </div>
+
+    <div class="flor-sep">🌼</div>
+  </section>
+
+  <!-- ═══ SECCIÓN 7: TE ESPERAMOS ═══ -->
+  <section class="footer-section hidden">
+    <div class="te-esperamos">¡Te esperamos!</div>
+    <div style="font-size:72px; margin: 0 auto; display:block; width:fit-content; animation: float 3s ease-in-out infinite;">🐻</div>
+    <div class="balloons-footer">
+      <div class="bal bal-1"></div>
+      <div class="bal bal-2"></div>
+      <div class="bal bal-3"></div>
+      <div class="bal bal-4"></div>
+      <div class="bal bal-5"></div>
+    </div>
+  </section>
+
+</div><!-- /bg-wrapper -->
+
+<script>
+  /* ─── ANIMACIÓN SCROLL ─── */
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      }
+    });
+  }, { threshold: 0.15 });
+
+  document.querySelectorAll('.hidden').forEach(el => observer.observe(el));
+
+  /* ─── CUENTA REGRESIVA ─── */
+  const eventDate = new Date("July 18, 2026 18:00:00").getTime();
+
+  function updateCountdown() {
+    const now = new Date().getTime();
+    const distance = eventDate - now;
+
+    if (distance <= 0) {
+      document.querySelector('.countdown-card').style.display = 'none';
+      document.querySelector('.solo-faltan').style.display = 'none';
+      document.getElementById('hoy-msg').style.display = 'block';
+      return;
+    }
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById('cd-dias').textContent = days;
+    document.getElementById('cd-horas').textContent = String(hours).padStart(2,'0');
+    document.getElementById('cd-min').textContent = String(minutes).padStart(2,'0');
+    document.getElementById('cd-seg').textContent = String(seconds).padStart(2,'0');
+  }
+
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+
+  /* ─── BOTÓN LISTA REGALOS (placeholder hasta tener el link) ─── */
+  document.getElementById('btn-lista-regalos').addEventListener('click', function(e) {
+    e.preventDefault();
+    alert('¡Lista de regalos próximamente! 🎀');
+  });
+</script>
+</body>
+</html>
