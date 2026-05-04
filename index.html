@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Baby Shower · Aitana</title>
+<meta property="og:title" content="Baby Shower · Abigail Aitana">
+<meta property="og:description" content="Un dulce milagro viene en camino, acompáñanos a celebrar la llegada de nuestra bebé.">
+<meta property="og:image" content="https://tu-dominio.com/bg_image.jpg">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,600&family=Parisienne&family=Playfair+Display:wght@700;900&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --color-primary: #d8829d;
+  --color-primary-light: #ec9bad;
+  --color-gold: #cca580;
+  --color-brown: #6d5b58;
+  --color-brown-light: #9c847e;
+  --color-rose: #ebd2d7;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Cormorant Garamond',serif;background:url('bg_image.jpg') repeat-y top center/100% auto;color:var(--color-brown);overflow-x:hidden}
+.clouds{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:0}
+.cloud{position:absolute;opacity:.45;background:white;border-radius:50px}
+.cloud::before,.cloud::after{content:'';position:absolute;background:white;border-radius:50%}
+.c1{width:90px;height:32px;top:6%;animation:lr 25s linear infinite}
+.c1::before{width:44px;height:44px;top:-22px;left:12px}.c1::after{width:32px;height:32px;top:-16px;left:44px}
+.c2{width:70px;height:26px;top:18%;animation:rl 19s linear infinite;animation-delay:-6s}
+.c2::before{width:36px;height:36px;top:-18px;left:10px}.c2::after{width:26px;height:26px;top:-13px;left:36px}
+.c3{width:110px;height:38px;top:32%;animation:lr 30s linear infinite;animation-delay:-12s}
+.c3::before{width:54px;height:54px;top:-27px;left:16px}.c3::after{width:38px;height:38px;top:-19px;left:56px}
+.c4{width:80px;height:28px;top:50%;animation:rl 22s linear infinite;animation-delay:-3s}
+.c4::before{width:40px;height:40px;top:-20px;left:12px}.c4::after{width:28px;height:28px;top:-14px;left:42px}
+.c5{width:95px;height:34px;top:65%;animation:lr 27s linear infinite;animation-delay:-9s}
+.c5::before{width:48px;height:48px;top:-24px;left:14px}.c5::after{width:34px;height:34px;top:-17px;left:50px}
+.c6{width:65px;height:24px;top:80%;animation:rl 16s linear infinite;animation-delay:-4s;opacity:.3}
+.c6::before{width:32px;height:32px;top:-16px;left:8px}.c6::after{width:24px;height:24px;top:-12px;left:32px}
+.c7{width:100px;height:36px;top:90%;animation:lr 28s linear infinite;animation-delay:-15s;opacity:.3}
+.c7::before{width:50px;height:50px;top:-25px;left:14px}.c7::after{width:36px;height:36px;top:-18px;left:52px}
+@keyframes lr{from{transform:translateX(-160px)}to{transform:translateX(calc(100vw + 160px))}}
+@keyframes rl{from{transform:translateX(calc(100vw + 160px))}to{transform:translateX(-160px)}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+.page{max-width:440px;margin:0 auto;position:relative;z-index:1;padding:0 0 60px;text-align:center}
+.s{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease}
+.s.on{opacity:1;transform:none}
+/* HERO */
+.hero{padding:28px 20px 0}
+.pooh-fly{width:58%;max-width:230px;display:block;margin:0 auto;animation:float 3.5s ease-in-out infinite;filter:drop-shadow(0 8px 16px rgba(0,0,0,.1))}
+.baby-word{font-family:'Playfair Display',serif;font-weight:900;font-size:78px;line-height:1;color:var(--color-primary);letter-spacing:7px;display:block;margin-top:-4px}
+.shower-word{font-family:'Parisienne',cursive;font-size:48px;color:var(--color-gold);display:block;margin-top:-4px}
+
+.shower{
+  font-family:'Cormorant Garamond', serif;
+  font-size:60px;
+  font-style:italic;
+  font-weight:700;
+  /* color:var(--color-gold); */
+  line-height:1;
+  letter-spacing:2px;
+}
+.nombre-bebe{
+  font-family:'Quicksand', sans-serif;
+  font-size:74px;
+  font-weight:700;
+  color:#6b3f2c;
+  line-height:1.05;
+  letter-spacing:.5px;
+}
+
+.sep{display:flex;align-items:center;gap:10px;margin:16px auto 14px;width:65%}
+.sep-l{flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--color-rose),transparent)}
+.sep-dot{font-size:13px;color:var(--color-rose)}
+.de-p{font-size:15px;font-style:italic;color:var(--color-brown-light);letter-spacing:1px;margin-bottom:4px}
+.nombre{font-family:'Parisienne',cursive;font-size:74px;color:var(--color-brown);line-height:1;margin-bottom:22px}
+.pooh-sit{width:50%;max-width:190px;display:block;margin:0 auto 14px;filter:drop-shadow(1px 5px 10px rgba(0,0,0,.08))}
+.quote{font-size:15px;font-style:italic;color:var(--color-brown-light);line-height:1.85;padding:0 30px;margin-bottom:18px}
+.deco-row{display:flex;align-items:flex-end;justify-content:center;gap:28px;padding:0 20px}
+.img-panal{width:78px;filter:drop-shadow(1px 3px 6px rgba(0,0,0,.07))}
+.img-abeja{width:88px;filter:drop-shadow(1px 3px 6px rgba(0,0,0,.07))}
+/* CARDS */
+.card{background:rgba(255,248,250,.65);backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.9);border-radius:26px;padding:26px 24px;margin:18px 18px 0;box-shadow:0 8px 32px rgba(216,130,157,.15)}
+/* FECHA */
+/*.mes{font-family:'Allura',cursive;font-size:44px;color:var(--color-primary);display:block}*/
+.mes{
+  /* font-family:'Parisienne', cursive; */
+  font-size:42px;
+  color:var(--color-primary);
+  display:block;
+  line-height:1.1;
+}
+.hr{display:flex;align-items:center;gap:10px;margin:4px 0}
+.hr-l{flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--color-rose),transparent);max-width:1000px}
+/* .tag{font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--color-brown-light)} */
+.tag{
+  font-family:'Cormorant Garamond', serif;
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  color:var(--color-brown-light);
+}
+/* .dia{font-family:'Allura',cursive;font-size:86px;color:var(--color-gold);line-height:.9} */
+.dia{
+  font-family:'Cormorant Garamond', serif;
+  font-size:88px;
+  font-weight:600;
+  color:var(--color-gold);
+  line-height:.9;
+}
+.anio{
+  font-family:'Cormorant Garamond', serif;
+  font-size:17px;
+  font-weight:600;
+  color:var(--color-brown-light);
+  margin-top:6px;
+}
+/* .anio{font-size:15px;font-weight:700;color:var(--color-brown-light);margin-top:6px} */
+/* LUGAR */
+/* .lugar-nom{font-family:'Allura',cursive;font-size:30px;color:var(--color-primary);display:block;margin-bottom:6px}
+.lugar-det{font-size:15px;font-weight:700;color:var(--color-brown);line-height:1.6}
+.lugar-dir{font-size:13px;font-style:italic;color:var(--color-brown-light);margin-top:4px} */
+/* LUGAR */
+.lugar-nom{
+  /* font-family:'Parisienne', cursive; */
+  font-size:34px;
+  color:var(--color-primary-light);
+  display:block;
+  margin-bottom:8px;
+  line-height:1.15;
+}
+
+.lugar-det{
+  font-family:'Cormorant Garamond', serif;
+  font-size:18px;
+  font-weight:600;
+  color:var(--color-brown);
+  line-height:1.6;
+}
+
+.lugar-dir{
+  font-family:'Cormorant Garamond', serif;
+  font-size:15px;
+  font-style:italic;
+  color:var(--color-brown-light);
+  margin-top:4px;
+}
+
+/* BTNS */
+.btn-wrap{padding:18px 0 0;text-align:center}
+.btn-gold{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#e4b5c1,#d8829d);color:white;font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:600;font-style:italic;padding:13px 34px;border-radius:50px;text-decoration:none;box-shadow:0 6px 20px rgba(216,130,157,.25);transition:all .3s ease}
+.btn-gold:hover{transform:translateY(-3px);box-shadow:0 8px 25px rgba(216,130,157,.35)}
+.btn-rose{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#e4b5c1,#d8829d);color:white;font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:600;font-style:italic;padding:13px 30px;border-radius:50px;text-decoration:none;box-shadow:0 6px 20px rgba(216,130,157,.25);transition:all .3s ease}
+.btn-rose:hover{transform:translateY(-3px);box-shadow:0 8px 25px rgba(216,130,157,.35)}
+/* COUNTDOWN */
+/* .cd-titulo{font-size:15px;font-style:italic;color:var(--color-brown-light);margin-bottom:16px;font-weight:600}
+.cd-n{font-family:'Allura',cursive;font-size:52px;color:var(--color-gold);line-height:1}
+.cd-l{font-size:9px;text-transform:uppercase;letter-spacing:1.5px;color:var(--color-brown-light);font-weight:700;margin-top:2px}
+.cd-sep{font-family:'Allura',cursive;font-size:36px;color:var(--color-rose);margin-top:4px}
+#hoy{font-family:'Allura',cursive;font-size:52px;color:var(--color-primary);display:none} */
+.cd-titulo{
+  font-family:'Cormorant Garamond', serif;
+  font-size:20px;
+  font-style:italic;
+  font-weight:600;
+  color:var(--color-brown-light);
+  margin-bottom:16px;
+}
+.cd-row{display:flex;justify-content:center;align-items:flex-start;gap:4px}
+.cd-u{display:flex;flex-direction:column;align-items:center;min-width:58px}
+.cd-n{
+  font-family:'Cormorant Garamond', serif;
+  font-size:56px;
+  font-weight:600;
+  color:var(--color-gold);
+  line-height:1;
+  font-variant-numeric: tabular-nums;
+  display: inline-block;
+}
+
+@keyframes pop {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.15); color: var(--color-primary); }
+  100% { transform: scale(1); }
+}
+
+.pop-anim {
+  animation: pop 0.3s ease-out;
+}
+
+.cd-l{
+  font-family:'Cormorant Garamond', serif;
+  font-size:10px;
+  text-transform:uppercase;
+  letter-spacing:2px;
+  color:var(--color-brown-light);
+  font-weight:700;
+  margin-top:4px;
+}
+
+.cd-sep{
+  font-family:'Cormorant Garamond', serif;
+  font-size:34px;
+  color:var(--color-rose);
+  margin-top:2px;
+}
+
+#hoy{
+  font-family:'Parisienne', cursive;
+  font-size:46px;
+  color:var(--color-primary);
+  display:none;
+}
+/* CAL */
+.cal-title{font-size:17px;font-weight:700;font-style:italic;color:var(--color-brown);margin-bottom:12px}
+.cal-div{height:1px;background:linear-gradient(90deg,transparent,var(--color-rose),transparent);margin-bottom:14px}
+.cal-mes{border:1.5px solid var(--color-rose);border-radius:10px;padding:8px;font-size:12px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--color-brown);margin-bottom:14px;background:rgba(255,255,255,.4)}
+.cal-g{display:grid;grid-template-columns:repeat(7,1fr);gap:0}
+.cal-dow{font-size:11px;font-weight:700;color:var(--color-rose);padding:3px 0 8px;text-align:center}
+.cal-d{font-size:14px;font-weight:500;color:#c47a8a;padding:8px 2px;text-align:center;border-radius:50%;line-height:1;position:relative}
+.cal-d.x{visibility:hidden}
+.cal-d.ok{color:var(--color-primary-light);font-weight:800}
+.cal-d.ok::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:34px;height:34px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M50 85C50 85 10 55 10 30C10 15 22 5 35 5C42 5 48 9 50 14C52 9 58 5 65 5C78 5 90 15 90 30C90 55 50 85 50 85Z' fill='%23f4a3b5' opacity='.85'/%3E%3C/svg%3E") center/contain no-repeat;z-index:0}
+.cal-d.ok span{position:relative;z-index:1}
+/* REGALO */
+.amigos{width:86%;max-width:300px;display:block;margin:0 auto 16px;filter:drop-shadow(0 5px 12px rgba(0,0,0,.09))}
+.regalo-txt{font-size:15px;line-height:1.8;color:var(--color-brown)}
+.regalo-txt em{color:var(--color-primary);font-style:italic}
+/* CONFIRMAR */
+.confirm-label{font-size:15px;font-style:italic;color:var(--color-brown-light);margin-bottom:18px;display:block}
+.btns{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+.btn-wp{display:inline-flex;align-items:center;gap:7px;background:linear-gradient(135deg,#e4b5c1,#d8829d);color:white;font-family:'Cormorant Garamond',serif;font-size:15px;font-weight:600;font-style:italic;padding:12px 20px;border-radius:50px;text-decoration:none;box-shadow:0 5px 16px rgba(216,130,157,.25);white-space:nowrap;transition:all .3s ease}
+.btn-wp:hover{transform:translateY(-3px);box-shadow:0 8px 25px rgba(216,130,157,.35)}
+/* FOOTER */
+/* .footer{padding:30px 20px 0} */
+.footer{ padding: 30px 20px 90px;
+  min-height: 220px;}
+/* .te-esp{font-family:'Allura',cursive;font-size:68px;background:linear-gradient(135deg,var(--color-primary),var(--color-primary-light));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;display:block;margin-bottom:20px} */
+.te-esp{
+  font-family:'Playfair Display', serif;
+  font-size:48px;
+  font-style:italic;
+  font-weight:700;
+  color:var(--color-primary-light);
+  text-align:center;
+  line-height:1.1;
+  margin: 20px 0 30px;
+  margin-bottom: 28px;
+}
+.bals{display:flex;justify-content:center;gap:10px;margin-top: 18px;}
+.bal{width:26px;height:34px;border-radius:50% 50% 50% 50%/60% 60% 40% 40%;position:relative;animation:float 3s ease-in-out infinite}
+.bal::after{content:'';position:absolute;bottom:-10px;left:50%;transform:translateX(-50%);width:1px;height:12px;background:#ccc}
+.b1{background:#aecfe8;animation-delay:0s}.b2{background:#d4b896;animation-delay:.3s}.b3{background:#f4a8c0;animation-delay:.6s}.b4{background:#aecfe8;animation-delay:.9s}.b5{background:#d4b896;animation-delay:.15s}
+@media(max-width:380px){.baby-word{font-size:62px}.nombre{font-size:60px}.dia{font-size:70px}.te-esp{font-size:54px}.btns{flex-direction:column;align-items:center}}
+
+/* MODAL REGALOS */
+.modal-backdrop {
+  position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(0,0,0,0.4); backdrop-filter: blur(4px);
+  z-index: 100; display: flex; align-items: center; justify-content: center;
+  opacity: 0; pointer-events: none; transition: opacity 0.3s ease;
+  padding: 20px;
+}
+.modal-backdrop.show {
+  opacity: 1; pointer-events: auto;
+}
+.modal-card {
+  background: rgba(255, 248, 250, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  border-radius: 26px;
+  width: 100%; max-width: 400px; max-height: 85vh;
+  box-shadow: 0 12px 40px rgba(216, 130, 157, 0.3);
+  position: relative; display: flex; flex-direction: column;
+  transform: translateY(20px); transition: transform 0.3s ease;
+}
+.modal-backdrop.show .modal-card {
+  transform: translateY(0);
+}
+.modal-close {
+  position: absolute; top: 16px; right: 16px; width: 32px; height: 32px;
+  background: white; border: none; border-radius: 50%;
+  color: var(--color-primary); font-size: 16px; font-weight: bold;
+  box-shadow: 0 4px 12px rgba(216, 130, 157, 0.2); cursor: pointer;
+  z-index: 10; display:flex; align-items:center; justify-content:center;
+}
+.modal-title {
+  font-family: 'Playfair Display', serif; font-size: 26px;
+  color: var(--color-primary); text-align: center; margin-top: 24px;
+}
+.modal-desc {
+  font-size: 14px; font-style: italic; color: var(--color-brown-light);
+  text-align: center; margin-bottom: 12px;
+}
+.modal-scroll {
+  overflow-y: auto; padding: 0 20px 24px;
+}
+.modal-scroll::-webkit-scrollbar { width: 6px; }
+.modal-scroll::-webkit-scrollbar-thumb { background: var(--color-rose); border-radius: 10px; }
+.cat-title {
+  font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 700;
+  color: var(--color-brown); margin: 18px 0 10px; border-bottom: 1px solid var(--color-rose); padding-bottom: 4px;
+}
+.gift-list {
+  display: flex; flex-direction: column; gap: 10px;
+}
+.gift-item {
+  background: white; border-radius: 12px; padding: 12px;
+  display: flex; align-items: center; justify-content: space-between; gap: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.gift-info {
+  display: flex; flex-direction: column; gap: 4px; flex: 1;
+}
+.gift-name {
+  font-size: 13px; font-weight: 600; color: var(--color-brown); line-height: 1.3;
+}
+.gift-price {
+  font-size: 13px; color: var(--color-gold); font-weight: 700; font-family: 'Quicksand', sans-serif;
+}
+.gift-btn {
+  background: linear-gradient(135deg, #e4b5c1, #d8829d);
+  color: white; font-size: 12px; font-weight: 600; text-decoration: none;
+  padding: 6px 14px; border-radius: 20px; box-shadow: 0 3px 10px rgba(216, 130, 157, 0.2); white-space: nowrap; font-family: 'Quicksand', sans-serif;
+}
+
+
+.gift-item { position: relative; }
+.gift-actions { display: flex; gap: 6px; align-items: center; }
+.gift-btn-wa {
+  background: linear-gradient(135deg, #a8e0b3, #4caf50);
+  color: white; font-size: 12px; font-weight: 600; text-decoration: none;
+  padding: 6px 14px; border-radius: 20px; box-shadow: 0 3px 10px rgba(76, 175, 80, 0.2); white-space: nowrap; font-family: 'Quicksand', sans-serif;
+  text-align: center; transition: transform 0.2s;
+}
+.gift-btn-wa:hover { transform: translateY(-2px); }
+.gift-item.comprado {
+  opacity: 0.6; background: #fdfdfd; filter: grayscale(90%);
+}
+.gift-item.comprado .gift-actions { display: none; }
+.gift-item.comprado::after {
+  content: 'Reservado 🎁';
+  position: absolute; right: 16px; top: 50%; transform: translateY(-50%);
+  font-family: 'Quicksand', sans-serif; font-size: 14px; font-weight: 700; color: #999;
+}
+
+</style>
+</head>
+<body>
+<div class="clouds">
+  <div class="cloud c1"></div><div class="cloud c2"></div><div class="cloud c3"></div>
+  <div class="cloud c4"></div><div class="cloud c5"></div><div class="cloud c6"></div>
+  <div class="cloud c7"></div>
+</div>
+<div class="page">
+
+  <div class="hero s">
+    <img class="pooh-fly" src="pooh_fly.png" alt="Pooh">
+    <span class="baby-word">BABY</span>
+    <span class="shower-word shower">shower</span>
+    <div class="sep"><div class="sep-l"></div><span class="sep-dot">✦</span><div class="sep-l"></div></div>
+    <p class="de-p">De nuestra princesa</p>
+    <div class="shower">Abigail Aitana</div>
+    <img class="pooh-sit" src="pooh_sit.png" alt="Pooh sentado">
+    <p class="quote">Un dulce milagro viene en camino,<br>acompáñanos a celebrar<br>la llegada de nuestra bebé.</p>
+    <div class="deco-row">
+      <img class="img-panal" src="panal.png" alt="Panal">
+      <img class="img-abeja" src="abeja.png" alt="Abeja">
+    </div>
+  </div>
+
+  <div class="card s">
+    <span class="mes">Julio</span>
+    <div class="hr"><div class="hr-l"></div><span class="tag">Sábado</span><div class="hr-l"></div></div>
+    <div class="dia">18</div>
+    <div class="hr"><div class="hr-l"></div><span class="tag">6:00 pm</span><div class="hr-l"></div></div>
+    <div class="anio">2026</div>
+  </div>
+
+  <div class="card s">
+    <span class="lugar-nom">Av. La Paz 1153</span>
+    <div class="lugar-det">San Miguel, Lima</div>
+    <div class="lugar-dir">Av. La Paz 1153, San Miguel</div>
+  </div>
+
+  <div class="btn-wrap s">
+    <!-- <a class="btn-gold" href="https://maps.app.goo.gl/oxjN4sNinDL6gjnG9" target="_blank">📍 Ver Ubicación</a> -->
+    <a class="btn-gold" href="https://maps.app.goo.gl/oxjN4sNinDL6gjnG9" target="_blank" rel="noopener noreferrer">📍 Ver Ubicación</a>
+  </div>
+
+  <div class="card s">
+    <div class="cd-titulo">Sólo faltan...</div>
+    <div class="cd-row">
+      <div class="cd-u"><span class="cd-n" id="cd-d">--</span><span class="cd-l">días</span></div>
+      <span class="cd-sep">·</span>
+      <div class="cd-u"><span class="cd-n" id="cd-h">--</span><span class="cd-l">horas</span></div>
+      <span class="cd-sep">·</span>
+      <div class="cd-u"><span class="cd-n" id="cd-m">--</span><span class="cd-l">min</span></div>
+      <span class="cd-sep">·</span>
+      <div class="cd-u"><span class="cd-n" id="cd-s">--</span><span class="cd-l">seg</span></div>
+    </div>
+    <div id="hoy">¡Es hoy! 🎉</div>
+  </div>
+
+  <div class="card s">
+    <div class="cal-title">Agenda la fecha:</div>
+    <div class="cal-div"></div>
+    <div class="cal-mes">JULIO</div>
+    <div class="cal-g">
+      <div class="cal-dow">L</div><div class="cal-dow">M</div><div class="cal-dow">M</div><div class="cal-dow">J</div><div class="cal-dow">V</div><div class="cal-dow">S</div><div class="cal-dow">D</div>
+      <div class="cal-d x"></div><div class="cal-d x"></div>
+      <div class="cal-d">1</div><div class="cal-d">2</div><div class="cal-d">3</div><div class="cal-d">4</div><div class="cal-d">5</div>
+      <div class="cal-d">6</div><div class="cal-d">7</div><div class="cal-d">8</div><div class="cal-d">9</div><div class="cal-d">10</div><div class="cal-d">11</div><div class="cal-d">12</div>
+      <div class="cal-d">13</div><div class="cal-d">14</div><div class="cal-d">15</div><div class="cal-d">16</div><div class="cal-d">17</div><div class="cal-d ok"><span>18</span></div><div class="cal-d">19</div>
+      <div class="cal-d">20</div><div class="cal-d">21</div><div class="cal-d">22</div><div class="cal-d">23</div><div class="cal-d">24</div><div class="cal-d">25</div><div class="cal-d">26</div>
+      <div class="cal-d">27</div><div class="cal-d">28</div><div class="cal-d">29</div><div class="cal-d">30</div><div class="cal-d">31</div><div class="cal-d x"></div><div class="cal-d x"></div>
+    </div>
+  </div>
+
+  <div class="card s">
+    <img class="amigos" src="amigos.png" alt="Amigos de Pooh">
+    <p class="regalo-txt">Si deseas tener un detalle conmigo,<br><em>mis papis han preparado una lista especial con mucho cariño 🌸</em></p>
+    <div class="btn-wrap">
+      <a class="btn-rose" href="#" id="btn-lista">🎀 Ver Lista de Regalos</a>
+      <!-- <a class="btn-rose" href="URL_DE_TU_LISTA" target="_blank" rel="noopener noreferrer">🎀 Ver Lista de Regalos</a> -->
+    </div>
+  </div>
+
+  <div class="card s">
+    <span class="confirm-label">🌸 Confirma tu asistencia 🌸</span>
+    <div class="btns">
+      <a class="btn-wp" href="https://wa.me/51900746481?text=%C2%A1%C2%A1Hola%2C%20G%C3%A9nesis%21%21%0AConfirmo%20mi%20asistencia%20al%20Baby%20Shower%20de%20Abigail%20Aitana.%20%F0%9F%A4%8D" target="_blank" rel="noopener noreferrer">💬 Confirmar con Génesis</a>
+      <a class="btn-wp" href="https://wa.me/51944038550?text=%C2%A1%C2%A1Hola%2C%20David%21%21%0AConfirmo%20mi%20asistencia%20al%20Baby%20Shower%20de%20Abigail%20Aitana.%20%F0%9F%A4%8D" target="_blank" rel="noopener noreferrer">💬 Confirmar con David</a>
+    </div>
+  </div>
+
+  <div class="footer s">
+    <!-- <span class="te-esp">¡Te esperamos!</span> -->
+    <div class="te-esp">¡Te esperamos!</div>
+    <div class="bals">
+      <div class="bal b1"></div><div class="bal b2"></div><div class="bal b3"></div>
+      <div class="bal b4"></div><div class="bal b5"></div>
+    </div>
+  </div>
+
+
+<div id="modal-regalos" class="modal-backdrop">
+  <div class="modal-card">
+    <button class="modal-close" id="btn-cerrar-lista">✕</button>
+    <h2 class="modal-title">Lista de Regalos</h2>
+    <p class="modal-desc">Sugerencias con mucho cariño 🌸</p>
+    
+    <div class="modal-scroll">
+      <h3 class="cat-title">🍼 Alimentación y Lactancia</h3>
+      <div class="gift-list">
+         <div class="gift-item">
+            <div class="gift-info">
+               <span class="gift-name">Biberón de Vidrio Avent Natural 1+ Meses</span>
+               <span class="gift-price">S/ 83.00</span>
+            </div>
+            <div class="gift-actions">
+               <a class="gift-btn" href="https://inkafarma.pe/producto/biberon-de-vidrio-avent-natural-1-meses-240-ml/025059" target="_blank" rel="noopener noreferrer">Ver</a>
+               <a class="gift-btn-wa" href="https://wa.me/51900746481?text=¡Hola! He elegido regalar el Biberón de la lista. 🎁" target="_blank" rel="noopener noreferrer">Reservar</a>
+            </div>
+         </div>
+         <div class="gift-item">
+            <div class="gift-info">
+               <span class="gift-name">Biberón Philips Avent Natural 3.0 1M+</span>
+               <span class="gift-price">S/ 86.00</span>
+            </div>
+            <div class="gift-actions">
+               <a class="gift-btn" href="https://inkafarma.pe/producto/biberon-philips-avent-natural-30-1m/073518" target="_blank" rel="noopener noreferrer">Ver</a>
+               <a class="gift-btn-wa" href="https://wa.me/51900746481?text=¡Hola! He elegido regalar el Biberón Philips Avent Natural 3.0 1M+ de la lista. 🎁" target="_blank" rel="noopener noreferrer">Reservar</a>
+            </div>
+         </div>
+         <div class="gift-item">
+            <div class="gift-info">
+               <span class="gift-name">Biberón Philips Avent Natural 3.0 3M+</span>
+               <span class="gift-price">S/ 68.90</span>
+            </div>
+            <div class="gift-actions">
+               <a class="gift-btn" href="https://inkafarma.pe/producto/biberon-philips-avent-natural-30-3m/073517" target="_blank" rel="noopener noreferrer">Ver</a>
+               <a class="gift-btn-wa" href="https://wa.me/51900746481?text=¡Hola! He elegido regalar el Biberón Philips Avent Natural 3.0 3M+ de la lista. 🎁" target="_blank" rel="noopener noreferrer">Reservar</a>
+            </div>
+         </div>
+         <div class="gift-item">
+            <div class="gift-info">
+               <span class="gift-name">Set Anticolic Triple Pack Rosado</span>
+               <span class="gift-price">S/ 135.20</span>
+            </div>
+            <div class="gift-actions">
+               <a class="gift-btn" href="https://infanti.com.pe/collections/biberones-chupones-y-tetinas/products/scy119-19-set-anticolic-triple-pack-rosado" target="_blank" rel="noopener noreferrer">Ver</a>
+               <a class="gift-btn-wa" href="https://wa.me/51900746481?text=¡Hola! He elegido regalar el Set Anticolic Triple Pack Rosado de la lista. 🎁" target="_blank" rel="noopener noreferrer">Reservar</a>
+            </div>
+         </div>
+         <div class="gift-item">
+            <div class="gift-info">
+               <span class="gift-name">Nuevo Extractor Electrico Simple Philips Avent</span>
+               <span class="gift-price">S/ 1,109.00</span>
+            </div>
+            <div class="gift-actions">
+               <a class="gift-btn" href="https://infanti.com.pe/collections/extractor-electrico/products/scf391-11-nuevo-extractor-electrico-simple-philips-avent" target="_blank" rel="noopener noreferrer">Ver</a>
+               <a class="gift-btn-wa" href="https://wa.me/51900746481?text=¡Hola! He elegido regalar el Nuevo Extractor Electrico Simple Philips Avent de la lista. 🎁" target="_blank" rel="noopener noreferrer">Reservar</a>
+            </div>
+         </div>
+         <div class="gift-item">
+            <div class="gift-info">
+               <span class="gift-name">Extractor de Leche Manual</span>
+               <span class="gift-price">S/ 269.00</span>
+            </div>
+            <div class="gift-actions">
+               <a class="gift-btn" href="https://infanti.com.pe/collections/extractor-manual/products/scf430-01-extractor-de-leche-manual-le" target="_blank" rel="noopener noreferrer">Ver</a>
+               <a class="gift-btn-wa" href="https://wa.me/51900746481?text=¡Hola! He elegido regalar el Extractor de la lista. 🎁" target="_blank" rel="noopener noreferrer">Reservar</a>
+            </div>
+         </div>
+         <div class="gift-item">
+            <div class="gift-info">
+               <span class="gift-name">Bolsas Preesterilizadas X25 P/Leche Materna 6Oz/18</span>
+               <span class="gift-price">S/ 59.00</span>
+            </div>
+            <div class="gift-actions">
+               <a class="gift-btn" href="https://infanti.com.pe/collections/accesorios-3/products/scf603-25-bolsas-preesterilizadas-x25-p-leche-materna-6oz-18" target="_blank" rel="noopener noreferrer">Ver</a>
+               <a class="gift-btn-wa" href="https://wa.me/51900746481?text=¡Hola! He elegido regalar el Bolsas Preesterilizadas X25 P/Leche Materna 6Oz/18 de la lista. 🎁" target="_blank" rel="noopener noreferrer">Reservar</a>
+            </div>
+         </div>
+         <div class="gift-item">
+            <div class="gift-info">
+               <span class="gift-name">Esterilizador Electrico Avanzado</span>
+               <span class="gift-price">S/ 749.00</span>
+            </div>
+            <div class="gift-actions">
+               <a class="gift-btn" href="https://infanti.com.pe/collections/accesorios-3/products/scf291-00-esterilizador-electrico-avanzado" target="_blank" rel="noopener noreferrer">Ver</a>
+               <a class="gift-btn-wa" href="https://wa.me/51900746481?text=¡Hola! He elegido regalar el Esterilizador Electrico Avanzado de la lista. 🎁" target="_blank" rel="noopener noreferrer">Reservar</a>
+            </div>
+         </div>
+         <div class="gift-item">
+            <div class="gift-info">
+               <span class="gift-name">Silla de Comer Feed</span>
+               <span class="gift-price">S/ 244.30</span>
+            </div>
+            <div class="gift-actions">
+               <a class="gift-btn" href="https://infanti.com.pe/products/b-005s-silla-de-comer-feed?variant=50394283770156" target="_blank" rel="noopener noreferrer">Ver</a>
+               <a class="gift-btn-wa" href="https://wa.me/51900746481?text=¡Hola! He elegido regalar el Silla de la lista. 🎁" target="_blank" rel="noopener noreferrer">Reservar</a>
+            </div>
+         </div>
+      </div>
+      <h3 class="cat-title">🛁 Aseo y Cuidados</h3>
+      <div class="gift-list">
+         <div class="gift-item">
+            <div class="gift-info">
+               <span class="gift-name">Pack Pañales Huggies Natural Care Talla RN + Talla P</span>
+               <span class="gift-price">S/ 39.90</span>
+            </div>
+            <div class="gift-actions">
+               <a class="gift-btn" href="https://inkafarma.pe/producto/pack-panales-huggies-naturalcare-rn-talla-p/PACKMB288" target="_blank" rel="noopener noreferrer">Ver</a>
+               <a class="gift-btn-wa" href="https://wa.me/51900746481?text=¡Hola! He elegido regalar el Pack Pañales Huggies Natural Care Talla RN + Talla P de la lista. 🎁" target="_blank" rel="noopener noreferrer">Reservar</a>
+            </div>
+         </div>
+         <div class="gift-item">
+            <div class="gift-info">
+               <span class="gift-name">Pack 04 Pañales Recién Nacido Huggies Natural Care</span>
+               <span class="gift-price">S/ 44.90</span>
+            </div>
+            <div class="gift-actions">
+               <a class="gift-btn" href="https://inkafarma.pe/producto/pack-04-panales-recien-nacido-huggies-natural-care/PACKMB290" target="_blank" rel="noopener noreferrer">Ver</a>
+               <a class="gift-btn-wa" href="https://wa.me/51900746481?text=¡Hola! He elegido regalar el Pack 04 Pañales Recién Nacido Huggies Natural Care de la lista. 🎁" target="_blank" rel="noopener noreferrer">Reservar</a>
+            </div>
+         </div>
+         <div class="gift-item">
+            <div class="gift-info">
+               <span class="gift-name">Pack Pañales Huggies Unisex Talla P Natural Care 2 Uni</span>
+               <span class="gift-price">S/ 59.90</span>
+            </div>
+            <div class="gift-actions">
+               <a class="gift-btn" href="https://inkafarma.pe/producto/pack-panal-huggies-unisex-talla-p-natural-2-un/PACKMB05" target="_blank" rel="noopener noreferrer">Ver</a>
+               <a class="gift-btn-wa" href="https://wa.me/51900746481?text=¡Hola! He elegido regalar el Pack Pañales Huggies Unisex Talla P Natural Care 2 Uni de la lista. 🎁" target="_blank" rel="noopener noreferrer">Reservar</a>
+            </div>
+         </div>
+         <div class="gift-item">
+            <div class="gift-info">
+               <span class="gift-name">Toallas Húmedas Huggies Puro y Natural</span>
+               <span class="gift-price">S/ 35.50</span>
+            </div>
+            <div class="gift-actions">
+               <a class="gift-btn" href="https://inkafarma.pe/producto/toallas-humedas-huggies-puro-y-natural/073675" target="_blank" rel="noopener noreferrer">Ver</a>
+               <a class="gift-btn-wa" href="https://wa.me/51900746481?text=¡Hola! He elegido regalar el Toallas Húmedas Huggies Puro y Natural de la lista. 🎁" target="_blank" rel="noopener noreferrer">Reservar</a>
+            </div>
+         </div>
+         <div class="gift-item">
+            <div class="gift-info">
+               <span class="gift-name">Bañera Plegable con Termómetro</span>
+               <span class="gift-price">S/ 199.90</span>
+            </div>
+            <div class="gift-actions">
+               <a class="gift-btn" href="https://infanti.com.pe/collections/hora-de-bano/products/banera-plegable-con-termometro" target="_blank" rel="noopener noreferrer">Ver</a>
+               <a class="gift-btn-wa" href="https://wa.me/51900746481?text=¡Hola! He elegido regalar el Bañera Plegable con Termómetro de la lista. 🎁" target="_blank" rel="noopener noreferrer">Reservar</a>
+            </div>
+         </div>
+         <div class="gift-item">
+            <div class="gift-info">
+               <span class="gift-name">Bañera con Cambiador</span>
+               <span class="gift-price">S/ 479.90</span>
+            </div>
+            <div class="gift-actions">
+               <a class="gift-btn" href="https://infanti.com.pe/collections/hora-de-bano/products/bb020-banera-c-cambiador" target="_blank" rel="noopener noreferrer">Ver</a>
+               <a class="gift-btn-wa" href="https://wa.me/51900746481?text=¡Hola! He elegido regalar el Bañera con Cambiador de la lista. 🎁" target="_blank" rel="noopener noreferrer">Reservar</a>
+            </div>
+         </div>
+         <div class="gift-item">
+            <div class="gift-info">
+               <span class="gift-name">Termometro Para Baño Patito</span>
+               <span class="gift-price">S/ 29.00</span>
+            </div>
+            <div class="gift-actions">
+               <a class="gift-btn" href="https://infanti.com.pe/collections/hora-de-bano/products/31001-termometro-para-bano-patito" target="_blank" rel="noopener noreferrer">Ver</a>
+               <a class="gift-btn-wa" href="https://wa.me/51900746481?text=¡Hola! He elegido regalar el Termometro Para Baño Patito de la lista. 🎁" target="_blank" rel="noopener noreferrer">Reservar</a>
+            </div>
+         </div>
+         <div class="gift-item">
+            <div class="gift-info">
+               <span class="gift-name">Calentador de Toallitas Húmedas</span>
+               <span class="gift-price">S/ 167.30</span>
+            </div>
+            <div class="gift-actions">
+               <a class="gift-btn" href="https://infanti.com.pe/collections/cuidados-y-aseo-del-bebe/products/calentador-de-toallitas-humedas" target="_blank" rel="noopener noreferrer">Ver</a>
+               <a class="gift-btn-wa" href="https://wa.me/51900746481?text=¡Hola! He elegido regalar el Calentador de la lista. 🎁" target="_blank" rel="noopener noreferrer">Reservar</a>
+            </div>
+         </div>
+      </div>
+      <h3 class="cat-title">🛏️ Paseo y Descanso</h3>
+      <div class="gift-list">
+         <div class="gift-item">
+            <div class="gift-info">
+               <span class="gift-name">Coche Paseo Padua 2G</span>
+               <span class="gift-price">S/ 599.00</span>
+            </div>
+            <div class="gift-actions">
+               <a class="gift-btn" href="https://infanti.com.pe/products/coche-paseo-padua-2g?variant=52785099407660" target="_blank" rel="noopener noreferrer">Ver</a>
+               <a class="gift-btn-wa" href="https://wa.me/51900746481?text=¡Hola! He elegido regalar el Coche Paseo Padua 2G de la lista. 🎁" target="_blank" rel="noopener noreferrer">Reservar</a>
+            </div>
+         </div>
+         <div class="gift-item">
+            <div class="gift-info">
+               <span class="gift-name">Cuna Playard Always Together 2G</span>
+               <span class="gift-price">S/ 379.05</span>
+            </div>
+            <div class="gift-actions">
+               <a class="gift-btn" href="https://infanti.com.pe/collections/corral-cuna/products/cuna-playard-always-together-2g" target="_blank" rel="noopener noreferrer">Ver</a>
+               <a class="gift-btn-wa" href="https://wa.me/51900746481?text=¡Hola! He elegido regalar el Cuna Playard Always Together 2G de la lista. 🎁" target="_blank" rel="noopener noreferrer">Reservar</a>
+            </div>
+         </div>
+         <div class="gift-item">
+            <div class="gift-info">
+               <span class="gift-name">Colchón para Pack&Play Snooze 104x67x9</span>
+               <span class="gift-price">S/ 299.00</span>
+            </div>
+            <div class="gift-actions">
+               <a class="gift-btn" href="https://infanti.com.pe/collections/colchones-cojines-y-almohadas/products/colchon-para-pack-play-snooze-104x67x9" target="_blank" rel="noopener noreferrer">Ver</a>
+               <a class="gift-btn-wa" href="https://wa.me/51900746481?text=¡Hola! He elegido regalar el Colchón para Pack&Play Snooze 104x67x9 de la lista. 🎁" target="_blank" rel="noopener noreferrer">Reservar</a>
+            </div>
+         </div>
+         <div class="gift-item">
+            <div class="gift-info">
+               <span class="gift-name">Pack x2 Sabanas Bajeras Colecho MM Flores/Blanco Cr</span>
+               <span class="gift-price">S/ 149.00</span>
+            </div>
+            <div class="gift-actions">
+               <a class="gift-btn" href="https://infanti.com.pe/collections/ropa-de-cunas/products/pack-x2-sabanas-bajeras-colecho-mm-flores-blanco-cremoso" target="_blank" rel="noopener noreferrer">Ver</a>
+               <a class="gift-btn-wa" href="https://wa.me/51900746481?text=¡Hola! He elegido regalar el Pack x2 Sabanas Bajeras Colecho MM Flores/Blanco Cr de la lista. 🎁" target="_blank" rel="noopener noreferrer">Reservar</a>
+            </div>
+         </div>
+         <div class="gift-item">
+            <div class="gift-info">
+               <span class="gift-name">Silla Nido Animalitos Safari</span>
+               <span class="gift-price">S/ 219.90</span>
+            </div>
+            <div class="gift-actions">
+               <a class="gift-btn" href="https://infanti.com.pe/collections/sillas-nido/products/6920-silla-nido-animalitos-safari" target="_blank" rel="noopener noreferrer">Ver</a>
+               <a class="gift-btn-wa" href="https://wa.me/51900746481?text=¡Hola! He elegido regalar el Silla Nido Animalitos Safari de la lista. 🎁" target="_blank" rel="noopener noreferrer">Reservar</a>
+            </div>
+         </div>
+      </div>
+      <h3 class="cat-title">🧸 Juguetes y Estimulación</h3>
+      <div class="gift-list">
+         <div class="gift-item">
+            <div class="gift-info">
+               <span class="gift-name">Sonaja Mordedora Caterpillar</span>
+               <span class="gift-price">S/ 29.00</span>
+            </div>
+            <div class="gift-actions">
+               <a class="gift-btn" href="https://infanti.com.pe/collections/mordedores/products/10573-sonaja-mordedora-caterpillar" target="_blank" rel="noopener noreferrer">Ver</a>
+               <a class="gift-btn-wa" href="https://wa.me/51900746481?text=¡Hola! He elegido regalar el Sonaja Mordedora Caterpillar de la lista. 🎁" target="_blank" rel="noopener noreferrer">Reservar</a>
+            </div>
+         </div>
+         <div class="gift-item">
+            <div class="gift-info">
+               <span class="gift-name">Móvil Take Along Tiny Princess Tales</span>
+               <span class="gift-price">S/ 99.00</span>
+            </div>
+            <div class="gift-actions">
+               <a class="gift-btn" href="https://infanti.com.pe/collections/moviles-y-espantacuco/products/130550-movil-take-along-tiny-princess-tales" target="_blank" rel="noopener noreferrer">Ver</a>
+               <a class="gift-btn-wa" href="https://wa.me/51900746481?text=¡Hola! He elegido regalar el Móvil Take Along Tiny Princess Tales de la lista. 🎁" target="_blank" rel="noopener noreferrer">Reservar</a>
+            </div>
+         </div>
+         <div class="gift-item">
+            <div class="gift-info">
+               <span class="gift-name">Juguete Bebe Koala Hora de Dormir</span>
+               <span class="gift-price">S/ 189.90</span>
+            </div>
+            <div class="gift-actions">
+               <a class="gift-btn" href="https://infanti.com.pe/collections/moviles-y-espantacuco/products/13090-juguete-bebe-koala-hora-de-dormir" target="_blank" rel="noopener noreferrer">Ver</a>
+               <a class="gift-btn-wa" href="https://wa.me/51900746481?text=¡Hola! He elegido regalar el Juguete Bebe Koala Hora de la lista. 🎁" target="_blank" rel="noopener noreferrer">Reservar</a>
+            </div>
+         </div>
+         <div class="gift-item">
+            <div class="gift-info">
+               <span class="gift-name">Gimnasio Musical Giggly Garden</span>
+               <span class="gift-price">S/ 159.20</span>
+            </div>
+            <div class="gift-actions">
+               <a class="gift-btn" href="https://infanti.com.pe/collections/gimnasios-y-alfombras/products/gimnasio-musical-giggly-garden" target="_blank" rel="noopener noreferrer">Ver</a>
+               <a class="gift-btn-wa" href="https://wa.me/51900746481?text=¡Hola! He elegido regalar el Gimnasio Musical Giggly Garden de la lista. 🎁" target="_blank" rel="noopener noreferrer">Reservar</a>
+            </div>
+         </div>
+         <div class="gift-item">
+            <div class="gift-info">
+               <span class="gift-name">Gimnasio Mighty Milestones</span>
+               <span class="gift-price">S/ 119.20</span>
+            </div>
+            <div class="gift-actions">
+               <a class="gift-btn" href="https://infanti.com.pe/collections/gimnasios-y-alfombras/products/gimnasio-mighty-milestones" target="_blank" rel="noopener noreferrer">Ver</a>
+               <a class="gift-btn-wa" href="https://wa.me/51900746481?text=¡Hola! He elegido regalar el Gimnasio Mighty Milestones de la lista. 🎁" target="_blank" rel="noopener noreferrer">Reservar</a>
+            </div>
+         </div>
+         <div class="gift-item">
+            <div class="gift-info">
+               <span class="gift-name">Pulpo Musical - Octoplush</span>
+               <span class="gift-price">S/ 99.00</span>
+            </div>
+            <div class="gift-actions">
+               <a class="gift-btn" href="https://infanti.com.pe/collections/juguetes-bebe/products/30933-pulpo-musical-octoplush" target="_blank" rel="noopener noreferrer">Ver</a>
+               <a class="gift-btn-wa" href="https://wa.me/51900746481?text=¡Hola! He elegido regalar el Pulpo Musical - Octoplush de la lista. 🎁" target="_blank" rel="noopener noreferrer">Reservar</a>
+            </div>
+         </div>
+         <div class="gift-item">
+            <div class="gift-info">
+               <span class="gift-name">Juguetero Actividad Mono</span>
+               <span class="gift-price">S/ 109.00</span>
+            </div>
+            <div class="gift-actions">
+               <a class="gift-btn" href="https://infanti.com.pe/collections/mordedores-y-colgantes/products/306201-juguetero-actividad-mono" target="_blank" rel="noopener noreferrer">Ver</a>
+               <a class="gift-btn-wa" href="https://wa.me/51900746481?text=¡Hola! He elegido regalar el Juguetero Actividad Mono de la lista. 🎁" target="_blank" rel="noopener noreferrer">Reservar</a>
+            </div>
+         </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+<script>
+const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('on')}),{threshold:.1});
+document.querySelectorAll('.s').forEach(el=>obs.observe(el));
+const ev = new Date("2026-07-18T18:00:00-05:00").getTime();
+
+const elD = document.getElementById('cd-d');
+const elH = document.getElementById('cd-h');
+const elM = document.getElementById('cd-m');
+const elS = document.getElementById('cd-s');
+
+function updateVal(el, val) {
+  if (el.textContent !== String(val)) {
+    el.textContent = val;
+    el.classList.remove('pop-anim');
+    void el.offsetWidth; // trigger reflow
+    el.classList.add('pop-anim');
+  }
+}
+
+function tick(){
+  const d=ev-Date.now();
+  if(d<=0){
+    document.querySelector('.cd-row').style.display='none';
+    document.querySelector('.cd-titulo').style.display='none';
+    document.getElementById('hoy').style.display='block';
+    return;
+  }
+  updateVal(elD, Math.floor(d/86400000));
+  updateVal(elH, String(Math.floor((d%86400000)/3600000)).padStart(2,'0'));
+  updateVal(elM, String(Math.floor((d%3600000)/60000)).padStart(2,'0'));
+  updateVal(elS, String(Math.floor((d%60000)/1000)).padStart(2,'0'));
+}
+tick();
+setInterval(tick,1000);
+
+const btnLista = document.getElementById('btn-lista');
+const modalRegalos = document.getElementById('modal-regalos');
+const btnCerrarLista = document.getElementById('btn-cerrar-lista');
+const DB_URL = "https://baby-shower-fedfb-default-rtdb.firebaseio.com/gifts.json";
+
+// Abrir modal y consultar base de datos
+btnLista.addEventListener('click', async e => {
+  e.preventDefault();
+  modalRegalos.classList.add('show');
+  
+  try {
+    const res = await fetch(DB_URL);
+    const data = await (res.json()) || {};
+    const items = document.querySelectorAll('.gift-item');
+    items.forEach((item, idx) => {
+      if (data[idx]) {
+        item.classList.add('comprado');
+      } else {
+        item.classList.remove('comprado');
+      }
+    });
+  } catch(e) { console.error('Error DB', e); }
+});
+
+btnCerrarLista.addEventListener('click', () => {
+  modalRegalos.classList.remove('show');
+});
+
+modalRegalos.addEventListener('click', e => {
+  if (e.target === modalRegalos) {
+    modalRegalos.classList.remove('show');
+  }
+});
+
+// Lógica de los botones Reservar
+const waBtns = document.querySelectorAll('.gift-btn-wa');
+waBtns.forEach((btn, idx) => {
+  btn.addEventListener('click', async e => {
+    e.preventDefault();
+    const waLink = btn.href;
+    const itemEl = btn.closest('.gift-item');
+    
+    // Check if already reserved
+    itemEl.style.opacity = '0.5'; 
+    try {
+      const res = await fetch(DB_URL);
+      const data = await (res.json()) || {};
+      
+      if (data[idx]) {
+        alert("¡Ups! Alguien acaba de reservar este regalo hace un momento. Por favor elige otro de la lista.");
+        itemEl.classList.add('comprado');
+        itemEl.style.opacity = '';
+        return;
+      }
+      
+      // Marcar como reservado en BD
+      await fetch(DB_URL, {
+        method: 'PATCH',
+        body: JSON.stringify({ [idx]: true })
+      });
+      
+      itemEl.classList.add('comprado');
+      itemEl.style.opacity = '';
+      
+      // Abrir WhatsApp
+      window.open(waLink, '_blank');
+      
+    } catch(err) {
+      alert("Hubo un error de conexión. Inténtalo de nuevo.");
+      itemEl.style.opacity = '';
+    }
+  });
+});
+
+</script>
+</body>
+</html>
+
