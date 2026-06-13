@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
@@ -47,7 +47,7 @@ body{font-family:'Cormorant Garamond',serif;background:url('bg_image.jpg') repea
 .s.on{opacity:1;transform:none}
 /* HERO */
 .hero{padding:28px 20px 0}
-.pooh-fly{width:58%;max-width:230px;display:block;margin:0 auto;animation:float 3.5s ease-in-out infinite;filter:drop-shadow(0 8px 16px rgba(0,0,0,.1))}
+.pooh-fly{width:clamp(220px,55vw,280px);display:block;margin:0 auto 8px;animation:float 3.5s ease-in-out infinite;filter:drop-shadow(0 8px 16px rgba(0,0,0,.1));object-fit:contain;height:auto;max-width:35%}
 .baby-word{font-family:'Playfair Display',serif;font-weight:900;font-size:78px;line-height:1;color:var(--color-primary);letter-spacing:7px;display:block;margin-top:-4px}
 .shower-word{font-family:'Parisienne',cursive;font-size:48px;color:var(--color-gold);display:block;margin-top:-4px}
 
@@ -60,13 +60,16 @@ body{font-family:'Cormorant Garamond',serif;background:url('bg_image.jpg') repea
   line-height:1;
   letter-spacing:2px;
 }
-.nombre-bebe{
-  font-family:'Quicksand', sans-serif;
-  font-size:74px;
+
+.shower-name{
+  font-family:'Cormorant Garamond', serif;
+  font-size:60px;
+  font-style:italic;
   font-weight:700;
-  color:#6b3f2c;
-  line-height:1.05;
-  letter-spacing:.5px;
+  /* color:var(--color-gold); */
+  line-height:1;
+  letter-spacing:5px;
+  margin-bottom: 3%;
 }
 
 .sep{display:flex;align-items:center;gap:10px;margin:16px auto 14px;width:65%}
@@ -74,13 +77,13 @@ body{font-family:'Cormorant Garamond',serif;background:url('bg_image.jpg') repea
 .sep-dot{font-size:13px;color:var(--color-rose)}
 .de-p{font-size:15px;font-style:italic;color:var(--color-brown-light);letter-spacing:1px;margin-bottom:4px}
 .nombre{font-family:'Parisienne',cursive;font-size:74px;color:var(--color-brown);line-height:1;margin-bottom:22px}
-.pooh-sit{width:50%;max-width:190px;display:block;margin:0 auto 14px;filter:drop-shadow(1px 5px 10px rgba(0,0,0,.08))}
+.pooh-sit{width:52%;max-width:185px;display:block;margin:12px auto 16px;filter:drop-shadow(1px 5px 10px rgba(0,0,0,.08));object-fit:contain;height:auto}
 .quote{font-size:15px;font-style:italic;color:var(--color-brown-light);line-height:1.85;padding:0 30px;margin-bottom:18px}
 .deco-row{display:flex;align-items:flex-end;justify-content:center;gap:28px;padding:0 20px}
-.img-panal{width:78px;filter:drop-shadow(1px 3px 6px rgba(0,0,0,.07))}
-.img-abeja{width:88px;filter:drop-shadow(1px 3px 6px rgba(0,0,0,.07))}
+.img-panal{width:58px;filter:drop-shadow(1px 3px 6px rgba(0,0,0,.07))}
+.img-abeja{width:66px;filter:drop-shadow(1px 3px 6px rgba(0,0,0,.07))}
 /* CARDS */
-.card{background:rgba(255,248,250,.65);backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.9);border-radius:26px;padding:26px 24px;margin:18px 18px 0;box-shadow:0 8px 32px rgba(216,130,157,.15)}
+.card{background:rgba(255,248,250,.65);backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.9);border-radius:26px;padding:20px 20px;margin:12px 16px 0;box-shadow:0 8px 32px rgba(216,130,157,.15);position:relative}
 /* FECHA */
 /*.mes{font-family:'Allura',cursive;font-size:44px;color:var(--color-primary);display:block}*/
 .mes{
@@ -148,7 +151,7 @@ body{font-family:'Cormorant Garamond',serif;background:url('bg_image.jpg') repea
 }
 
 /* BTNS */
-.btn-wrap{padding:18px 0 0;text-align:center}
+.btn-wrap{padding:12px 0 0;text-align:center}
 .btn-gold{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#e4b5c1,#d8829d);color:white;font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:600;font-style:italic;padding:13px 34px;border-radius:50px;text-decoration:none;box-shadow:0 6px 20px rgba(216,130,157,.25);transition:all .3s ease}
 .btn-gold:hover{transform:translateY(-3px);box-shadow:0 8px 25px rgba(216,130,157,.35)}
 .btn-rose{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#e4b5c1,#d8829d);color:white;font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:600;font-style:italic;padding:13px 30px;border-radius:50px;text-decoration:none;box-shadow:0 6px 20px rgba(216,130,157,.25);transition:all .3s ease}
@@ -224,13 +227,13 @@ body{font-family:'Cormorant Garamond',serif;background:url('bg_image.jpg') repea
 .cal-d.ok::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:34px;height:34px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M50 85C50 85 10 55 10 30C10 15 22 5 35 5C42 5 48 9 50 14C52 9 58 5 65 5C78 5 90 15 90 30C90 55 50 85 50 85Z' fill='%23f4a3b5' opacity='.85'/%3E%3C/svg%3E") center/contain no-repeat;z-index:0}
 .cal-d.ok span{position:relative;z-index:1}
 /* REGALO */
-.amigos{width:86%;max-width:300px;display:block;margin:0 auto 16px;filter:drop-shadow(0 5px 12px rgba(0,0,0,.09))}
+.amigos{width:70%;max-width:200px;display:block;margin:0 auto 12px;filter:drop-shadow(0 5px 12px rgba(0,0,0,.09))}
 .regalo-txt{font-size:15px;line-height:1.8;color:var(--color-brown)}
 .regalo-txt em{color:var(--color-primary);font-style:italic}
 /* CONFIRMAR */
-.confirm-label{font-size:15px;font-style:italic;color:var(--color-brown-light);margin-bottom:18px;display:block}
-.btns{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
-.btn-wp{display:inline-flex;align-items:center;gap:7px;background:linear-gradient(135deg,#e4b5c1,#d8829d);color:white;font-family:'Cormorant Garamond',serif;font-size:15px;font-weight:600;font-style:italic;padding:12px 20px;border-radius:50px;text-decoration:none;box-shadow:0 5px 16px rgba(216,130,157,.25);white-space:nowrap;transition:all .3s ease}
+.confirm-label{font-size:15px;font-style:italic;color:var(--color-brown-light);margin-bottom:12px;display:block}
+.btns{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;max-width:340px;margin:0 auto}
+.btn-wp{flex:1;min-width:130px;max-width:160px;display:inline-flex;align-items:center;justify-content:center;gap:6px;background:linear-gradient(135deg,#e4b5c1,#d8829d);color:white;font-family:'Cormorant Garamond',serif;font-size:15px;font-weight:600;font-style:italic;padding:11px 14px;border-radius:50px;text-decoration:none;box-shadow:0 5px 16px rgba(216,130,157,.25);transition:all .3s ease;text-align:center}
 .btn-wp:hover{transform:translateY(-3px);box-shadow:0 8px 25px rgba(216,130,157,.35)}
 /* FOOTER */
 /* .footer{padding:30px 20px 0} */
@@ -361,6 +364,89 @@ body{font-family:'Cormorant Garamond',serif;background:url('bg_image.jpg') repea
   text-transform: uppercase; letter-spacing: 0.5px;
 }
 
+.yape-qr {
+  width: 180px;
+  border-radius: 16px;
+  margin: 12px auto 8px;
+  display: block;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.12);
+}
+.yape-num {
+  text-align: center;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  letter-spacing: 0.05em;
+  margin: 4px 0 0;
+  cursor: pointer;
+}
+.btn-yape {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: linear-gradient(135deg, #e4b5c1, #d8829d);
+  color: white; font-family: 'Cormorant Garamond', serif;
+  font-size: 15px; font-weight: 600; font-style: italic;
+  padding: 12px 24px; border-radius: 50px; border: none;
+  box-shadow: 0 5px 16px rgba(216,130,157,.25);
+  cursor: pointer; transition: all .3s ease; margin-top: 10px;
+}
+.btn-yape:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(216,130,157,.35); }
+.yape-toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  z-index: 200;
+  background: rgba(255,248,250,.97);
+  border: 1px solid rgba(216,130,157,.25);
+  border-radius: 50px;
+  padding: 12px 22px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-brown);
+  box-shadow: 0 8px 24px rgba(216,130,157,.25);
+  white-space: nowrap;
+  max-width: calc(100vw - 48px);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity .3s ease, transform .3s ease;
+}
+.yape-toast.visible {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.ev-mes{font-family:'Cormorant Garamond',serif;font-size:12px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--color-brown-light);display:block;margin-bottom:2px}
+.ev-dia-grande{font-family:'Cormorant Garamond',serif;font-size:76px;font-weight:600;color:var(--color-gold);line-height:1;display:block}
+.ev-dow-hora{font-family:'Cormorant Garamond',serif;font-size:15px;font-weight:600;color:var(--color-brown-light);letter-spacing:.5px;display:block;margin-top:4px}
+.ev-sep{height:1px;background:linear-gradient(90deg,transparent,var(--color-rose),transparent);margin:14px 0}
+.ev-lugar{font-family:'Cormorant Garamond',serif;font-size:15px;font-weight:600;color:var(--color-brown)}
+.mini-cal-g{display:grid;grid-template-columns:repeat(7,1fr);gap:0}
+.mini-cal-dow{font-size:9px;font-weight:700;color:var(--color-rose);padding:2px 0 5px;text-align:center;letter-spacing:.5px}
+.mini-cal-d{font-size:11px;font-weight:500;color:#c47a8a;padding:5px 1px;text-align:center;border-radius:50%;line-height:1;position:relative}
+.mini-cal-d.x{visibility:hidden}
+.mini-cal-d.ok{color:var(--color-primary-light);font-weight:800}
+.mini-cal-d.ok::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:22px;height:22px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M50 85C50 85 10 55 10 30C10 15 22 5 35 5C42 5 48 9 50 14C52 9 58 5 65 5C78 5 90 15 90 30C90 55 50 85 50 85Z' fill='%23f4a3b5' opacity='.85'/%3E%3C/svg%3E") center/contain no-repeat;z-index:0}
+.mini-cal-d.ok span{position:relative;z-index:1}
+
+.pooh-cd-deco{position:absolute;right:0;bottom:0;width:68px;height:auto;object-fit:contain;opacity:.82;filter:drop-shadow(1px 3px 6px rgba(0,0,0,.07));pointer-events:none}
+.ev-dia-wrap{display:flex;align-items:center;justify-content:center;gap:10px}
+.ev-deco-panal{width:46px;height:auto;object-fit:contain;opacity:.88;flex-shrink:0;filter:drop-shadow(1px 2px 4px rgba(0,0,0,.07))}
+.ev-deco-abeja{width:52px;height:auto;object-fit:contain;opacity:.88;flex-shrink:0;filter:drop-shadow(1px 2px 4px rgba(0,0,0,.07))}
+.yape-deco{position:absolute;left:4%;top:30%;width:82px;height:auto;object-fit:contain;opacity:.8;filter:drop-shadow(1px 3px 6px rgba(0,0,0,.07));pointer-events:none}
+@media(max-width:380px){.ev-deco-panal{width:36px}.ev-deco-abeja{width:42px}.yape-deco{width:64px}}
+
+.modal-filters{padding:0 20px 10px}
+.gift-search{width:100%;padding:9px 14px;border:1.5px solid var(--color-rose);border-radius:20px;font-family:'Quicksand',sans-serif;font-size:14px;color:var(--color-brown);background:rgba(255,255,255,.8);outline:none;margin-bottom:10px;box-sizing:border-box}
+.gift-search:focus{border-color:var(--color-primary)}
+.cat-pills{display:flex;gap:6px;overflow-x:auto;padding-bottom:6px;scrollbar-width:none}
+.cat-pills::-webkit-scrollbar{display:none}
+.cat-pill{flex-shrink:0;background:rgba(235,210,215,.4);border:1.5px solid var(--color-rose);border-radius:20px;padding:5px 12px;font-family:'Quicksand',sans-serif;font-size:11px;font-weight:700;color:var(--color-brown);cursor:pointer;transition:all .2s;white-space:nowrap}
+.cat-pill.active,.cat-pill:hover{background:var(--color-primary);border-color:var(--color-primary);color:white}
+.gift-num{font-size:10px;font-weight:700;color:var(--color-primary);letter-spacing:.5px;display:block;margin-bottom:2px;font-family:'Quicksand',sans-serif}
+.gift-empty{text-align:center;padding:24px 0;color:var(--color-brown-light);font-style:italic;font-family:'Cormorant Garamond',serif;font-size:16px}
+
 </style>
 </head>
 <body>
@@ -372,37 +458,38 @@ body{font-family:'Cormorant Garamond',serif;background:url('bg_image.jpg') repea
 <div class="page">
 
   <div class="hero s">
-    <img class="pooh-fly" src="pooh_fly.png" alt="Pooh">
+    <img class="pooh-fly" src="pooh-bebita.png" alt="Pooh bebita">
     <span class="baby-word">BABY</span>
     <span class="shower-word shower">shower</span>
     <div class="sep"><div class="sep-l"></div><span class="sep-dot">✦</span><div class="sep-l"></div></div>
     <p class="de-p">De nuestra princesa</p>
-    <div class="shower">Abigail Aitana</div>
-    <img class="pooh-sit" src="pooh_sit.png" alt="Pooh sentado">
+    <div class="shower-name">Abigail Aitana</div>
     <p class="quote">Un dulce milagro viene en camino,<br>acompáñanos a celebrar<br>la llegada de nuestra bebé.</p>
-    <div class="deco-row">
-      <img class="img-panal" src="panal.png" alt="Panal">
-      <img class="img-abeja" src="abeja.png" alt="Abeja">
+  </div>
+
+  <div class="card s">
+    <span class="ev-mes">Julio 2026</span>
+    <div class="ev-dia-wrap">
+      <img class="ev-deco-panal" src="panal.png" alt="">
+      <span class="ev-dia-grande">18</span>
+      <img class="ev-deco-abeja" src="abeja.png" alt="">
     </div>
-  </div>
-
-  <div class="card s">
-    <span class="mes">Julio</span>
-    <div class="hr"><div class="hr-l"></div><span class="tag">Sábado</span><div class="hr-l"></div></div>
-    <div class="dia">18</div>
-    <div class="hr"><div class="hr-l"></div><span class="tag">6:00 pm</span><div class="hr-l"></div></div>
-    <div class="anio">2026</div>
-  </div>
-
-  <div class="card s">
-    <span class="lugar-nom">Av. La Paz 1153</span>
-    <div class="lugar-det">San Miguel, Lima</div>
-    <div class="lugar-dir">Av. La Paz 1153, San Miguel</div>
-  </div>
-
-  <div class="btn-wrap s">
-    <!-- <a class="btn-gold" href="https://maps.app.goo.gl/oxjN4sNinDL6gjnG9" target="_blank">📍 Ver Ubicación</a> -->
-    <a class="btn-gold" href="https://maps.app.goo.gl/oxjN4sNinDL6gjnG9" target="_blank" rel="noopener noreferrer">📍 Ver Ubicación</a>
+    <span class="ev-dow-hora">Sábado &middot; 6:00 PM</span>
+    <div class="ev-sep"></div>
+    <div class="ev-lugar">📍 Av. La Paz 1153, San Miguel</div>
+    <div class="btn-wrap">
+      <a class="btn-gold" href="https://maps.app.goo.gl/oxjN4sNinDL6gjnG9" target="_blank" rel="noopener noreferrer">📍 Ver ubicación</a>
+    </div>
+    <div class="ev-sep"></div>
+    <div class="mini-cal-g">
+      <div class="mini-cal-dow">L</div><div class="mini-cal-dow">M</div><div class="mini-cal-dow">M</div><div class="mini-cal-dow">J</div><div class="mini-cal-dow">V</div><div class="mini-cal-dow">S</div><div class="mini-cal-dow">D</div>
+      <div class="mini-cal-d x"></div><div class="mini-cal-d x"></div>
+      <div class="mini-cal-d">1</div><div class="mini-cal-d">2</div><div class="mini-cal-d">3</div><div class="mini-cal-d">4</div><div class="mini-cal-d">5</div>
+      <div class="mini-cal-d">6</div><div class="mini-cal-d">7</div><div class="mini-cal-d">8</div><div class="mini-cal-d">9</div><div class="mini-cal-d">10</div><div class="mini-cal-d">11</div><div class="mini-cal-d">12</div>
+      <div class="mini-cal-d">13</div><div class="mini-cal-d">14</div><div class="mini-cal-d">15</div><div class="mini-cal-d">16</div><div class="mini-cal-d">17</div><div class="mini-cal-d ok"><span>18</span></div><div class="mini-cal-d">19</div>
+      <div class="mini-cal-d">20</div><div class="mini-cal-d">21</div><div class="mini-cal-d">22</div><div class="mini-cal-d">23</div><div class="mini-cal-d">24</div><div class="mini-cal-d">25</div><div class="mini-cal-d">26</div>
+      <div class="mini-cal-d">27</div><div class="mini-cal-d">28</div><div class="mini-cal-d">29</div><div class="mini-cal-d">30</div><div class="mini-cal-d">31</div><div class="mini-cal-d x"></div><div class="mini-cal-d x"></div>
+    </div>
   </div>
 
   <div class="card s">
@@ -417,37 +504,32 @@ body{font-family:'Cormorant Garamond',serif;background:url('bg_image.jpg') repea
       <div class="cd-u"><span class="cd-n" id="cd-s">--</span><span class="cd-l">seg</span></div>
     </div>
     <div id="hoy">¡Es hoy! 🎉</div>
-  </div>
-
-  <div class="card s">
-    <div class="cal-title">Agenda la fecha:</div>
-    <div class="cal-div"></div>
-    <div class="cal-mes">JULIO</div>
-    <div class="cal-g">
-      <div class="cal-dow">L</div><div class="cal-dow">M</div><div class="cal-dow">M</div><div class="cal-dow">J</div><div class="cal-dow">V</div><div class="cal-dow">S</div><div class="cal-dow">D</div>
-      <div class="cal-d x"></div><div class="cal-d x"></div>
-      <div class="cal-d">1</div><div class="cal-d">2</div><div class="cal-d">3</div><div class="cal-d">4</div><div class="cal-d">5</div>
-      <div class="cal-d">6</div><div class="cal-d">7</div><div class="cal-d">8</div><div class="cal-d">9</div><div class="cal-d">10</div><div class="cal-d">11</div><div class="cal-d">12</div>
-      <div class="cal-d">13</div><div class="cal-d">14</div><div class="cal-d">15</div><div class="cal-d">16</div><div class="cal-d">17</div><div class="cal-d ok"><span>18</span></div><div class="cal-d">19</div>
-      <div class="cal-d">20</div><div class="cal-d">21</div><div class="cal-d">22</div><div class="cal-d">23</div><div class="cal-d">24</div><div class="cal-d">25</div><div class="cal-d">26</div>
-      <div class="cal-d">27</div><div class="cal-d">28</div><div class="cal-d">29</div><div class="cal-d">30</div><div class="cal-d">31</div><div class="cal-d x"></div><div class="cal-d x"></div>
-    </div>
-  </div>
-
-  <div class="card s">
-    <img class="amigos" src="amigos.png" alt="Amigos de Pooh">
-    <p class="regalo-txt">Si deseas tener un detalle conmigo,<br><em>mis papis han preparado una lista especial con mucho cariño 🌸</em></p>
-    <div class="btn-wrap">
-      <a class="btn-rose" href="#" id="btn-lista">🎀 Ver Lista de Regalos</a>
-      <!-- <a class="btn-rose" href="URL_DE_TU_LISTA" target="_blank" rel="noopener noreferrer">🎀 Ver Lista de Regalos</a> -->
-    </div>
+    <img class="pooh-cd-deco" src="Pooh de Lado.png" alt="">
   </div>
 
   <div class="card s">
     <span class="confirm-label">🌸 Confirma tu asistencia 🌸</span>
     <div class="btns">
-      <a class="btn-wp" href="https://wa.me/51900746481?text=%C2%A1%C2%A1Hola%2C%20G%C3%A9nesis%21%21%0AConfirmo%20mi%20asistencia%20al%20Baby%20Shower%20de%20Abigail%20Aitana.%20%F0%9F%A4%8D" target="_blank" rel="noopener noreferrer">💬 Confirmar con Génesis</a>
-      <a class="btn-wp" href="https://wa.me/51944038550?text=%C2%A1%C2%A1Hola%2C%20David%21%21%0AConfirmo%20mi%20asistencia%20al%20Baby%20Shower%20de%20Abigail%20Aitana.%20%F0%9F%A4%8D" target="_blank" rel="noopener noreferrer">💬 Confirmar con David</a>
+      <a class="btn-wp" href="https://wa.me/51900746481?text=%C2%A1%C2%A1Hola%2C%20G%C3%A9nesis%21%21%0AConfirmo%20mi%20asistencia%20al%20Baby%20Shower%20de%20Abigail%20Aitana.%20%F0%9F%A4%8D" target="_blank" rel="noopener noreferrer">💬 Con Génesis</a>
+      <a class="btn-wp" href="https://wa.me/51944038550?text=%C2%A1%C2%A1Hola%2C%20David%21%21%0AConfirmo%20mi%20asistencia%20al%20Baby%20Shower%20de%20Abigail%20Aitana.%20%F0%9F%A4%8D" target="_blank" rel="noopener noreferrer">💬 Con David</a>
+    </div>
+  </div>
+
+  <div class="card s">
+    <p class="regalo-txt">Si deseas tener un detalle conmigo, mis papis prepararon una lista especial con mucho cariño. 🌸</p>
+    <div class="btn-wrap">
+      <a class="btn-rose" href="#" id="btn-lista">🎀 Ver lista de regalos</a>
+    </div>
+  </div>
+
+  <div class="card s">
+    <img class="yape-deco" src="Pooh de Espalda.png" alt="">
+    <span class="confirm-label">💛 ¿Prefieres un regalo en efectivo? 💛</span>
+    <p class="regalo-txt">Escanea el QR o copia el número para yapear.</p>
+    <img class="yape-qr" src="yape_qr.png" alt="QR Yape David">
+    <p class="yape-num" onclick="handleYapeClick()">📱 944 038 550</p>
+    <div class="btn-wrap">
+      <button class="btn-yape" onclick="handleYapeClick()">📱 Copiar número y abrir Yape</button>
     </div>
   </div>
 
@@ -466,735 +548,21 @@ body{font-family:'Cormorant Garamond',serif;background:url('bg_image.jpg') repea
     <button class="modal-close" id="btn-cerrar-lista">✕</button>
     <h2 class="modal-title">Lista de Regalos</h2>
     <p class="modal-desc">Sugerencias con mucho cariño 🌸</p>
-    
-    <div class="modal-scroll">
-      <h3 class="cat-title">🍼 Alimentación y Lactancia</h3>
-      <div class="gift-list">
-         <div class="gift-item">
-            <div class="gift-info">
-               <span class="gift-name">Almohada de Lactancia</span>
-               <span class="gift-price">S/ 149.90</span>
-            </div>
-            <div class="gift-actions">
-               <a class="gift-btn" href="https://infanti.com.pe/products/almohada-de-lactancia-v2?_pos=1&_psq=Almohada+de+Lactancia&_ss=e&_v=1.0" target="_blank" rel="noopener noreferrer">Ver</a>
-               <a class="gift-btn-wa" href="https://wa.me/51900746481?text=¡Hola! He elegido regalar el Almohada de Lactancia de la lista. 🎁" target="_blank" rel="noopener noreferrer">Reservar</a>
-            </div>
-         </div>
-         <div class="gift-item">
-            <div class="gift-info">
-               <span class="gift-name">Biberón Philips Avent Natural 3.0 1M+</span>
-               <span class="gift-price">S/ 86.00</span>
-            </div>
-            <div class="gift-actions">
-               <a class="gift-btn" href="https://inkafarma.pe/producto/biberon-philips-avent-natural-30-1m/073518" target="_blank" rel="noopener noreferrer">Ver</a>
-               <a class="gift-btn-wa" href="https://wa.me/51900746481?text=¡Hola! He elegido regalar el Biberón Philips Avent Natural 3.0 1M+ de la lista. 🎁" target="_blank" rel="noopener noreferrer">Reservar</a>
-            </div>
-         </div>
-         <div class="gift-item">
-            <div class="gift-info">
-               <span class="gift-name">Biberón Philips Avent Natural 3.0 3M+</span>
-               <span class="gift-price">S/ 68.90</span>
-            </div>
-            <div class="gift-actions">
-               <a class="gift-btn" href="https://inkafarma.pe/producto/biberon-philips-avent-natural-30-3m/073517" target="_blank" rel="noopener noreferrer">Ver</a>
-               <a class="gift-btn-wa" href="https://wa.me/51900746481?text=¡Hola! He elegido regalar el Biberón Philips Avent Natural 3.0 3M+ de la lista. 🎁" target="_blank" rel="noopener noreferrer">Reservar</a>
-            </div>
-         </div>
-         <div class="gift-item">
-            <div class="gift-info">
-               <span class="gift-name">Bolsas Preesterilizadas X25 P/Leche Materna 6Oz/18</span>
-               <span class="gift-price">S/ 59.00</span>
-            </div>
-            <div class="gift-actions">
-               <a class="gift-btn" href="https://infanti.com.pe/collections/accesorios-3/products/scf603-25-bolsas-preesterilizadas-x25-p-leche-materna-6oz-18" target="_blank" rel="noopener noreferrer">Ver</a>
-               <a class="gift-btn-wa" href="https://wa.me/51900746481?text=¡Hola! He elegido regalar el Bolsas Preesterilizadas X25 P/Leche Materna 6Oz/18 de la lista. 🎁" target="_blank" rel="noopener noreferrer">Reservar</a>
-            </div>
-         </div>
-         <div class="gift-item">
-            <div class="gift-info">
-               <span class="gift-name">Esterilizador Electrico Avanzado</span>
-               <span class="gift-price">S/ 749.00</span>
-            </div>
-            <div class="gift-actions">
-               <a class="gift-btn" href="https://infanti.com.pe/collections/accesorios-3/products/scf291-00-esterilizador-electrico-avanzado" target="_blank" rel="noopener noreferrer">Ver</a>
-               <a class="gift-btn-wa" href="https://wa.me/51900746481?text=¡Hola! He elegido regalar el Esterilizador Electrico Avanzado de la lista. 🎁" target="_blank" rel="noopener noreferrer">Reservar</a>
-            </div>
-         </div>
-         <div class="gift-item">
-            <div class="gift-info">
-               <span class="gift-name">Esterilizador Microondas Avent</span>
-               <span class="gift-price">S/ 289.00</span>
-            </div>
-            <div class="gift-actions">
-               <a class="gift-btn" href="https://infanti.com.pe/collections/de-0-a-3-meses/products/scf281-02-esterilizador-microondas-avent" target="_blank" rel="noopener noreferrer">Ver</a>
-               <a class="gift-btn-wa" href="https://wa.me/51900746481?text=¡Hola! He elegido regalar el Esterilizador Microondas Avent de la lista. 🎁" target="_blank" rel="noopener noreferrer">Reservar</a>
-            </div>
-         </div>
-         <div class="gift-item">
-            <div class="gift-info">
-               <span class="gift-name">Extractor Electrico Simple Philips Avent</span>
-               <span class="gift-price">S/ 1109.00</span>
-            </div>
-            <div class="gift-actions">
-               <a class="gift-btn" href="https://infanti.com.pe/collections/extractor-electrico/products/scf391-11-nuevo-extractor-electrico-simple-philips-avent" target="_blank" rel="noopener noreferrer">Ver</a>
-               <a class="gift-btn-wa" href="https://wa.me/51900746481?text=¡Hola! He elegido regalar el Extractor Electrico Simple Philips Avent de la lista. 🎁" target="_blank" rel="noopener noreferrer">Reservar</a>
-            </div>
-         </div>
-         <div class="gift-item">
-            <div class="gift-info">
-               <span class="gift-name">Extractor de Leche Manual</span>
-               <span class="gift-price">S/ 269.00</span>
-            </div>
-            <div class="gift-actions">
-               <a class="gift-btn" href="https://infanti.com.pe/collections/extractor-manual/products/scf430-01-extractor-de-leche-manual-le" target="_blank" rel="noopener noreferrer">Ver</a>
-               <a class="gift-btn-wa" href="https://wa.me/51900746481?text=¡Hola! He elegido regalar el Extractor de Leche Manual de la lista. 🎁" target="_blank" rel="noopener noreferrer">Reservar</a>
-            </div>
-         </div>
-         <div class="gift-item">
-            <div class="gift-info">
-               <span class="gift-name">Recipiente Leche 180Ml X 10 Pcs+2 Adaptadores</span>
-               <span class="gift-price">S/ 119.00</span>
-            </div>
-            <div class="gift-actions">
-               <a class="gift-btn" href="https://infanti.com.pe/products/recipiente-leche-180ml-x-10-pcs-2-adaptadores" target="_blank" rel="noopener noreferrer">Ver</a>
-               <a class="gift-btn-wa" href="https://wa.me/51900746481?text=¡Hola! He elegido regalar el Recipiente Leche 180Ml X 10 Pcs+2 Adaptadores de la lista. 🎁" target="_blank" rel="noopener noreferrer">Reservar</a>
-            </div>
-         </div>
-         <div class="gift-item">
-            <div class="gift-info">
-               <span class="gift-name">Set Alimentación de Silicona</span>
-               <span class="gift-price">S/ 129.90</span>
-            </div>
-            <div class="gift-actions">
-               <a class="gift-btn" href="https://infanti.com.pe/products/set-alimentacion-de-silicona" target="_blank" rel="noopener noreferrer">Ver</a>
-               <a class="gift-btn-wa" href="https://wa.me/51900746481?text=¡Hola! He elegido regalar el Set Alimentación de Silicona de la lista. 🎁" target="_blank" rel="noopener noreferrer">Reservar</a>
-            </div>
-         </div>
-         <div class="gift-item">
-            <div class="gift-info">
-               <span class="gift-name">Silla de Comer Feed</span>
-               <span class="gift-price">S/ 244.30</span>
-            </div>
-            <div class="gift-actions">
-               <a class="gift-btn" href="https://infanti.com.pe/products/b-005s-silla-de-comer-feed?variant=50394283770156" target="_blank" rel="noopener noreferrer">Ver</a>
-               <a class="gift-btn-wa" href="https://wa.me/51900746481?text=¡Hola! He elegido regalar el Silla de Comer Feed de la lista. 🎁" target="_blank" rel="noopener noreferrer">Reservar</a>
-            </div>
-         </div>
-         <div class="gift-item">
-            <div class="gift-info">
-               <span class="gift-name">Tetina Natural Response 3.0 X2 Flow 3 - 1M+</span>
-               <span class="gift-price">S/ 49.00</span>
-            </div>
-            <div class="gift-actions">
-               <a class="gift-btn" href="https://infanti.com.pe/collections/de-0-a-3-meses/products/tetina-natural-response-3-0-x2-flow-3-1m" target="_blank" rel="noopener noreferrer">Ver</a>
-               <a class="gift-btn-wa" href="https://wa.me/51900746481?text=¡Hola! He elegido regalar el Tetina Natural Response 3.0 X2 Flow 3 - 1M+ de la lista. 🎁" target="_blank" rel="noopener noreferrer">Reservar</a>
-            </div>
-         </div>
-      </div>
-      <h3 class="cat-title">🛁 Aseo y Cuidados</h3>
-      <div class="gift-list">
-         <div class="gift-item">
-            <div class="gift-info">
-               <span class="gift-name">Aspirador Nasal Nuby</span>
-               <span class="gift-price">S/ 16.90</span>
-            </div>
-            <div class="gift-actions">
-               <a class="gift-btn" href="https://mifarma.com.pe/producto/aspirador-nasal-nuby/973232" target="_blank" rel="noopener noreferrer">Ver</a>
-               <a class="gift-btn-wa" href="https://wa.me/51900746481?text=¡Hola! He elegido regalar el Aspirador Nasal Nuby de la lista. 🎁" target="_blank" rel="noopener noreferrer">Reservar</a>
-            </div>
-         </div>
-         <div class="gift-item">
-            <div class="gift-info">
-               <span class="gift-name">Bañera con Cambiador</span>
-               <span class="gift-price">S/ 479.90</span>
-            </div>
-            <div class="gift-actions">
-               <a class="gift-btn" href="https://infanti.com.pe/collections/hora-de-bano/products/bb020-banera-c-cambiador" target="_blank" rel="noopener noreferrer">Ver</a>
-               <a class="gift-btn-wa" href="https://wa.me/51900746481?text=¡Hola! He elegido regalar el Bañera con Cambiador de la lista. 🎁" target="_blank" rel="noopener noreferrer">Reservar</a>
-            </div>
-         </div>
-         <div class="gift-item">
-            <div class="gift-info">
-               <span class="gift-name">Estuche para Pañitos Húmedos - Gris</span>
-               <span class="gift-price">S/ 59.00</span>
-            </div>
-            <div class="gift-actions">
-               <a class="gift-btn" href="https://infanti.com.pe/products/234151-estuche-para-panitos-humedos-gris" target="_blank" rel="noopener noreferrer">Ver</a>
-               <a class="gift-btn-wa" href="https://wa.me/51900746481?text=¡Hola! He elegido regalar el Estuche para Pañitos Húmedos - Gris de la lista. 🎁" target="_blank" rel="noopener noreferrer">Reservar</a>
-            </div>
-         </div>
-         <div class="gift-item">
-            <div class="gift-info">
-               <span class="gift-name">Jabón Líquido Relajante para Cabeza y Cuerpo x 520ml</span>
-               <span class="gift-price">S/ 39.50</span>
-            </div>
-            <div class="gift-actions">
-               <a class="gift-btn" href="https://infanti.com.pe/products/jabon-liquido-relajanta-para-cabeza-y-cuerpo-x-520-ml" target="_blank" rel="noopener noreferrer">Ver</a>
-               <a class="gift-btn-wa" href="https://wa.me/51900746481?text=¡Hola! He elegido regalar el Jabón Líquido Relajante para Cabeza y Cuerpo x 520ml de la lista. 🎁" target="_blank" rel="noopener noreferrer">Reservar</a>
-            </div>
-         </div>
-         <div class="gift-item">
-            <div class="gift-info">
-               <span class="gift-name">Limador de Uñas Eléctrico para Bebé Rosado - Maternelle</span>
-               <span class="gift-price">S/ 89.90</span>
-            </div>
-            <div class="gift-actions">
-               <a class="gift-btn" href="https://www.maternelle.pe/collections/accesorios-de-bano/products/limador-de-unas-electrico-para-bebe-rosaso-maternelle" target="_blank" rel="noopener noreferrer">Ver</a>
-               <a class="gift-btn-wa" href="https://wa.me/51900746481?text=¡Hola! He elegido regalar el Limador de Uñas Eléctrico para Bebé Rosado - Maternelle de la lista. 🎁" target="_blank" rel="noopener noreferrer">Reservar</a>
-            </div>
-         </div>
-         <div class="gift-item">
-            <div class="gift-info">
-               <span class="gift-name">Pack 04 Pañales Recién Nacido Huggies Natural Care</span>
-               <span class="gift-price">S/ 44.90</span>
-            </div>
-            <div class="gift-actions">
-               <a class="gift-btn" href="https://inkafarma.pe/producto/pack-04-panales-recien-nacido-huggies-natural-care/PACKMB290" target="_blank" rel="noopener noreferrer">Ver</a>
-               <a class="gift-btn-wa" href="https://wa.me/51900746481?text=¡Hola! He elegido regalar el Pack 04 Pañales Recién Nacido Huggies Natural Care de la lista. 🎁" target="_blank" rel="noopener noreferrer">Reservar</a>
-            </div>
-         </div>
-         <div class="gift-item">
-            <div class="gift-info">
-               <span class="gift-name">Pack 04 Pañales Recién Nacido Huggies Natural Care</span>
-               <span class="gift-price">S/ 44.90</span>
-            </div>
-            <div class="gift-actions">
-               <a class="gift-btn" href="https://inkafarma.pe/producto/pack-04-panales-recien-nacido-huggies-natural-care/PACKMB290" target="_blank" rel="noopener noreferrer">Ver</a>
-               <a class="gift-btn-wa" href="https://wa.me/51900746481?text=¡Hola! He elegido regalar el Pack 04 Pañales Recién Nacido Huggies Natural Care de la lista. 🎁" target="_blank" rel="noopener noreferrer">Reservar</a>
-            </div>
-         </div>
-         <div class="gift-item">
-            <div class="gift-info">
-               <span class="gift-name">Pack 04 Pañales Recién Nacido Huggies Natural Care</span>
-               <span class="gift-price">S/ 44.90</span>
-            </div>
-            <div class="gift-actions">
-               <a class="gift-btn" href="https://inkafarma.pe/producto/pack-04-panales-recien-nacido-huggies-natural-care/PACKMB290" target="_blank" rel="noopener noreferrer">Ver</a>
-               <a class="gift-btn-wa" href="https://wa.me/51900746481?text=¡Hola! He elegido regalar el Pack 04 Pañales Recién Nacido Huggies Natural Care de la lista. 🎁" target="_blank" rel="noopener noreferrer">Reservar</a>
-            </div>
-         </div>
-         <div class="gift-item">
-            <div class="gift-info">
-               <span class="gift-name">Pack 04 Pañales Recién Nacido Huggies Natural Care</span>
-               <span class="gift-price">S/ 44.90</span>
-            </div>
-            <div class="gift-actions">
-               <a class="gift-btn" href="https://inkafarma.pe/producto/pack-04-panales-recien-nacido-huggies-natural-care/PACKMB290" target="_blank" rel="noopener noreferrer">Ver</a>
-               <a class="gift-btn-wa" href="https://wa.me/51900746481?text=¡Hola! He elegido regalar el Pack 04 Pañales Recién Nacido Huggies Natural Care de la lista. 🎁" target="_blank" rel="noopener noreferrer">Reservar</a>
-            </div>
-         </div>
-         <div class="gift-item">
-            <div class="gift-info">
-               <span class="gift-name">Pack Pañales Huggies Unisex Talla P Natural Care 2 Unidades</span>
-               <span class="gift-price">S/ 59.90</span>
-            </div>
-            <div class="gift-actions">
-               <a class="gift-btn" href="https://inkafarma.pe/producto/pack-panal-huggies-unisex-talla-p-natural-2-un/PACKMB05" target="_blank" rel="noopener noreferrer">Ver</a>
-               <a class="gift-btn-wa" href="https://wa.me/51900746481?text=¡Hola! He elegido regalar el Pack Pañales Huggies Unisex Talla P Natural Care 2 Unidades de la lista. 🎁" target="_blank" rel="noopener noreferrer">Reservar</a>
-            </div>
-         </div>
-         <div class="gift-item">
-            <div class="gift-info">
-               <span class="gift-name">Pack Pañales Huggies Unisex Talla P Natural Care 2 Unidades</span>
-               <span class="gift-price">S/ 59.90</span>
-            </div>
-            <div class="gift-actions">
-               <a class="gift-btn" href="https://inkafarma.pe/producto/pack-panal-huggies-unisex-talla-p-natural-2-un/PACKMB05" target="_blank" rel="noopener noreferrer">Ver</a>
-               <a class="gift-btn-wa" href="https://wa.me/51900746481?text=¡Hola! He elegido regalar el Pack Pañales Huggies Unisex Talla P Natural Care 2 Unidades de la lista. 🎁" target="_blank" rel="noopener noreferrer">Reservar</a>
-            </div>
-         </div>
-         <div class="gift-item">
-            <div class="gift-info">
-               <span class="gift-name">Pack Pañales Huggies Unisex Talla P Natural Care 2 Unidades</span>
-               <span class="gift-price">S/ 59.90</span>
-            </div>
-            <div class="gift-actions">
-               <a class="gift-btn" href="https://inkafarma.pe/producto/pack-panal-huggies-unisex-talla-p-natural-2-un/PACKMB05" target="_blank" rel="noopener noreferrer">Ver</a>
-               <a class="gift-btn-wa" href="https://wa.me/51900746481?text=¡Hola! He elegido regalar el Pack Pañales Huggies Unisex Talla P Natural Care 2 Unidades de la lista. 🎁" target="_blank" rel="noopener noreferrer">Reservar</a>
-            </div>
-         </div>
-         <div class="gift-item">
-            <div class="gift-info">
-               <span class="gift-name">Pack Pañales Huggies Unisex Talla P Natural Care 2 Unidades</span>
-               <span class="gift-price">S/ 59.90</span>
-            </div>
-            <div class="gift-actions">
-               <a class="gift-btn" href="https://inkafarma.pe/producto/pack-panal-huggies-unisex-talla-p-natural-2-un/PACKMB05" target="_blank" rel="noopener noreferrer">Ver</a>
-               <a class="gift-btn-wa" href="https://wa.me/51900746481?text=¡Hola! He elegido regalar el Pack Pañales Huggies Unisex Talla P Natural Care 2 Unidades de la lista. 🎁" target="_blank" rel="noopener noreferrer">Reservar</a>
-            </div>
-         </div>
-         
-         <div class="gift-item">
-            <div class="gift-info">
-               <span class="gift-name">Toallas Húmedas Huggies Puro y Natural</span>
-               <span class="gift-price">S/ 35.50</span>
-            </div>
-            <div class="gift-actions">
-               <a class="gift-btn" href="https://inkafarma.pe/producto/toallas-humedas-huggies-puro-y-natural/073675" target="_blank" rel="noopener noreferrer">Ver</a>
-               <a class="gift-btn-wa" href="https://wa.me/51900746481?text=¡Hola! He elegido regalar el Toallas Húmedas Huggies Puro y Natural de la lista. 🎁" target="_blank" rel="noopener noreferrer">Reservar</a>
-            </div>
-         </div>
-         <div class="gift-item">
-            <div class="gift-info">
-               <span class="gift-name">Toallas Húmedas Huggies Puro y Natural</span>
-               <span class="gift-price">S/ 35.50</span>
-            </div>
-            <div class="gift-actions">
-               <a class="gift-btn" href="https://inkafarma.pe/producto/toallas-humedas-huggies-puro-y-natural/073675" target="_blank" rel="noopener noreferrer">Ver</a>
-               <a class="gift-btn-wa" href="https://wa.me/51900746481?text=¡Hola! He elegido regalar el Toallas Húmedas Huggies Puro y Natural de la lista. 🎁" target="_blank" rel="noopener noreferrer">Reservar</a>
-            </div>
-         </div>
-         <div class="gift-item">
-            <div class="gift-info">
-               <span class="gift-name">Toallas Húmedas Huggies Puro y Natural</span>
-               <span class="gift-price">S/ 35.50</span>
-            </div>
-            <div class="gift-actions">
-               <a class="gift-btn" href="https://inkafarma.pe/producto/toallas-humedas-huggies-puro-y-natural/073675" target="_blank" rel="noopener noreferrer">Ver</a>
-               <a class="gift-btn-wa" href="https://wa.me/51900746481?text=¡Hola! He elegido regalar el Toallas Húmedas Huggies Puro y Natural de la lista. 🎁" target="_blank" rel="noopener noreferrer">Reservar</a>
-            </div>
-         </div>
-         <div class="gift-item">
-            <div class="gift-info">
-               <span class="gift-name">Toallas Húmedas Huggies Puro y Natural</span>
-               <span class="gift-price">S/ 35.50</span>
-            </div>
-            <div class="gift-actions">
-               <a class="gift-btn" href="https://inkafarma.pe/producto/toallas-humedas-huggies-puro-y-natural/073675" target="_blank" rel="noopener noreferrer">Ver</a>
-               <a class="gift-btn-wa" href="https://wa.me/51900746481?text=¡Hola! He elegido regalar el Toallas Húmedas Huggies Puro y Natural de la lista. 🎁" target="_blank" rel="noopener noreferrer">Reservar</a>
-            </div>
-         </div>
-         <div class="gift-item">
-            <div class="gift-info">
-               <span class="gift-name">Set de Cortaúñas para Bebé Ninet</span>
-               <span class="gift-price">S/ 14.90</span>
-            </div>
-            <div class="gift-actions">
-               <a class="gift-btn" href="https://inkafarma.pe/producto/set-de-cortaunas-para-bebe-ninet/037884" target="_blank" rel="noopener noreferrer">Ver</a>
-               <a class="gift-btn-wa" href="https://wa.me/51900746481?text=¡Hola! He elegido regalar el Set de Cortaúñas para Bebé Ninet de la lista. 🎁" target="_blank" rel="noopener noreferrer">Reservar</a>
-            </div>
-         </div>
-         <div class="gift-item">
-            <div class="gift-info">
-               <span class="gift-name">Termometro Para Baño Patito</span>
-               <span class="gift-price">S/ 29.00</span>
-            </div>
-            <div class="gift-actions">
-               <a class="gift-btn" href="https://infanti.com.pe/collections/hora-de-bano/products/31001-termometro-para-bano-patito" target="_blank" rel="noopener noreferrer">Ver</a>
-               <a class="gift-btn-wa" href="https://wa.me/51900746481?text=¡Hola! He elegido regalar el Termometro Para Baño Patito de la lista. 🎁" target="_blank" rel="noopener noreferrer">Reservar</a>
-            </div>
-         </div>
-      </div>
-      <h3 class="cat-title">🛏️ Paseo y Descanso</h3>
-      <div class="gift-list">
-         <div class="gift-item">
-            <div class="gift-info">
-               <span class="gift-name">Coche Paseo Padua 2G</span>
-               <span class="gift-price">S/ 599.00</span>
-            </div>
-            <div class="gift-actions">
-               <a class="gift-btn" href="https://infanti.com.pe/products/coche-paseo-padua-2g?variant=52785099407660" target="_blank" rel="noopener noreferrer">Ver</a>
-               <a class="gift-btn-wa" href="https://wa.me/51900746481?text=¡Hola! He elegido regalar el Coche Paseo Padua 2G de la lista. 🎁" target="_blank" rel="noopener noreferrer">Reservar</a>
-            </div>
-         </div>
-         <div class="gift-item">
-            <div class="gift-info">
-               <span class="gift-name">Cojín Antireflujo Maternelle Rosado Cometa</span>
-               <span class="gift-price">S/ 169.90</span>
-            </div>
-            <div class="gift-actions">
-               <a class="gift-btn" href="https://www.maternelle.pe/collections/cojin-antireflujo/products/copia-de-cojin-antireflujo-rosado-vintage" target="_blank" rel="noopener noreferrer">Ver</a>
-               <a class="gift-btn-wa" href="https://wa.me/51900746481?text=¡Hola! He elegido regalar el Cojín Antireflujo Maternelle Rosado Cometa de la lista. 🎁" target="_blank" rel="noopener noreferrer">Reservar</a>
-            </div>
-         </div>
-         <div class="gift-item">
-            <div class="gift-info">
-               <span class="gift-name">Colchón para Pack&Play Snooze 104x67x9</span>
-               <span class="gift-price">S/ 299.00</span>
-            </div>
-            <div class="gift-actions">
-               <a class="gift-btn" href="https://infanti.com.pe/collections/colchones-cojines-y-almohadas/products/colchon-para-pack-play-snooze-104x67x9" target="_blank" rel="noopener noreferrer">Ver</a>
-               <a class="gift-btn-wa" href="https://wa.me/51900746481?text=¡Hola! He elegido regalar el Colchón para Pack&Play Snooze 104x67x9 de la lista. 🎁" target="_blank" rel="noopener noreferrer">Reservar</a>
-            </div>
-         </div>
-         <div class="gift-item">
-            <div class="gift-info">
-               <span class="gift-name">Cuna Playard Always Together 2G</span>
-               <span class="gift-price">S/ 379.05</span>
-            </div>
-            <div class="gift-actions">
-               <a class="gift-btn" href="https://infanti.com.pe/collections/corral-cuna/products/cuna-playard-always-together-2g" target="_blank" rel="noopener noreferrer">Ver</a>
-               <a class="gift-btn-wa" href="https://wa.me/51900746481?text=¡Hola! He elegido regalar el Cuna Playard Always Together 2G de la lista. 🎁" target="_blank" rel="noopener noreferrer">Reservar</a>
-            </div>
-         </div>
-         <div class="gift-item">
-            <div class="gift-info">
-               <span class="gift-name">Mochila Pañalera Emma Rosa</span>
-               <span class="gift-price">S/ 159.90</span>
-            </div>
-            <div class="gift-actions">
-               <a class="gift-btn" href="https://infanti.com.pe/products/ca559609-03-mochila-panalera-emma-rosa" target="_blank" rel="noopener noreferrer">Ver</a>
-               <a class="gift-btn-wa" href="https://wa.me/51900746481?text=¡Hola! He elegido regalar el Mochila Pañalera Emma Rosa de la lista. 🎁" target="_blank" rel="noopener noreferrer">Reservar</a>
-            </div>
-         </div>
-         <div class="gift-item">
-            <div class="gift-info">
-               <span class="gift-name">Pack x2 Sabanas Bajeras Colecho MM Flores/Blanco Cremoso</span>
-               <span class="gift-price">S/ 149.00</span>
-            </div>
-            <div class="gift-actions">
-               <a class="gift-btn" href="https://infanti.com.pe/collections/ropa-de-cunas/products/pack-x2-sabanas-bajeras-colecho-mm-flores-blanco-cremoso" target="_blank" rel="noopener noreferrer">Ver</a>
-               <a class="gift-btn-wa" href="https://wa.me/51900746481?text=¡Hola! He elegido regalar el Pack x2 Sabanas Bajeras Colecho MM Flores/Blanco Cremoso de la lista. 🎁" target="_blank" rel="noopener noreferrer">Reservar</a>
-            </div>
-         </div>
-         <div class="gift-item">
-            <div class="gift-info">
-               <span class="gift-name">Pack x2 Sabanas Bajeras para Colecho</span>
-               <span class="gift-price">S/ 143.10</span>
-            </div>
-            <div class="gift-actions">
-               <a class="gift-btn" href="https://infanti.com.pe/products/pack-x2-sabanas-bajeras-blanco" target="_blank" rel="noopener noreferrer">Ver</a>
-               <a class="gift-btn-wa" href="https://wa.me/51900746481?text=¡Hola! He elegido regalar el Pack x2 Sabanas Bajeras para Colecho de la lista. 🎁" target="_blank" rel="noopener noreferrer">Reservar</a>
-            </div>
-         </div>
-         <div class="gift-item">
-            <div class="gift-info">
-               <span class="gift-name">Silla Nido 3 En 1 Deluxe</span>
-               <span class="gift-price">S/ 328.30</span>
-            </div>
-            <div class="gift-actions">
-               <a class="gift-btn" href="https://infanti.com.pe/products/08103-silla-nido-3-en-1-deluxe" target="_blank" rel="noopener noreferrer">Ver</a>
-               <a class="gift-btn-wa" href="https://wa.me/51900746481?text=¡Hola! He elegido regalar el Silla Nido 3 En 1 Deluxe de la lista. 🎁" target="_blank" rel="noopener noreferrer">Reservar</a>
-            </div>
-         </div>
-         <div class="gift-item">
-            <div class="gift-info">
-               <span class="gift-name">Silla Nido Animalitos Safari</span>
-               <span class="gift-price">S/ 219.90</span>
-            </div>
-            <div class="gift-actions">
-               <a class="gift-btn" href="https://infanti.com.pe/collections/sillas-nido/products/6920-silla-nido-animalitos-safari" target="_blank" rel="noopener noreferrer">Ver</a>
-               <a class="gift-btn-wa" href="https://wa.me/51900746481?text=¡Hola! He elegido regalar el Silla Nido Animalitos Safari de la lista. 🎁" target="_blank" rel="noopener noreferrer">Reservar</a>
-            </div>
-         </div>
-      </div>
-      <h3 class="cat-title">🧸 Juguetes y Estimulación</h3>
-      <div class="gift-list">
-         <div class="gift-item">
-            <div class="gift-info">
-               <span class="gift-name">Gimnasio Musical Giggly Garden</span>
-               <span class="gift-price">S/ 159.20</span>
-            </div>
-            <div class="gift-actions">
-               <a class="gift-btn" href="https://infanti.com.pe/collections/gimnasios-y-alfombras/products/gimnasio-musical-giggly-garden" target="_blank" rel="noopener noreferrer">Ver</a>
-               <a class="gift-btn-wa" href="https://wa.me/51900746481?text=¡Hola! He elegido regalar el Gimnasio Musical Giggly Garden de la lista. 🎁" target="_blank" rel="noopener noreferrer">Reservar</a>
-            </div>
-         </div>
-         <div class="gift-item">
-            <div class="gift-info">
-               <span class="gift-name">Juguete Bebe Koala Hora de Dormir</span>
-               <span class="gift-price">S/ 189.90</span>
-            </div>
-            <div class="gift-actions">
-               <a class="gift-btn" href="https://infanti.com.pe/collections/moviles-y-espantacuco/products/13090-juguete-bebe-koala-hora-de-dormir" target="_blank" rel="noopener noreferrer">Ver</a>
-               <a class="gift-btn-wa" href="https://wa.me/51900746481?text=¡Hola! He elegido regalar el Juguete Bebe Koala Hora de Dormir de la lista. 🎁" target="_blank" rel="noopener noreferrer">Reservar</a>
-            </div>
-         </div>
-         <div class="gift-item">
-            <div class="gift-info">
-               <span class="gift-name">Móvil Take Along Meadow Days</span>
-               <span class="gift-price">S/ 99.00</span>
-            </div>
-            <div class="gift-actions">
-               <a class="gift-btn" href="https://infanti.com.pe/products/130490-movil-take-along-meadow-days" target="_blank" rel="noopener noreferrer">Ver</a>
-               <a class="gift-btn-wa" href="https://wa.me/51900746481?text=¡Hola! He elegido regalar el Móvil Take Along Meadow Days de la lista. 🎁" target="_blank" rel="noopener noreferrer">Reservar</a>
-            </div>
-         </div>
-         <div class="gift-item">
-            <div class="gift-info">
-               <span class="gift-name">Móvil Take Along Tiny Princess Tales</span>
-               <span class="gift-price">S/ 99.00</span>
-            </div>
-            <div class="gift-actions">
-               <a class="gift-btn" href="https://infanti.com.pe/collections/moviles-y-espantacuco/products/130550-movil-take-along-tiny-princess-tales" target="_blank" rel="noopener noreferrer">Ver</a>
-               <a class="gift-btn-wa" href="https://wa.me/51900746481?text=¡Hola! He elegido regalar el Móvil Take Along Tiny Princess Tales de la lista. 🎁" target="_blank" rel="noopener noreferrer">Reservar</a>
-            </div>
-         </div>
-         <div class="gift-item">
-            <div class="gift-info">
-               <span class="gift-name">Móvil Take Along Tiny Rockers</span>
-               <span class="gift-price">S/ 99.00</span>
-            </div>
-            <div class="gift-actions">
-               <a class="gift-btn" href="https://infanti.com.pe/products/movil-take-along-tiny-rockers" target="_blank" rel="noopener noreferrer">Ver</a>
-               <a class="gift-btn-wa" href="https://wa.me/51900746481?text=¡Hola! He elegido regalar el Móvil Take Along Tiny Rockers de la lista. 🎁" target="_blank" rel="noopener noreferrer">Reservar</a>
-            </div>
-         </div>
-         <div class="gift-item">
-            <div class="gift-info">
-               <span class="gift-name">Peluche Interactivo Lupe Llama</span>
-               <span class="gift-price">S/ 87.20</span>
-            </div>
-            <div class="gift-actions">
-               <a class="gift-btn" href="https://infanti.com.pe/products/0189037-peluche-interactivo-lupe-llama" target="_blank" rel="noopener noreferrer">Ver</a>
-               <a class="gift-btn-wa" href="https://wa.me/51900746481?text=¡Hola! He elegido regalar el Peluche Interactivo Lupe Llama de la lista. 🎁" target="_blank" rel="noopener noreferrer">Reservar</a>
-            </div>
-         </div>
-         <div class="gift-item">
-            <div class="gift-info">
-               <span class="gift-name">Peluche de Apego Interactivo 2 en 1 Infanti</span>
-               <span class="gift-price">S/ 109.00</span>
-            </div>
-            <div class="gift-actions">
-               <a class="gift-btn" href="https://infanti.com.pe/products/espantacuco-buoanannote-2-en-1-infanti" target="_blank" rel="noopener noreferrer">Ver</a>
-               <a class="gift-btn-wa" href="https://wa.me/51900746481?text=¡Hola! He elegido regalar el Peluche de Apego Interactivo 2 en 1 Infanti de la lista. 🎁" target="_blank" rel="noopener noreferrer">Reservar</a>
-            </div>
-         </div>
-         <div class="gift-item">
-            <div class="gift-info">
-               <span class="gift-name">Set de Juego Sensorial Bumble Bee</span>
-               <span class="gift-price">S/ 90.30</span>
-            </div>
-            <div class="gift-actions">
-               <a class="gift-btn" href="https://infanti.com.pe/products/0188407-set-de-juego-sensorial-bumble-bee" target="_blank" rel="noopener noreferrer">Ver</a>
-               <a class="gift-btn-wa" href="https://wa.me/51900746481?text=¡Hola! He elegido regalar el Set de Juego Sensorial Bumble Bee de la lista. 🎁" target="_blank" rel="noopener noreferrer">Reservar</a>
-            </div>
-         </div>
-         <div class="gift-item">
-            <div class="gift-info">
-               <span class="gift-name">Set de Pisos Eva Paq X9 Gris - Blanco</span>
-               <span class="gift-price">S/ 129.00</span>
-            </div>
-            <div class="gift-actions">
-               <a class="gift-btn" href="https://infanti.com.pe/products/set-de-pisos-eva-paq-x9-gris-blanco" target="_blank" rel="noopener noreferrer">Ver</a>
-               <a class="gift-btn-wa" href="https://wa.me/51900746481?text=¡Hola! He elegido regalar el Set de Pisos Eva Paq X9 Gris - Blanco de la lista. 🎁" target="_blank" rel="noopener noreferrer">Reservar</a>
-            </div>
-         </div>
-         <div class="gift-item">
-            <div class="gift-info">
-               <span class="gift-name">Set de Pisos Eva Paq X9 Gris - Blanco</span>
-               <span class="gift-price">S/ 129.00</span>
-            </div>
-            <div class="gift-actions">
-               <a class="gift-btn" href="https://infanti.com.pe/products/set-de-pisos-eva-paq-x9-gris-blanco" target="_blank" rel="noopener noreferrer">Ver</a>
-               <a class="gift-btn-wa" href="https://wa.me/51900746481?text=¡Hola! He elegido regalar el Set de Pisos Eva Paq X9 Gris - Blanco de la lista. 🎁" target="_blank" rel="noopener noreferrer">Reservar</a>
-            </div>
-         </div>
-         <div class="gift-item">
-            <div class="gift-info">
-               <span class="gift-name">Set de Pisos Eva Paq X9 Gris - Blanco</span>
-               <span class="gift-price">S/ 129.00</span>
-            </div>
-            <div class="gift-actions">
-               <a class="gift-btn" href="https://infanti.com.pe/products/set-de-pisos-eva-paq-x9-gris-blanco" target="_blank" rel="noopener noreferrer">Ver</a>
-               <a class="gift-btn-wa" href="https://wa.me/51900746481?text=¡Hola! He elegido regalar el Set de Pisos Eva Paq X9 Gris - Blanco de la lista. 🎁" target="_blank" rel="noopener noreferrer">Reservar</a>
-            </div>
-         </div>
-         <div class="gift-item">
-            <div class="gift-info">
-               <span class="gift-name">Set de Pisos Eva Paq X9 Gris - Blanco</span>
-               <span class="gift-price">S/ 129.00</span>
-            </div>
-            <div class="gift-actions">
-               <a class="gift-btn" href="https://infanti.com.pe/products/set-de-pisos-eva-paq-x9-gris-blanco" target="_blank" rel="noopener noreferrer">Ver</a>
-               <a class="gift-btn-wa" href="https://wa.me/51900746481?text=¡Hola! He elegido regalar el Set de Pisos Eva Paq X9 Gris - Blanco de la lista. 🎁" target="_blank" rel="noopener noreferrer">Reservar</a>
-            </div>
-         </div>
-         <div class="gift-item">
-            <div class="gift-info">
-               <span class="gift-name">Sonaja Mordedora Caterpillar</span>
-               <span class="gift-price">S/ 29.00</span>
-            </div>
-            <div class="gift-actions">
-               <a class="gift-btn" href="https://infanti.com.pe/collections/mordedores/products/10573-sonaja-mordedora-caterpillar" target="_blank" rel="noopener noreferrer">Ver</a>
-               <a class="gift-btn-wa" href="https://wa.me/51900746481?text=¡Hola! He elegido regalar el Sonaja Mordedora Caterpillar de la lista. 🎁" target="_blank" rel="noopener noreferrer">Reservar</a>
-            </div>
-         </div>
-      </div>
-      <h3 class="cat-title">👗 Ropita y Accesorios</h3>
-      <div class="gift-list">
-         <div class="gift-item">
-            <div class="gift-info">
-               <span class="gift-name">Conjunto 3 Piezas Bebé Niña Algodón</span>
-               <span class="gift-price">S/ 109.90 <span class='size-tag'>Recién Nacido</span></span>
-            </div>
-            <div class="gift-actions">
-               <a class="gift-btn" href="https://www.falabella.com.pe/falabella-pe/product/21461540/conjunto-3-piezas-bebe-nina-algodon/21461543" target="_blank" rel="noopener noreferrer">Ver</a>
-               <a class="gift-btn-wa" href="https://wa.me/51900746481?text=¡Hola! He elegido regalar el Conjunto 3 Piezas Bebé Niña Algodón de la lista. 🎁" target="_blank" rel="noopener noreferrer">Reservar</a>
-            </div>
-         </div>
-         <div class="gift-item">
-            <div class="gift-info">
-               <span class="gift-name">Conjunto Bebé Niña 2 Piezas Algodón Carters</span>
-               <span class="gift-price">S/ 99.90 <span class='size-tag'>Recién Nacido</span></span>
-            </div>
-            <div class="gift-actions">
-               <a class="gift-btn" href="https://www.falabella.com.pe/falabella-pe/product/20994242/conjunto-bebe-nina-2-piezas-algodon-carters/20994243" target="_blank" rel="noopener noreferrer">Ver</a>
-               <a class="gift-btn-wa" href="https://wa.me/51900746481?text=¡Hola! He elegido regalar el Conjunto Bebé Niña 2 Piezas Algodón Carters de la lista. 🎁" target="_blank" rel="noopener noreferrer">Reservar</a>
-            </div>
-         </div>
-         <div class="gift-item">
-            <div class="gift-info">
-               <span class="gift-name">Conjunto Bebé Niña 3 Piezas Carters</span>
-               <span class="gift-price">S/ 129.90 <span class='size-tag'>Recién Nacido</span></span>
-            </div>
-            <div class="gift-actions">
-               <a class="gift-btn" href="https://www.falabella.com.pe/falabella-pe/product/21088961/conjunto-bebe-nina-3-piezas-carters/21088967" target="_blank" rel="noopener noreferrer">Ver</a>
-               <a class="gift-btn-wa" href="https://wa.me/51900746481?text=¡Hola! He elegido regalar el Conjunto Bebé Niña 3 Piezas Carters de la lista. 🎁" target="_blank" rel="noopener noreferrer">Reservar</a>
-            </div>
-         </div>
-         <div class="gift-item">
-            <div class="gift-info">
-               <span class="gift-name">Conjunto Bebé Niña 3 Piezas Carters</span>
-               <span class="gift-price">S/ 119.90 <span class='size-tag'>Recién Nacido</span></span>
-            </div>
-            <div class="gift-actions">
-               <a class="gift-btn" href="https://www.falabella.com.pe/falabella-pe/product/21088825/conjunto-bebe-nina-3-piezas-carters/21088830" target="_blank" rel="noopener noreferrer">Ver</a>
-               <a class="gift-btn-wa" href="https://wa.me/51900746481?text=¡Hola! He elegido regalar el Conjunto Bebé Niña 3 Piezas Carters de la lista. 🎁" target="_blank" rel="noopener noreferrer">Reservar</a>
-            </div>
-         </div>
-         <div class="gift-item">
-            <div class="gift-info">
-               <span class="gift-name">Conjunto Bebé Niña Algodón Yamp</span>
-               <span class="gift-price">S/ 59.90 <span class='size-tag'>Recién Nacido</span></span>
-            </div>
-            <div class="gift-actions">
-               <a class="gift-btn" href="https://www.falabella.com.pe/falabella-pe/product/883711345/conjunto-bebe-nina-algodon-yamp/883711348" target="_blank" rel="noopener noreferrer">Ver</a>
-               <a class="gift-btn-wa" href="https://wa.me/51900746481?text=¡Hola! He elegido regalar el Conjunto Bebé Niña Algodón Yamp de la lista. 🎁" target="_blank" rel="noopener noreferrer">Reservar</a>
-            </div>
-         </div>
-         <div class="gift-item">
-            <div class="gift-info">
-               <span class="gift-name">Enterizo Bebé Niña Algodón</span>
-               <span class="gift-price">S/ 59.90 <span class='size-tag'>Recién Nacido</span></span>
-            </div>
-            <div class="gift-actions">
-               <a class="gift-btn" href="https://www.falabella.com.pe/falabella-pe/product/21461699/enterizo-bebe-nina-algodon/21461701" target="_blank" rel="noopener noreferrer">Ver</a>
-               <a class="gift-btn-wa" href="https://wa.me/51900746481?text=¡Hola! He elegido regalar el Enterizo Bebé Niña Algodón de la lista. 🎁" target="_blank" rel="noopener noreferrer">Reservar</a>
-            </div>
-         </div>
-         <div class="gift-item">
-            <div class="gift-info">
-               <span class="gift-name">Vestido Bebé Niña Algodón</span>
-               <span class="gift-price">S/ 89.90 <span class='size-tag'>Recién Nacido</span></span>
-            </div>
-            <div class="gift-actions">
-               <a class="gift-btn" href="https://www.falabella.com.pe/falabella-pe/product/21461267/vestido-bebe-nina-algodon/21461268" target="_blank" rel="noopener noreferrer">Ver</a>
-               <a class="gift-btn-wa" href="https://wa.me/51900746481?text=¡Hola! He elegido regalar el Vestido Bebé Niña Algodón de la lista. 🎁" target="_blank" rel="noopener noreferrer">Reservar</a>
-            </div>
-         </div>
-         <div class="gift-item">
-            <div class="gift-info">
-               <span class="gift-name">Bata Algodón Carters</span>
-               <span class="gift-price">S/ 89.90 <span class='size-tag'>3 Meses</span></span>
-            </div>
-            <div class="gift-actions">
-               <a class="gift-btn" href="https://www.falabella.com.pe/falabella-pe/product/20993755/bata-algodon-carters/20993756" target="_blank" rel="noopener noreferrer">Ver</a>
-               <a class="gift-btn-wa" href="https://wa.me/51900746481?text=¡Hola! He elegido regalar el Bata Algodón Carters de la lista. 🎁" target="_blank" rel="noopener noreferrer">Reservar</a>
-            </div>
-         </div>
-         <div class="gift-item">
-            <div class="gift-info">
-               <span class="gift-name">Conjunto 2 Piezas Bebé Niña Carters</span>
-               <span class="gift-price">S/ 119.90 <span class='size-tag'>3 Meses</span></span>
-            </div>
-            <div class="gift-actions">
-               <a class="gift-btn" href="https://www.falabella.com.pe/falabella-pe/product/21407666/conjunto-2-piezas-bebe-nina-carters/21407667" target="_blank" rel="noopener noreferrer">Ver</a>
-               <a class="gift-btn-wa" href="https://wa.me/51900746481?text=¡Hola! He elegido regalar el Conjunto 2 Piezas Bebé Niña Carters de la lista. 🎁" target="_blank" rel="noopener noreferrer">Reservar</a>
-            </div>
-         </div>
-         <div class="gift-item">
-            <div class="gift-info">
-               <span class="gift-name">Conjunto Bebé Niña Algodón Yamp</span>
-               <span class="gift-price">S/ 48.93 <span class='size-tag'>3 Meses</span></span>
-            </div>
-            <div class="gift-actions">
-               <a class="gift-btn" href="https://www.falabella.com.pe/falabella-pe/product/883619311/conjunto-bebe-nina-algodon-yamp/883649515" target="_blank" rel="noopener noreferrer">Ver</a>
-               <a class="gift-btn-wa" href="https://wa.me/51900746481?text=¡Hola! He elegido regalar el Conjunto Bebé Niña Algodón Yamp de la lista. 🎁" target="_blank" rel="noopener noreferrer">Reservar</a>
-            </div>
-         </div>
-         <div class="gift-item">
-            <div class="gift-info">
-               <span class="gift-name">Pijama Bebé Niña</span>
-               <span class="gift-price">S/ 59.90 <span class='size-tag'>3 Meses</span></span>
-            </div>
-            <div class="gift-actions">
-               <a class="gift-btn" href="https://www.falabella.com.pe/falabella-pe/product/21366142/pijama-bebe-nina/21366146" target="_blank" rel="noopener noreferrer">Ver</a>
-               <a class="gift-btn-wa" href="https://wa.me/51900746481?text=¡Hola! He elegido regalar el Pijama Bebé Niña de la lista. 🎁" target="_blank" rel="noopener noreferrer">Reservar</a>
-            </div>
-         </div>
-         <div class="gift-item">
-            <div class="gift-info">
-               <span class="gift-name">Vestido Bebe Niña Algodón Coniglio</span>
-               <span class="gift-price">S/ 79.90 <span class='size-tag'>3 Meses</span></span>
-            </div>
-            <div class="gift-actions">
-               <a class="gift-btn" href="https://www.falabella.com.pe/falabella-pe/product/883712746/vestido-bebe-nina-algodon-coniglio/883712747" target="_blank" rel="noopener noreferrer">Ver</a>
-               <a class="gift-btn-wa" href="https://wa.me/51900746481?text=¡Hola! He elegido regalar el Vestido Bebe Niña Algodón Coniglio de la lista. 🎁" target="_blank" rel="noopener noreferrer">Reservar</a>
-            </div>
-         </div>
-         <div class="gift-item">
-            <div class="gift-info">
-               <span class="gift-name">Conjunto Bebé Niña Yamp</span>
-               <span class="gift-price">S/ 63.92 <span class='size-tag'>6 Meses</span></span>
-            </div>
-            <div class="gift-actions">
-               <a class="gift-btn" href="https://www.falabella.com.pe/falabella-pe/product/883710745/Conjunto-Bebe-Nina-Yamp/883710752" target="_blank" rel="noopener noreferrer">Ver</a>
-               <a class="gift-btn-wa" href="https://wa.me/51900746481?text=¡Hola! He elegido regalar el Conjunto Bebé Niña Yamp de la lista. 🎁" target="_blank" rel="noopener noreferrer">Reservar</a>
-            </div>
-         </div>
-         <div class="gift-item">
-            <div class="gift-info">
-               <span class="gift-name">Conjunto Bebé Niña Algodón Yamp</span>
-               <span class="gift-price">S/ 55.92 <span class='size-tag'>9 Meses</span></span>
-            </div>
-            <div class="gift-actions">
-               <a class="gift-btn" href="https://www.falabella.com.pe/falabella-pe/product/883708087/conjunto-bebe-nina-algodon-yamp/883708088" target="_blank" rel="noopener noreferrer">Ver</a>
-               <a class="gift-btn-wa" href="https://wa.me/51900746481?text=¡Hola! He elegido regalar el Conjunto Bebé Niña Algodón Yamp de la lista. 🎁" target="_blank" rel="noopener noreferrer">Reservar</a>
-            </div>
-         </div>
-         <div class="gift-item">
-            <div class="gift-info">
-               <span class="gift-name">Body Bebé Niña Pack X7 Algodón Yamp</span>
-               <span class="gift-price">S/ 79.92 <span class='size-tag'>12 Meses</span></span>
-            </div>
-            <div class="gift-actions">
-               <a class="gift-btn" href="https://www.falabella.com.pe/falabella-pe/product/883615831/body-bebe-nina-pack-x7-algodon-yamp/883615834" target="_blank" rel="noopener noreferrer">Ver</a>
-               <a class="gift-btn-wa" href="https://wa.me/51900746481?text=¡Hola! He elegido regalar el Body Bebé Niña Pack X7 Algodón Yamp de la lista. 🎁" target="_blank" rel="noopener noreferrer">Reservar</a>
-            </div>
-         </div>
-         <div class="gift-item">
-            <div class="gift-info">
-               <span class="gift-name">Conjunto Bebé Niña 2 Piezas Algodón Carters</span>
-               <span class="gift-price">S/ 89.90 <span class='size-tag'>12 Meses</span></span>
-            </div>
-            <div class="gift-actions">
-               <a class="gift-btn" href="https://www.falabella.com.pe/falabella-pe/product/21135506/conjunto-bebe-nina-2-piezas-algodon-carters/21135507" target="_blank" rel="noopener noreferrer">Ver</a>
-               <a class="gift-btn-wa" href="https://wa.me/51900746481?text=¡Hola! He elegido regalar el Conjunto Bebé Niña 2 Piezas Algodón Carters de la lista. 🎁" target="_blank" rel="noopener noreferrer">Reservar</a>
-            </div>
-         </div>
-         <div class="gift-item">
-            <div class="gift-info">
-               <span class="gift-name">Conjunto Bebé Niña Algodón Yamp</span>
-               <span class="gift-price">S/ 69.90 <span class='size-tag'>12 Meses</span></span>
-            </div>
-            <div class="gift-actions">
-               <a class="gift-btn" href="https://www.falabella.com.pe/falabella-pe/product/883711227/conjunto-bebe-nina-algodon-yamp/883711228" target="_blank" rel="noopener noreferrer">Ver</a>
-               <a class="gift-btn-wa" href="https://wa.me/51900746481?text=¡Hola! He elegido regalar el Conjunto Bebé Niña Algodón Yamp de la lista. 🎁" target="_blank" rel="noopener noreferrer">Reservar</a>
-            </div>
-         </div>
-         <div class="gift-item">
-            <div class="gift-info">
-               <span class="gift-name">Conjunto Bebé Niña Coniglio</span>
-               <span class="gift-price">S/ 79.90 <span class='size-tag'>12 Meses</span></span>
-            </div>
-            <div class="gift-actions">
-               <a class="gift-btn" href="https://www.falabella.com.pe/falabella-pe/product/883707719/conjunto-bebe-nina-coniglio/883707722" target="_blank" rel="noopener noreferrer">Ver</a>
-               <a class="gift-btn-wa" href="https://wa.me/51900746481?text=¡Hola! He elegido regalar el Conjunto Bebé Niña Coniglio de la lista. 🎁" target="_blank" rel="noopener noreferrer">Reservar</a>
-            </div>
-         </div>
+    <div class="modal-filters">
+      <input type="text" id="gift-search" class="gift-search" placeholder="🔍 Buscar regalo...">
+      <div class="cat-pills" id="cat-pills">
+        <button class="cat-pill active" data-cat="">Todos</button>
+        <button class="cat-pill" data-cat="Lactancia y biberones">🍼 Lactancia</button>
+        <button class="cat-pill" data-cat="Pañales y toallitas">👶 Pañales</button>
+        <button class="cat-pill" data-cat="Ropa de bebé">👗 Ropa</button>
+        <button class="cat-pill" data-cat="Juguetes y estimulación">🧸 Juguetes</button>
+        <button class="cat-pill" data-cat="Baño e higiene">🛁 Baño</button>
+        <button class="cat-pill" data-cat="Paseo y transporte">🛒 Paseo</button>
+        <button class="cat-pill" data-cat="Dormitorio y descanso">🛏️ Descanso</button>
+        <button class="cat-pill" data-cat="Accesorios">✨ Accesorios</button>
       </div>
     </div>
+    <div class="modal-scroll" id="gift-container"></div>
   </div>
 </div>
 
@@ -1234,80 +602,251 @@ function tick(){
 tick();
 setInterval(tick,1000);
 
+const DB_URL = "https://baby-shower-fedfb-default-rtdb.firebaseio.com/gifts.json";
+const CAT_ICONS = {"Lactancia y biberones":"🍼","Pañales y toallitas":"👶","Ropa de bebé":"👗","Juguetes y estimulación":"🧸","Baño e higiene":"🛁","Paseo y transporte":"🛒","Dormitorio y descanso":"🛏️","Accesorios":"✨"};
+let reservedState = {};
+let activeFilter = '';
+let searchQuery = '';
+
+const GIFTS = [
+{id:2,name:"Biberón Philips Avent Natural 3.0 1M+",price:86.00,link:"https://inkafarma.pe/producto/biberon-philips-avent-natural-30-1m/073518",cat:"Lactancia y biberones"},
+{id:3,name:"Biberón Philips Avent Natural 3.0 3M+",price:68.90,link:"https://inkafarma.pe/producto/biberon-philips-avent-natural-30-3m/073517",cat:"Lactancia y biberones"},
+{id:4,name:"Coche Paseo Padua 2G",price:599.00,link:"https://infanti.com.pe/products/coche-paseo-padua-2g?variant=52785099407660",cat:"Paseo y transporte"},
+{id:5,name:"Silla de Comer Feed",price:244.30,link:"https://infanti.com.pe/products/b-005s-silla-de-comer-feed?variant=50394283770156",cat:"Paseo y transporte"},
+{id:6,name:"Extractor Electrico Simple Philips Avent",price:1109.00,link:"https://infanti.com.pe/collections/extractor-electrico/products/scf391-11-nuevo-extractor-electrico-simple-philips-avent",cat:"Lactancia y biberones"},
+{id:7,name:"Extractor de Leche Manual",price:269.00,link:"https://infanti.com.pe/collections/extractor-manual/products/scf430-01-extractor-de-leche-manual-le",cat:"Lactancia y biberones"},
+{id:8,name:"Sonaja Mordedora Caterpillar",price:29.00,link:"https://infanti.com.pe/collections/mordedores/products/10573-sonaja-mordedora-caterpillar",cat:"Juguetes y estimulación"},
+{id:9,name:"Bolsas Preesterilizadas X25 P/Leche Materna 6Oz",price:59.00,link:"https://infanti.com.pe/collections/accesorios-3/products/scf603-25-bolsas-preesterilizadas-x25-p-leche-materna-6oz-18",cat:"Lactancia y biberones"},
+{id:10,name:"Esterilizador Electrico Avanzado",price:749.00,link:"https://infanti.com.pe/collections/accesorios-3/products/scf291-00-esterilizador-electrico-avanzado",cat:"Lactancia y biberones"},
+{id:11,name:"Cuna Corral Bebé Tipo Colecho Priori Pro-Max",price:422.00,link:"https://www.falabella.com.pe/falabella-pe/product/143163170/Cuna-Corral-Bebe-Tipo-Colecho-Priori-Pro-Max-Negro/143163171",cat:"Dormitorio y descanso"},
+{id:12,name:"Colchón para Pack Play Snooze 104x67x9",price:299.00,link:"https://infanti.com.pe/collections/colchones-cojines-y-almohadas/products/colchon-para-pack-play-snooze-104x67x9",cat:"Dormitorio y descanso"},
+{id:13,name:"Móvil Take Along Tiny Princess Tales",price:99.00,link:"https://infanti.com.pe/collections/moviles-y-espantacuco/products/130550-movil-take-along-tiny-princess-tales",cat:"Juguetes y estimulación"},
+{id:14,name:"Juguete Bebé Koala Hora de Dormir",price:189.90,link:"https://infanti.com.pe/collections/moviles-y-espantacuco/products/13090-juguete-bebe-koala-hora-de-dormir",cat:"Juguetes y estimulación"},
+{id:15,name:"Pack x2 Sábanas Bajeras Colecho Flores",price:149.00,link:"https://infanti.com.pe/collections/ropa-de-cunas/products/pack-x2-sabanas-bajeras-colecho-mm-flores-blanco-cremoso",cat:"Dormitorio y descanso"},
+{id:16,name:"Bañera con Cambiador",price:479.90,link:"https://infanti.com.pe/collections/hora-de-bano/products/bb020-banera-c-cambiador",cat:"Baño e higiene"},
+{id:17,name:"Termómetro Para Baño Patito",price:29.00,link:"https://infanti.com.pe/collections/hora-de-bano/products/31001-termometro-para-bano-patito",cat:"Baño e higiene"},
+{id:18,name:"Silla Nido Animalitos Safari",price:219.90,link:"https://infanti.com.pe/collections/sillas-nido/products/6920-silla-nido-animalitos-safari",cat:"Paseo y transporte"},
+{id:19,name:"Gimnasio Musical Giggly Garden",price:159.20,link:"https://infanti.com.pe/collections/gimnasios-y-alfombras/products/gimnasio-musical-giggly-garden",cat:"Juguetes y estimulación"},
+{id:20,name:"Vestido Bebé Niña Algodón",price:89.90,link:"https://www.falabella.com.pe/falabella-pe/product/21461267/vestido-bebe-nina-algodon/21461268",cat:"Ropa de bebé"},
+{id:21,name:"Conjunto 3 Piezas Bebé Niña Algodón",price:109.90,link:"https://www.falabella.com.pe/falabella-pe/product/21461540/conjunto-3-piezas-bebe-nina-algodon/21461543",cat:"Ropa de bebé"},
+{id:22,name:"Conjunto Bebé Niña Yamp",price:63.92,link:"https://www.falabella.com.pe/falabella-pe/product/883710745/Conjunto-Bebe-Nina-Yamp/883710752",cat:"Ropa de bebé"},
+{id:23,name:"Vestido Bebé Niña Algodón Coniglio",price:79.90,link:"https://www.falabella.com.pe/falabella-pe/product/883712746/vestido-bebe-nina-algodon-coniglio/883712747",cat:"Ropa de bebé"},
+{id:24,name:"Bata Algodón Carters",price:89.90,link:"https://www.falabella.com.pe/falabella-pe/product/20993755/bata-algodon-carters/20993756",cat:"Ropa de bebé"},
+{id:25,name:"Pijama Bebé Niña",price:59.90,link:"https://www.falabella.com.pe/falabella-pe/product/21366142/pijama-bebe-nina/21366146",cat:"Ropa de bebé"},
+{id:26,name:"Enterizo Bebé Niña Algodón",price:59.90,link:"https://www.falabella.com.pe/falabella-pe/product/21461699/enterizo-bebe-nina-algodon/21461701",cat:"Ropa de bebé"},
+{id:28,name:"Recipiente Leche 180Ml X 10 Pcs + 2 Adaptadores",price:119.00,link:"https://infanti.com.pe/products/recipiente-leche-180ml-x-10-pcs-2-adaptadores",cat:"Lactancia y biberones"},
+{id:29,name:"Peluche de Apego Interactivo 2 en 1 Infanti",price:109.00,link:"https://infanti.com.pe/products/espantacuco-buoanannote-2-en-1-infanti",cat:"Juguetes y estimulación"},
+{id:30,name:"Móvil Take Along Meadow Days",price:99.00,link:"https://infanti.com.pe/products/130490-movil-take-along-meadow-days",cat:"Juguetes y estimulación"},
+{id:31,name:"Set de Juego Sensorial Bumble Bee",price:90.30,link:"https://infanti.com.pe/products/0188407-set-de-juego-sensorial-bumble-bee",cat:"Juguetes y estimulación"},
+{id:32,name:"Peluche Interactivo Lupe Llama",price:87.20,link:"https://infanti.com.pe/products/0189037-peluche-interactivo-lupe-llama",cat:"Juguetes y estimulación"},
+{id:33,name:"Bolsas Preesterilizadas X25 P/Leche Materna 6Oz",price:59.00,link:"https://infanti.com.pe/products/scf603-25-bolsas-preesterilizadas-x25-p-leche-materna-6oz-18",cat:"Lactancia y biberones"},
+{id:34,name:"Mochila Pañalera Emma Rosa",price:159.90,link:"https://infanti.com.pe/products/ca559609-03-mochila-panalera-emma-rosa",cat:"Paseo y transporte"},
+{id:35,name:"Set Alimentación de Silicona",price:129.90,link:"https://infanti.com.pe/products/set-alimentacion-de-silicona",cat:"Accesorios"},
+{id:36,name:"Silla Nido 3 En 1 Deluxe",price:328.30,link:"https://infanti.com.pe/products/08103-silla-nido-3-en-1-deluxe",cat:"Paseo y transporte"},
+{id:37,name:"Movil Take Along Tiny Rockers",price:99.00,link:"https://infanti.com.pe/products/movil-take-along-tiny-rockers",cat:"Juguetes y estimulación"},
+{id:38,name:"Set de Cortauñas para Bebé Ninet",price:14.90,link:"https://inkafarma.pe/producto/set-de-cortaunas-para-bebe-ninet/037884",cat:"Baño e higiene"},
+{id:39,name:"Aspirador Nasal Nuby",price:16.90,link:"https://www.mifarma.com.pe/producto/aspirador-nasal-nuby/973232",cat:"Baño e higiene"},
+{id:40,name:"Toallitas Húmedas Babysec Super Premium",price:60.00,link:"https://www.mifarma.com.pe/producto/pack-toallitas-humedas-babysec-super-premium/PACKMB46",cat:"Pañales y toallitas"},
+{id:41,name:"Almohada de Lactancia y Estimulación 5 en 1 Maternelle",price:159.90,link:"https://www.maternelle.pe/collections/almohadas-y-cojines/products/almohada-de-lactancia-y-estimulacion-5-en-1-maternelle-rosado-apego-cojin-de-lactancia-copia",cat:"Lactancia y biberones"},
+{id:42,name:"Cojín Antireflujo Maternelle Rosado Cometa",price:169.90,link:"https://www.maternelle.pe/collections/cojin-antireflujo/products/copia-de-cojin-antireflujo-rosado-vintage",cat:"Dormitorio y descanso"},
+{id:43,name:"Limador de Uñas Eléctrico para Bebé - Maternelle",price:89.90,link:"https://www.maternelle.pe/collections/accesorios-de-bano/products/limador-de-unas-electrico-para-bebe-rosaso-maternelle",cat:"Baño e higiene"},
+{id:44,name:"Tetina Natural Response 3.0 X2 Flow 3 - 1M+",price:49.00,link:"https://infanti.com.pe/collections/de-0-a-3-meses/products/tetina-natural-response-3-0-x2-flow-3-1m",cat:"Lactancia y biberones"},
+{id:45,name:"Esterilizador Microondas Avent",price:289.00,link:"https://infanti.com.pe/collections/de-0-a-3-meses/products/scf281-02-esterilizador-microondas-avent",cat:"Lactancia y biberones"},
+{id:46,name:"Body Bebé Niña Pack X7 Algodón Yamp",price:79.92,link:"https://www.falabella.com.pe/falabella-pe/product/883615831/body-bebe-nina-pack-x7-algodon-yamp/883615834",cat:"Ropa de bebé"},
+{id:47,name:"Conjunto Bebé Niña Algodón Yamp",price:59.90,link:"https://www.falabella.com.pe/falabella-pe/product/883711345/conjunto-bebe-nina-algodon-yamp/883711348",cat:"Ropa de bebé"},
+{id:48,name:"Conjunto Bebé Niña Algodón Yamp",price:69.90,link:"https://www.falabella.com.pe/falabella-pe/product/883711227/conjunto-bebe-nina-algodon-yamp/883711228",cat:"Ropa de bebé"},
+{id:49,name:"Conjunto Bebé Niña Algodón Yamp",price:55.92,link:"https://www.falabella.com.pe/falabella-pe/product/883708087/conjunto-bebe-nina-algodon-yamp/883708088",cat:"Ropa de bebé"},
+{id:50,name:"Conjunto Bebé Niña 3 Piezas Carters",price:129.90,link:"https://www.falabella.com.pe/falabella-pe/product/21088961/conjunto-bebe-nina-3-piezas-carters/21088967",cat:"Ropa de bebé"},
+{id:51,name:"Conjunto Bebé Niña 2 Piezas Algodón Carters",price:99.90,link:"https://www.falabella.com.pe/falabella-pe/product/20994242/conjunto-bebe-nina-2-piezas-algodon-carters/20994243",cat:"Ropa de bebé"},
+{id:52,name:"Conjunto Bebé Niña 3 Piezas Carters",price:119.90,link:"https://www.falabella.com.pe/falabella-pe/product/21088825/conjunto-bebe-nina-3-piezas-carters/21088830",cat:"Ropa de bebé"},
+{id:53,name:"Conjunto Bebé Niña Algodón Yamp",price:48.93,link:"https://www.falabella.com.pe/falabella-pe/product/883619311/conjunto-bebe-nina-algodon-yamp/883649515",cat:"Ropa de bebé"},
+{id:54,name:"Conjunto 2 Piezas Bebé Niña Carters",price:119.90,link:"https://www.falabella.com.pe/falabella-pe/product/21407666/conjunto-2-piezas-bebe-nina-carters/21407667",cat:"Ropa de bebé"},
+{id:55,name:"Conjunto Bebé Niña Coniglio",price:79.90,link:"https://www.falabella.com.pe/falabella-pe/product/883707719/conjunto-bebe-nina-coniglio/883707722",cat:"Ropa de bebé"},
+{id:56,name:"Conjunto Bebé Niña 2 Piezas Algodón Carters",price:89.90,link:"https://www.falabella.com.pe/falabella-pe/product/21135506/conjunto-bebe-nina-2-piezas-algodon-carters/21135507",cat:"Ropa de bebé"},
+{id:57,name:"Almohada de Lactancia Pre y Post Natal Focas Rosadas",price:249.90,link:"https://infanti.com.pe/products/almohada-de-lactancia-pre-y-post-natal-focas-rosadas",cat:"Lactancia y biberones"},
+{id:58,name:"Set Manicura Birdies Verde",price:144.90,link:"https://infanti.com.pe/collections/higiene-y-salud/products/8426420070249-set-manicura-birdies-verde-i2",cat:"Baño e higiene"},
+{id:59,name:"Set Cepillo y Peine Birdies Rosado",price:49.90,link:"https://infanti.com.pe/collections/higiene-y-salud/products/7726-set-cepiilo-y-peine-birdies-rosado",cat:"Baño e higiene"},
+{id:60,name:"Pack x2 Sábanas Colecho",price:119.90,link:"https://infanti.com.pe/collections/ropa-de-cunas/products/pack-x2-sabanas-colecho-monchito",cat:"Dormitorio y descanso"},
+{id:61,name:"Gimnasio Clip Clop con Música",price:149.94,link:"https://infanti.com.pe/collections/gimnasios-y-alfombras/products/0186991-gimnasio-clip-clop-con-musica",cat:"Juguetes y estimulación"},
+{id:62,name:"Pañal Babysec Super Premium RN",price:10.90,link:"https://inkafarma.pe/producto/panal-babysec-super-premiumtalla-recien-nacido/071886",cat:"Pañales y toallitas"},
+{id:63,name:"Pañal Babysec Super Premium RN",price:10.90,link:"https://inkafarma.pe/producto/panal-babysec-super-premiumtalla-recien-nacido/071886",cat:"Pañales y toallitas"},
+{id:64,name:"Pañal Babysec Super Premium RN",price:10.90,link:"https://inkafarma.pe/producto/panal-babysec-super-premiumtalla-recien-nacido/071886",cat:"Pañales y toallitas"},
+{id:65,name:"Pañal Babysec Super Premium RN",price:10.90,link:"https://inkafarma.pe/producto/panal-babysec-super-premiumtalla-recien-nacido/071886",cat:"Pañales y toallitas"},
+{id:66,name:"Pañal Babysec Super Premium RN",price:10.90,link:"https://inkafarma.pe/producto/panal-babysec-super-premiumtalla-recien-nacido/071886",cat:"Pañales y toallitas"},
+{id:67,name:"Pañales Babysec Super Premium P",price:34.00,link:"https://inkafarma.pe/producto/panales-babysec-super-premium-talla-p-56un/011515",cat:"Pañales y toallitas"},
+{id:68,name:"Pañales Babysec Super Premium P",price:34.00,link:"https://inkafarma.pe/producto/panales-babysec-super-premium-talla-p-56un/011515",cat:"Pañales y toallitas"},
+{id:69,name:"Pañales Babysec Super Premium P",price:34.00,link:"https://inkafarma.pe/producto/panales-babysec-super-premium-talla-p-56un/011515",cat:"Pañales y toallitas"},
+{id:70,name:"Pañales Babysec Super Premium P",price:34.00,link:"https://inkafarma.pe/producto/panales-babysec-super-premium-talla-p-56un/011515",cat:"Pañales y toallitas"},
+{id:71,name:"Pañales Babysec Super Premium P",price:34.00,link:"https://inkafarma.pe/producto/panales-babysec-super-premium-talla-p-56un/011515",cat:"Pañales y toallitas"},
+{id:72,name:"Pañales Babysec Super Premium Talla P",price:34.00,link:"https://inkafarma.pe/producto/panales-babysec-super-premium-talla-p-56un/011515",cat:"Pañales y toallitas"},
+{id:73,name:"Pañales Babysec Super Premium Talla P",price:34.00,link:"https://inkafarma.pe/producto/panales-babysec-super-premium-talla-p-56un/011515",cat:"Pañales y toallitas"},
+{id:74,name:"Pañales Babysec Super Premium Talla P",price:34.00,link:"https://inkafarma.pe/producto/panales-babysec-super-premium-talla-p-56un/011515",cat:"Pañales y toallitas"},
+{id:75,name:"Pañales Babysec Super Premium Talla P",price:34.00,link:"https://inkafarma.pe/producto/panales-babysec-super-premium-talla-p-56un/011515",cat:"Pañales y toallitas"},
+{id:76,name:"Pañal Babysec Super Premium M",price:39.50,link:"https://inkafarma.pe/producto/panal-babysec-super-premium-talla-m-58-un/035119",cat:"Pañales y toallitas"},
+{id:77,name:"Pañal Babysec Super Premium M",price:39.50,link:"https://inkafarma.pe/producto/panal-babysec-super-premium-talla-m-58-un/035119",cat:"Pañales y toallitas"},
+{id:78,name:"Pañal Babysec Super Premium M",price:39.50,link:"https://inkafarma.pe/producto/panal-babysec-super-premium-talla-m-58-un/035119",cat:"Pañales y toallitas"},
+{id:79,name:"Pañal Babysec Super Premium M",price:39.50,link:"https://inkafarma.pe/producto/panal-babysec-super-premium-talla-m-58-un/035119",cat:"Pañales y toallitas"},
+{id:80,name:"Pañal Babysec Super Premium M",price:39.50,link:"https://inkafarma.pe/producto/panal-babysec-super-premium-talla-m-58-un/035119",cat:"Pañales y toallitas"},
+{id:81,name:"Pañales Babysec Super Premium G",price:97.90,link:"https://inkafarma.pe/producto/pack-02-panales-babysec-packeton-premium-talla-g/PACKMB304",cat:"Pañales y toallitas"},
+{id:82,name:"Pañales Babysec Super Premium G",price:97.90,link:"https://inkafarma.pe/producto/pack-02-panales-babysec-packeton-premium-talla-g/PACKMB304",cat:"Pañales y toallitas"},
+{id:83,name:"Pañales Babysec Super Premium G",price:97.90,link:"https://inkafarma.pe/producto/pack-02-panales-babysec-packeton-premium-talla-g/PACKMB304",cat:"Pañales y toallitas"},
+{id:84,name:"Pañales Babysec Super Premium G",price:97.90,link:"https://inkafarma.pe/producto/pack-02-panales-babysec-packeton-premium-talla-g/PACKMB304",cat:"Pañales y toallitas"},
+{id:85,name:"Pañales Babysec Super Premium G",price:97.90,link:"https://inkafarma.pe/producto/pack-02-panales-babysec-packeton-premium-talla-g/PACKMB304",cat:"Pañales y toallitas"},
+{id:86,name:"Pañales Babysec Super Premium XG",price:88.90,link:"https://inkafarma.pe/producto/pack-02-panales-babysec-packeton-super-premium-xg/PACKMB185",cat:"Pañales y toallitas"},
+{id:87,name:"Pañales Babysec Super Premium XG",price:88.90,link:"https://inkafarma.pe/producto/pack-02-panales-babysec-packeton-super-premium-xg/PACKMB185",cat:"Pañales y toallitas"},
+{id:88,name:"Pañales Babysec Super Premium XG",price:88.90,link:"https://inkafarma.pe/producto/pack-02-panales-babysec-packeton-super-premium-xg/PACKMB185",cat:"Pañales y toallitas"},
+{id:89,name:"Pañales Babysec Super Premium XG",price:88.90,link:"https://inkafarma.pe/producto/pack-02-panales-babysec-packeton-super-premium-xg/PACKMB185",cat:"Pañales y toallitas"},
+{id:90,name:"Pañales Babysec Super Premium XG",price:88.90,link:"https://inkafarma.pe/producto/pack-02-panales-babysec-packeton-super-premium-xg/PACKMB185",cat:"Pañales y toallitas"},
+{id:91,name:"Pañales Babysec Super Premium XXG",price:88.00,link:"https://inkafarma.pe/producto/pack-02-panales-babysec-premium-talla-xxg-58-un/PACKMB186",cat:"Pañales y toallitas"},
+{id:92,name:"Pañales Babysec Super Premium XXG",price:88.00,link:"https://inkafarma.pe/producto/pack-02-panales-babysec-premium-talla-xxg-58-un/PACKMB186",cat:"Pañales y toallitas"},
+{id:93,name:"Pañales Babysec Super Premium XXG",price:88.00,link:"https://inkafarma.pe/producto/pack-02-panales-babysec-premium-talla-xxg-58-un/PACKMB186",cat:"Pañales y toallitas"},
+{id:94,name:"Pañales Babysec Super Premium XXG",price:88.00,link:"https://inkafarma.pe/producto/pack-02-panales-babysec-premium-talla-xxg-58-un/PACKMB186",cat:"Pañales y toallitas"},
+{id:95,name:"Pañales Babysec Super Premium XXG",price:88.00,link:"https://inkafarma.pe/producto/pack-02-panales-babysec-premium-talla-xxg-58-un/PACKMB186",cat:"Pañales y toallitas"},
+{id:96,name:"Pañales Babysec Super Premium XXXG",price:88.90,link:"https://inkafarma.pe/producto/pack-panales-babysec-super-premium-toalla-humeda-2/PACKMB297",cat:"Pañales y toallitas"},
+{id:97,name:"Pañales Babysec Super Premium XXXG",price:88.90,link:"https://inkafarma.pe/producto/pack-panales-babysec-super-premium-toalla-humeda-2/PACKMB297",cat:"Pañales y toallitas"},
+{id:98,name:"Pañales Babysec Super Premium XXXG",price:88.90,link:"https://inkafarma.pe/producto/pack-panales-babysec-super-premium-toalla-humeda-2/PACKMB297",cat:"Pañales y toallitas"},
+{id:99,name:"Pañales Babysec Super Premium XXXG",price:88.90,link:"https://inkafarma.pe/producto/pack-panales-babysec-super-premium-toalla-humeda-2/PACKMB297",cat:"Pañales y toallitas"},
+{id:100,name:"Pañales Babysec Super Premium XXXG",price:88.90,link:"https://inkafarma.pe/producto/pack-panales-babysec-super-premium-toalla-humeda-2/PACKMB297",cat:"Pañales y toallitas"},
+{id:101,name:"Toallitas Húmedas Babysec Super Premium",price:60.00,link:"https://www.mifarma.com.pe/producto/pack-toallitas-humedas-babysec-super-premium/PACKMB46",cat:"Pañales y toallitas"},
+{id:102,name:"Toallitas Húmedas Babysec Super Premium",price:60.00,link:"https://www.mifarma.com.pe/producto/pack-toallitas-humedas-babysec-super-premium/PACKMB46",cat:"Pañales y toallitas"},
+{id:103,name:"Toallitas Húmedas Babysec Super Premium",price:60.00,link:"https://www.mifarma.com.pe/producto/pack-toallitas-humedas-babysec-super-premium/PACKMB46",cat:"Pañales y toallitas"},
+{id:104,name:"Toallitas Húmedas Babysec Super Premium",price:60.00,link:"https://www.mifarma.com.pe/producto/pack-toallitas-humedas-babysec-super-premium/PACKMB46",cat:"Pañales y toallitas"},
+{id:105,name:"Toallitas Húmedas Babysec Super Premium",price:60.00,link:"https://www.mifarma.com.pe/producto/pack-toallitas-humedas-babysec-super-premium/PACKMB46",cat:"Pañales y toallitas"}
+];
+
+function escHtml(s) {
+  return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+
+function renderGifts() {
+  const container = document.getElementById('gift-container');
+  const filtered = GIFTS.filter(g =>
+    (!searchQuery || g.name.toLowerCase().includes(searchQuery)) &&
+    (!activeFilter || g.cat === activeFilter)
+  );
+  if (!filtered.length) {
+    container.innerHTML = '<p class="gift-empty">No se encontraron regalos 🌸</p>';
+    return;
+  }
+  const byCat = {};
+  filtered.forEach(g => { if (!byCat[g.cat]) byCat[g.cat] = []; byCat[g.cat].push(g); });
+  container.innerHTML = Object.entries(byCat).map(([cat, gifts]) =>
+    `<h3 class="cat-title">${CAT_ICONS[cat]||'🎁'} ${cat}</h3>
+    <div class="gift-list">${gifts.map(g => {
+      const res = reservedState[g.id - 1];
+      return `<div class="gift-item${res?' comprado':''}" data-gid="${g.id}">
+        <div class="gift-info">
+          <span class="gift-num">#${g.id}</span>
+          <span class="gift-name">${escHtml(g.name)}</span>
+          <span class="gift-price">S/ ${g.price.toFixed(2)}</span>
+        </div>
+        <div class="gift-actions">
+          <a class="gift-btn" href="${g.link}" target="_blank" rel="noopener noreferrer">Ver</a>
+          <button class="gift-btn-wa btn-reservar" data-gid="${g.id}">Reservar</button>
+        </div>
+      </div>`;
+    }).join('')}</div>`
+  ).join('');
+  document.querySelectorAll('.btn-reservar').forEach(btn => {
+    btn.addEventListener('click', async () => {
+      const gid = parseInt(btn.dataset.gid);
+      const gift = GIFTS.find(g => g.id === gid);
+      const itemEl = btn.closest('.gift-item');
+      itemEl.style.opacity = '.5';
+      try {
+        const res = await fetch(DB_URL);
+        const data = await res.json() || {};
+        if (data[gid - 1]) {
+          alert('¡Este regalo ya fue reservado! Por favor elige otro.');
+          itemEl.classList.add('comprado');
+          reservedState[gid - 1] = true;
+          itemEl.style.opacity = '';
+          return;
+        }
+        await fetch(DB_URL, { method: 'PATCH', body: JSON.stringify({ [gid - 1]: true }) });
+        itemEl.classList.add('comprado');
+        reservedState[gid - 1] = true;
+        itemEl.style.opacity = '';
+        const msg = encodeURIComponent(`¡Hola, Génesis! Quiero reservar el regalo #${gid}: ${gift.name}. 🎁`);
+        window.open(`https://wa.me/51900746481?text=${msg}`, '_blank');
+      } catch(err) {
+        alert('Error de conexión. Inténtalo de nuevo.');
+        itemEl.style.opacity = '';
+      }
+    });
+  });
+}
+
 const btnLista = document.getElementById('btn-lista');
 const modalRegalos = document.getElementById('modal-regalos');
 const btnCerrarLista = document.getElementById('btn-cerrar-lista');
-const DB_URL = "https://baby-shower-fedfb-default-rtdb.firebaseio.com/gifts.json";
 
-// Abrir modal y consultar base de datos
 btnLista.addEventListener('click', async e => {
   e.preventDefault();
   modalRegalos.classList.add('show');
-  
   try {
     const res = await fetch(DB_URL);
-    const data = await (res.json()) || {};
-    const items = document.querySelectorAll('.gift-item');
-    items.forEach((item, idx) => {
-      if (data[idx]) {
-        item.classList.add('comprado');
-      } else {
-        item.classList.remove('comprado');
-      }
-    });
-  } catch(e) { console.error('Error DB', e); }
+    reservedState = await res.json() || {};
+  } catch(e) { reservedState = {}; }
+  renderGifts();
 });
 
-btnCerrarLista.addEventListener('click', () => {
-  modalRegalos.classList.remove('show');
+btnCerrarLista.addEventListener('click', () => modalRegalos.classList.remove('show'));
+modalRegalos.addEventListener('click', e => { if (e.target === modalRegalos) modalRegalos.classList.remove('show'); });
+
+document.getElementById('gift-search').addEventListener('input', e => {
+  searchQuery = e.target.value.toLowerCase();
+  renderGifts();
 });
 
-modalRegalos.addEventListener('click', e => {
-  if (e.target === modalRegalos) {
-    modalRegalos.classList.remove('show');
-  }
+document.getElementById('cat-pills').addEventListener('click', e => {
+  const pill = e.target.closest('.cat-pill');
+  if (!pill) return;
+  document.querySelectorAll('.cat-pill').forEach(p => p.classList.remove('active'));
+  pill.classList.add('active');
+  activeFilter = pill.dataset.cat;
+  renderGifts();
 });
 
-// Lógica de los botones Reservar
-const waBtns = document.querySelectorAll('.gift-btn-wa');
-waBtns.forEach((btn, idx) => {
-  btn.addEventListener('click', async e => {
-    e.preventDefault();
-    const waLink = btn.href;
-    const itemEl = btn.closest('.gift-item');
-    
-    // Check if already reserved
-    itemEl.style.opacity = '0.5'; 
-    try {
-      const res = await fetch(DB_URL);
-      const data = await (res.json()) || {};
-      
-      if (data[idx]) {
-        alert("¡Ups! Alguien acaba de reservar este regalo hace un momento. Por favor elige otro de la lista.");
-        itemEl.classList.add('comprado');
-        itemEl.style.opacity = '';
-        return;
-      }
-      
-      // Marcar como reservado en BD
-      await fetch(DB_URL, {
-        method: 'PATCH',
-        body: JSON.stringify({ [idx]: true })
-      });
-      
-      itemEl.classList.add('comprado');
-      itemEl.style.opacity = '';
-      
-      // Abrir WhatsApp
-      window.open(waLink, '_blank');
-      
-    } catch(err) {
-      alert("Hubo un error de conexión. Inténtalo de nuevo.");
-      itemEl.style.opacity = '';
+const YAPE_NUM = "944038550";
+const YAPE_NUM_DISPLAY = "944 038 550";
+
+function isRealMobileDevice() {
+  const ua = navigator.userAgent || navigator.vendor || window.opera;
+  const isMobileUA = /android|iphone|ipad|ipod/i.test(ua);
+  const hasTouch = navigator.maxTouchPoints > 1;
+  return isMobileUA && hasTouch;
+}
+
+function showToast(msg) {
+  const toast = document.getElementById('yape-toast');
+  toast.textContent = msg;
+  toast.classList.add('visible');
+  clearTimeout(showToast._timer);
+  showToast._timer = setTimeout(() => toast.classList.remove('visible'), 4000);
+}
+
+// Adaptar texto del botón según dispositivo
+const btnYape = document.querySelector('.btn-yape');
+if (btnYape && !isRealMobileDevice()) {
+  btnYape.textContent = '📱 Copiar número';
+}
+
+async function handleYapeClick() {
+  try {
+    await navigator.clipboard.writeText(YAPE_NUM);
+    showToast("✓ Número copiado. Pégalo en Yape para continuar.");
+
+    if (isRealMobileDevice()) {
+      setTimeout(() => { window.location.href = "yape://"; }, 500);
     }
-  });
-});
+  } catch (err) {
+    showToast("No se pudo copiar. Usa este número: " + YAPE_NUM_DISPLAY);
+  }
+}
 
 </script>
+
+<div class="yape-toast" id="yape-toast" role="status" aria-live="polite"></div>
 </body>
 </html>
