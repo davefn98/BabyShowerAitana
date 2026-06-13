@@ -331,12 +331,13 @@ body{font-family:'Cormorant Garamond',serif;background:url('bg_image.jpg') repea
 .gift-item { position: relative; }
 .gift-actions { display: flex; gap: 6px; align-items: center; }
 .gift-btn-wa {
-  background: linear-gradient(135deg, #a8e0b3, #4caf50);
-  color: white; font-size: 12px; font-weight: 600; text-decoration: none;
-  padding: 6px 14px; border-radius: 20px; box-shadow: 0 3px 10px rgba(76, 175, 80, 0.2); white-space: nowrap; font-family: 'Quicksand', sans-serif;
-  text-align: center; transition: transform 0.2s;
+  background: linear-gradient(135deg, #c3ddb8, #8ab87a);
+  color: white; font-size: 12px; font-weight: 600;
+  padding: 6px 14px; border-radius: 20px; border: none;
+  box-shadow: 0 2px 8px rgba(130,180,110,.2); white-space: nowrap; font-family: 'Quicksand', sans-serif;
+  text-align: center; transition: all .2s; cursor: pointer;
 }
-.gift-btn-wa:hover { transform: translateY(-2px); }
+.gift-btn-wa:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(130,180,110,.3); }
 .gift-item.comprado {
   opacity: 0.6; background: #fdfdfd; filter: grayscale(90%);
 }
@@ -736,7 +737,6 @@ function renderGifts() {
       const res = reservedState[g.id - 1];
       return `<div class="gift-item${res?' comprado':''}" data-gid="${g.id}">
         <div class="gift-info">
-          <span class="gift-num">#${g.id}</span>
           <span class="gift-name">${escHtml(g.name)}</span>
           <span class="gift-price">S/ ${g.price.toFixed(2)}</span>
         </div>
