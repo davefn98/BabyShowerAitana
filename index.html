@@ -470,7 +470,8 @@ body{font-family:'Cormorant Garamond',serif;background:url('bg_image.jpg') repea
   letter-spacing: 1px;
   font-family: 'Quicksand', sans-serif;
   margin: 0 auto 14px;
-  cursor: pointer;
+  cursor: default;
+  user-select: text;
 }
 .btn-yape {
   display: inline-flex; align-items: center; gap: 6px;
@@ -623,9 +624,9 @@ body{font-family:'Cormorant Garamond',serif;background:url('bg_image.jpg') repea
         <img src="yape_qr.png" alt="QR Yape">
       </div>
     </div>
-    <p class="yape-num" onclick="handleYapeClick()">📱 944 038 550</p>
+    <p class="yape-num">📱 944 038 550</p>
     <div class="btn-wrap">
-      <button class="btn-yape" onclick="handleYapeClick()">📱 Copiar número de Yape</button>
+      <button class="btn-yape" onclick="copyYapeNumber()">📱 Copiar número de Yape</button>
     </div>
   </div>
 
@@ -984,19 +985,15 @@ function showToast(msg) {
   showToast._timer = setTimeout(() => toast.classList.remove('visible'), 4000);
 }
 
-// Adaptar texto del botón según dispositivo
-const btnYape = document.querySelector('.btn-yape');
-if (btnYape && !isRealMobileDevice()) {
-  btnYape.textContent = '📱 Copiar Yape';
-}
-
-async function handleYapeClick() {
+async function copyYapeNumber() {
+  const btn = document.querySelector('.btn-yape');
   try {
     await navigator.clipboard.writeText(YAPE_NUM);
-    showToast("✓ Número copiado. Pégalo en Yape para continuar.");
-
-    if (isRealMobileDevice()) {
-      setTimeout(() => { window.location.href = "yape://"; }, 500);
+    showToast("✓ ¡Número copiado!");
+    if (btn) {
+      const original = btn.textContent;
+      btn.textContent = '✓ ¡Número copiado!';
+      setTimeout(() => { btn.textContent = original; }, 2000);
     }
   } catch (err) {
     showToast("No se pudo copiar. Usa este número: " + YAPE_NUM_DISPLAY);
