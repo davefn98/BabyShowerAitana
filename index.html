@@ -236,24 +236,22 @@ body{font-family:'Cormorant Garamond',serif;background:url('bg_image.jpg') repea
 .btn-wp{flex:1;min-width:130px;max-width:160px;display:inline-flex;align-items:center;justify-content:center;gap:6px;background:linear-gradient(135deg,#e4b5c1,#d8829d);color:white;font-family:'Cormorant Garamond',serif;font-size:15px;font-weight:600;font-style:italic;padding:11px 14px;border-radius:50px;text-decoration:none;box-shadow:0 5px 16px rgba(216,130,157,.25);transition:all .3s ease;text-align:center}
 .btn-wp:hover{transform:translateY(-3px);box-shadow:0 8px 25px rgba(216,130,157,.35)}
 /* FOOTER */
-/* .footer{padding:30px 20px 0} */
-.footer{ padding: 30px 20px 90px;
-  min-height: 220px;}
-/* .te-esp{font-family:'Allura',cursive;font-size:68px;background:linear-gradient(135deg,var(--color-primary),var(--color-primary-light));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;display:block;margin-bottom:20px} */
+/* FOOTER */
+.footer{ padding: 24px 16px 36px; }
 .te-esp{
   font-family:'Playfair Display', serif;
-  font-size:48px;
+  font-size:36px;
   font-style:italic;
   font-weight:700;
   color:var(--color-primary-light);
   text-align:center;
   line-height:1.1;
-  margin: 20px 0 30px;
-  margin-bottom: 28px;
+  margin: 8px 0 0;
 }
-.bals{display:flex;justify-content:center;gap:10px;margin-top: 18px;}
-.bal{width:26px;height:34px;border-radius:50% 50% 50% 50%/60% 60% 40% 40%;position:relative;animation:float 3s ease-in-out infinite}
-.bal::after{content:'';position:absolute;bottom:-10px;left:50%;transform:translateX(-50%);width:1px;height:12px;background:#ccc}
+.bals{display:flex;justify-content:center;gap:9px;margin-top:12px;}
+.bal{width:22px;height:30px;border-radius:50% 50% 50% 50%/60% 60% 40% 40%;position:relative;animation:float 3s ease-in-out infinite}
+.bal::after{content:'';position:absolute;bottom:-8px;left:50%;transform:translateX(-50%);width:1px;height:10px;background:#ccc}
+@media(max-width:420px){.footer{padding:20px 14px 30px}.te-esp{font-size:32px}.bals{gap:8px;margin-top:10px}.bal{width:20px;height:27px}}
 .b1{background:#aecfe8;animation-delay:0s}.b2{background:#d4b896;animation-delay:.3s}.b3{background:#f4a8c0;animation-delay:.6s}.b4{background:#aecfe8;animation-delay:.9s}.b5{background:#d4b896;animation-delay:.15s}
 @media(max-width:380px){.baby-word{font-size:62px}.nombre{font-size:60px}.dia{font-size:70px}.te-esp{font-size:54px}.btns{flex-direction:column;align-items:center}}
 
@@ -308,36 +306,49 @@ body{font-family:'Cormorant Garamond',serif;background:url('bg_image.jpg') repea
   display: flex; flex-direction: column; gap: 10px;
 }
 .gift-item {
-  background: white; border-radius: 12px; padding: 12px;
-  display: flex; align-items: center; justify-content: space-between; gap: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  background: white; border-radius: 14px; padding: 14px 14px;
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04); position: relative;
 }
 .gift-info {
-  display: flex; flex-direction: column; gap: 4px; flex: 1;
+  flex: 1; min-width: 0;
+  display: flex; flex-direction: column; align-items: flex-start; gap: 5px;
 }
 .gift-name {
-  font-size: 13px; font-weight: 600; color: var(--color-brown); line-height: 1.3;
+  display: block; width: 100%;
+  font-size: 13px; font-weight: 600; color: var(--color-brown);
+  line-height: 1.35; text-align: left !important;
+  overflow: hidden; max-height: 2.7em;
 }
 .gift-price {
-  font-size: 13px; color: var(--color-gold); font-weight: 700; font-family: 'Quicksand', sans-serif;
+  display: block; width: 100%;
+  font-size: 15px; color: var(--color-gold); font-weight: 700;
+  font-family: 'Quicksand', sans-serif; text-align: left !important;
+}
+.gift-actions {
+  display: flex; align-items: center; justify-content: flex-end;
+  gap: 7px; flex-shrink: 0;
 }
 .gift-btn {
   background: linear-gradient(135deg, #e4b5c1, #d8829d);
   color: white; font-size: 12px; font-weight: 600; text-decoration: none;
-  padding: 6px 14px; border-radius: 20px; box-shadow: 0 3px 10px rgba(216, 130, 157, 0.2); white-space: nowrap; font-family: 'Quicksand', sans-serif;
+  padding: 7px 13px; border-radius: 999px;
+  box-shadow: 0 3px 10px rgba(216,130,157,0.2); white-space: nowrap;
+  font-family: 'Quicksand', sans-serif;
 }
-
-
-.gift-item { position: relative; }
-.gift-actions { display: flex; gap: 6px; align-items: center; }
 .gift-btn-wa {
   background: linear-gradient(135deg, #c3ddb8, #8ab87a);
   color: white; font-size: 12px; font-weight: 600;
-  padding: 6px 14px; border-radius: 20px; border: none;
-  box-shadow: 0 2px 8px rgba(130,180,110,.2); white-space: nowrap; font-family: 'Quicksand', sans-serif;
-  text-align: center; transition: all .2s; cursor: pointer;
+  padding: 7px 13px; border-radius: 999px; border: none;
+  box-shadow: 0 2px 8px rgba(130,180,110,.2); white-space: nowrap;
+  font-family: 'Quicksand', sans-serif; transition: all .2s; cursor: pointer;
 }
 .gift-btn-wa:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(130,180,110,.3); }
+@media (max-width: 420px) {
+  .gift-item { padding: 12px; gap: 10px; }
+  .gift-btn, .gift-btn-wa { padding: 6px 10px; font-size: 11px; }
+  .gift-name { font-size: 12.5px; }
+}
 .gift-item.comprado {
   opacity: 0.6; background: #fdfdfd; filter: grayscale(90%);
 }
@@ -359,39 +370,118 @@ body{font-family:'Cormorant Garamond',serif;background:url('bg_image.jpg') repea
 .thumb-paseo { background: #fff0db; border: 1px solid #ffe1bf; }
 .thumb-juguete { background: #e8fce8; border: 1px solid #ccf5cc; }
 .thumb-ropa { background: #fce8f8; border: 1px solid #fbd0f2; }
-.size-tag {
-  font-size: 10px; background: var(--color-rose); color: var(--color-brown);
-  padding: 3px 7px; border-radius: 6px; margin-left: 6px; font-weight: 700;
-  text-transform: uppercase; letter-spacing: 0.5px;
+.size-badge {
+  display: inline-flex; align-items: center; width: fit-content;
+  padding: 3px 10px; border-radius: 999px;
+  background: #f4dce4; color: #8a5b67;
+  font-size: 11px; font-weight: 600; line-height: 1;
+  white-space: nowrap; font-family: 'Quicksand', sans-serif;
 }
 
-.yape-qr {
-  width: 180px;
+#modal-confirmar {
+  display: none; position: fixed; inset: 0; z-index: 9999;
+  background: rgba(0,0,0,0.45);
+  align-items: center; justify-content: center; padding: 20px;
+}
+#modal-confirmar.show { display: flex; }
+.confirmar-card {
+  background: white; border-radius: 20px; padding: 28px 24px;
+  max-width: 320px; width: 100%;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+}
+.confirmar-titulo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px; font-weight: 700; color: var(--color-brown);
+  margin: 0 0 4px; text-align: center;
+}
+.confirmar-subtitulo {
+  font-size: 13px; color: var(--color-brown-light);
+  margin: 0 0 16px; font-family: 'Quicksand', sans-serif; text-align: center;
+}
+.confirmar-detalle {
+  background: #fdf6f9; border-radius: 12px; padding: 14px 16px;
+  margin-bottom: 20px; display: flex; flex-direction: column; gap: 6px;
+}
+.confirmar-detalle-nombre {
+  font-size: 13px; font-weight: 600; color: var(--color-brown);
+  margin: 0; line-height: 1.3; text-align: left;
+}
+.confirmar-detalle-talla {
+  display: none; align-items: center; width: fit-content;
+  padding: 3px 10px; border-radius: 999px;
+  background: #f4dce4; color: #8a5b67;
+  font-size: 11px; font-weight: 600; line-height: 1; white-space: nowrap;
+}
+.confirmar-detalle-precio {
+  font-size: 15px; font-weight: 700; color: var(--color-gold);
+  margin: 0; font-family: 'Quicksand', sans-serif; text-align: left;
+}
+.confirmar-botones {
+  display: flex; gap: 10px;
+}
+.btn-conf-cancelar {
+  flex: 1; padding: 10px 16px; border-radius: 999px;
+  background: #f4e4ec; color: #8a5b67;
+  font-size: 13px; font-weight: 600; border: none; cursor: pointer;
+  font-family: 'Quicksand', sans-serif; transition: background .2s;
+}
+.btn-conf-cancelar:hover { background: #ebd5e3; }
+.btn-conf-ok {
+  flex: 1; padding: 10px 16px; border-radius: 999px;
+  background: linear-gradient(135deg, #c3ddb8, #8ab87a);
+  color: white; font-size: 13px; font-weight: 600;
+  border: none; cursor: pointer; font-family: 'Quicksand', sans-serif;
+  box-shadow: 0 3px 12px rgba(130,180,110,.3); transition: all .2s;
+}
+.btn-conf-ok:hover { transform: translateY(-1px); box-shadow: 0 5px 16px rgba(130,180,110,.4); }
+
+.yape-content {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 8px 0 14px;
+}
+.yape-qr-card {
+  width: 164px;
+  max-width: 62vw;
+  padding: 16px 14px;
   border-radius: 16px;
-  margin: 12px auto 8px;
+  background: #76258c;
+  box-shadow: 0 10px 28px rgba(118,37,140,.22);
+}
+.yape-qr-card img {
+  width: 100%;
+  height: auto;
   display: block;
-  box-shadow: 0 4px 18px rgba(0,0,0,0.12);
+  border-radius: 4px;
 }
 .yape-num {
-  text-align: center;
-  font-family: 'Quicksand', sans-serif;
-  font-size: 1.2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 8px 18px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.75);
+  color: #df7d9d;
+  font-size: 18px;
   font-weight: 700;
-  color: var(--color-primary);
-  letter-spacing: 0.05em;
-  margin: 4px 0 0;
+  letter-spacing: 1px;
+  font-family: 'Quicksand', sans-serif;
+  margin: 0 auto 14px;
   cursor: pointer;
 }
 .btn-yape {
-  display: inline-flex; align-items: center; gap: 8px;
-  background: linear-gradient(135deg, #e4b5c1, #d8829d);
-  color: white; font-family: 'Cormorant Garamond', serif;
-  font-size: 15px; font-weight: 600; font-style: italic;
-  padding: 12px 24px; border-radius: 50px; border: none;
-  box-shadow: 0 5px 16px rgba(216,130,157,.25);
-  cursor: pointer; transition: all .3s ease; margin-top: 10px;
+  display: inline-flex; align-items: center; gap: 6px;
+  background: #e69ab3;
+  color: white; font-family: 'Quicksand', sans-serif;
+  font-size: 13px; font-weight: 700;
+  padding: 11px 22px; border-radius: 999px; border: none;
+  box-shadow: 0 6px 18px rgba(223,125,157,.25);
+  cursor: pointer; transition: all .3s ease;
 }
-.btn-yape:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(216,130,157,.35); }
+.btn-yape:hover { transform: translateY(-1px); box-shadow: 0 10px 22px rgba(223,125,157,.32); }
 .yape-toast {
   position: fixed;
   bottom: 24px;
@@ -435,8 +525,9 @@ body{font-family:'Cormorant Garamond',serif;background:url('bg_image.jpg') repea
 .ev-dia-wrap{display:flex;align-items:center;justify-content:center;gap:10px}
 .ev-deco-panal{width:46px;height:auto;object-fit:contain;opacity:.88;flex-shrink:0;filter:drop-shadow(1px 2px 4px rgba(0,0,0,.07))}
 .ev-deco-abeja{width:52px;height:auto;object-fit:contain;opacity:.88;flex-shrink:0;filter:drop-shadow(1px 2px 4px rgba(0,0,0,.07))}
-.yape-deco{position:absolute;left:4%;top:30%;width:82px;height:auto;object-fit:contain;opacity:.8;filter:drop-shadow(1px 3px 6px rgba(0,0,0,.07));pointer-events:none}
-@media(max-width:380px){.ev-deco-panal{width:36px}.ev-deco-abeja{width:42px}.yape-deco{width:64px}}
+.yape-deco{position:absolute;left:16px;top:50%;transform:translateY(-50%);width:72px;max-width:20vw;height:auto;object-fit:contain;opacity:.9;filter:drop-shadow(1px 3px 6px rgba(0,0,0,.07));pointer-events:none}
+@media(max-width:380px){.ev-deco-panal{width:36px}.ev-deco-abeja{width:42px}.yape-deco{left:8px;width:58px}}
+@media(max-width:420px){.yape-qr-card{width:148px;padding:14px 12px}.yape-num{font-size:16px;padding:7px 14px}.btn-yape{font-size:12.5px;padding:10px 18px}}
 
 .modal-filters{padding:0 20px 10px}
 .gift-search{width:100%;padding:9px 14px;border:1.5px solid var(--color-rose);border-radius:20px;font-family:'Quicksand',sans-serif;font-size:14px;color:var(--color-brown);background:rgba(255,255,255,.8);outline:none;margin-bottom:10px;box-sizing:border-box}
@@ -472,7 +563,7 @@ body{font-family:'Cormorant Garamond',serif;background:url('bg_image.jpg') repea
     <span class="ev-mes">Julio 2026</span>
     <div class="ev-dia-wrap">
       <img class="ev-deco-panal" src="panal.png" alt="">
-      <span class="ev-dia-grande">18</span>
+      <span class="ev-dia-grande">17</span>
       <img class="ev-deco-abeja" src="abeja.png" alt="">
     </div>
     <span class="ev-dow-hora">Sábado &middot; 6:00 PM</span>
@@ -524,13 +615,17 @@ body{font-family:'Cormorant Garamond',serif;background:url('bg_image.jpg') repea
   </div>
 
   <div class="card s">
-    <img class="yape-deco" src="Pooh de Espalda.png" alt="">
-    <span class="confirm-label">💛 ¿Prefieres un regalo en efectivo? 💛</span>
-    <p class="regalo-txt">Escanea el QR o copia el número para yapear.</p>
-    <img class="yape-qr" src="yape_qr.png" alt="QR Yape David">
+    <span class="confirm-label">💛 También puedes regalar por Yape 💛</span>
+    <p class="regalo-txt">Escanea el QR o copia el número.</p>
+    <div class="yape-content">
+      <img class="yape-deco" src="Pooh de Espalda.png" alt="">
+      <div class="yape-qr-card">
+        <img src="yape_qr.png" alt="QR Yape">
+      </div>
+    </div>
     <p class="yape-num" onclick="handleYapeClick()">📱 944 038 550</p>
     <div class="btn-wrap">
-      <button class="btn-yape" onclick="handleYapeClick()">📱 Copiar número y abrir Yape</button>
+      <button class="btn-yape" onclick="handleYapeClick()">📱 Copiar número de Yape</button>
     </div>
   </div>
 
@@ -567,11 +662,27 @@ body{font-family:'Cormorant Garamond',serif;background:url('bg_image.jpg') repea
   </div>
 </div>
 
+<div id="modal-confirmar">
+  <div class="confirmar-card">
+    <p class="confirmar-titulo">Confirmar reserva</p>
+    <p class="confirmar-subtitulo">¿Deseas reservar este regalo?</p>
+    <div class="confirmar-detalle">
+      <p class="confirmar-detalle-nombre" id="conf-nombre"></p>
+      <div class="confirmar-detalle-talla" id="conf-talla"></div>
+      <p class="confirmar-detalle-precio" id="conf-precio"></p>
+    </div>
+    <div class="confirmar-botones">
+      <button class="btn-conf-cancelar" id="btn-conf-cancelar">Cancelar</button>
+      <button class="btn-conf-ok" id="btn-conf-ok">Sí, reservar</button>
+    </div>
+  </div>
+</div>
+
 </div>
 <script>
 const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('on')}),{threshold:.1});
 document.querySelectorAll('.s').forEach(el=>obs.observe(el));
-const ev = new Date("2026-07-18T18:00:00-05:00").getTime();
+const ev = new Date("2026-07-17T18:00:00-05:00").getTime();
 
 const elD = document.getElementById('cd-d');
 const elH = document.getElementById('cd-h');
@@ -628,13 +739,13 @@ const GIFTS = [
 {id:17,name:"Termómetro Para Baño Patito",price:29.00,link:"https://infanti.com.pe/collections/hora-de-bano/products/31001-termometro-para-bano-patito",cat:"Baño e higiene"},
 {id:18,name:"Silla Nido Animalitos Safari",price:219.90,link:"https://infanti.com.pe/collections/sillas-nido/products/6920-silla-nido-animalitos-safari",cat:"Paseo y transporte"},
 {id:19,name:"Gimnasio Musical Giggly Garden",price:159.20,link:"https://infanti.com.pe/collections/gimnasios-y-alfombras/products/gimnasio-musical-giggly-garden",cat:"Juguetes y estimulación"},
-{id:20,name:"Vestido Bebé Niña Algodón",price:89.90,link:"https://www.falabella.com.pe/falabella-pe/product/21461267/vestido-bebe-nina-algodon/21461268",cat:"Ropa de bebé"},
-{id:21,name:"Conjunto 3 Piezas Bebé Niña Algodón",price:109.90,link:"https://www.falabella.com.pe/falabella-pe/product/21461540/conjunto-3-piezas-bebe-nina-algodon/21461543",cat:"Ropa de bebé"},
-{id:22,name:"Conjunto Bebé Niña Yamp",price:63.92,link:"https://www.falabella.com.pe/falabella-pe/product/883710745/Conjunto-Bebe-Nina-Yamp/883710752",cat:"Ropa de bebé"},
-{id:23,name:"Vestido Bebé Niña Algodón Coniglio",price:79.90,link:"https://www.falabella.com.pe/falabella-pe/product/883712746/vestido-bebe-nina-algodon-coniglio/883712747",cat:"Ropa de bebé"},
-{id:24,name:"Bata Algodón Carters",price:89.90,link:"https://www.falabella.com.pe/falabella-pe/product/20993755/bata-algodon-carters/20993756",cat:"Ropa de bebé"},
-{id:25,name:"Pijama Bebé Niña",price:59.90,link:"https://www.falabella.com.pe/falabella-pe/product/21366142/pijama-bebe-nina/21366146",cat:"Ropa de bebé"},
-{id:26,name:"Enterizo Bebé Niña Algodón",price:59.90,link:"https://www.falabella.com.pe/falabella-pe/product/21461699/enterizo-bebe-nina-algodon/21461701",cat:"Ropa de bebé"},
+{id:20,name:"Vestido Bebé Niña Algodón",price:89.90,link:"https://www.falabella.com.pe/falabella-pe/product/21461267/vestido-bebe-nina-algodon/21461268",cat:"Ropa de bebé",size:"0-3 meses"},
+{id:21,name:"Conjunto 3 Piezas Bebé Niña Algodón",price:109.90,link:"https://www.falabella.com.pe/falabella-pe/product/21461540/conjunto-3-piezas-bebe-nina-algodon/21461543",cat:"Ropa de bebé",size:"3-6 meses"},
+{id:22,name:"Conjunto Bebé Niña Yamp",price:63.92,link:"https://www.falabella.com.pe/falabella-pe/product/883710745/Conjunto-Bebe-Nina-Yamp/883710752",cat:"Ropa de bebé",size:"9-12 meses"},
+{id:23,name:"Vestido Bebé Niña Algodón Coniglio",price:79.90,link:"https://www.falabella.com.pe/falabella-pe/product/883712746/vestido-bebe-nina-algodon-coniglio/883712747",cat:"Ropa de bebé",size:"6-9 meses"},
+{id:24,name:"Bata Algodón Carters",price:89.90,link:"https://www.falabella.com.pe/falabella-pe/product/20993755/bata-algodon-carters/20993756",cat:"Ropa de bebé",size:"0-3 meses"},
+{id:25,name:"Pijama Bebé Niña",price:59.90,link:"https://www.falabella.com.pe/falabella-pe/product/21366142/pijama-bebe-nina/21366146",cat:"Ropa de bebé",size:"3-6 meses"},
+{id:26,name:"Enterizo Bebé Niña Algodón",price:59.90,link:"https://www.falabella.com.pe/falabella-pe/product/21461699/enterizo-bebe-nina-algodon/21461701",cat:"Ropa de bebé",size:"6-9 meses"},
 {id:28,name:"Recipiente Leche 180Ml X 10 Pcs + 2 Adaptadores",price:119.00,link:"https://infanti.com.pe/products/recipiente-leche-180ml-x-10-pcs-2-adaptadores",cat:"Lactancia y biberones"},
 {id:29,name:"Peluche de Apego Interactivo 2 en 1 Infanti",price:109.00,link:"https://infanti.com.pe/products/espantacuco-buoanannote-2-en-1-infanti",cat:"Juguetes y estimulación"},
 {id:30,name:"Móvil Take Along Meadow Days",price:99.00,link:"https://infanti.com.pe/products/130490-movil-take-along-meadow-days",cat:"Juguetes y estimulación"},
@@ -653,17 +764,17 @@ const GIFTS = [
 {id:43,name:"Limador de Uñas Eléctrico para Bebé - Maternelle",price:89.90,link:"https://www.maternelle.pe/collections/accesorios-de-bano/products/limador-de-unas-electrico-para-bebe-rosaso-maternelle",cat:"Baño e higiene"},
 {id:44,name:"Tetina Natural Response 3.0 X2 Flow 3 - 1M+",price:49.00,link:"https://infanti.com.pe/collections/de-0-a-3-meses/products/tetina-natural-response-3-0-x2-flow-3-1m",cat:"Lactancia y biberones"},
 {id:45,name:"Esterilizador Microondas Avent",price:289.00,link:"https://infanti.com.pe/collections/de-0-a-3-meses/products/scf281-02-esterilizador-microondas-avent",cat:"Lactancia y biberones"},
-{id:46,name:"Body Bebé Niña Pack X7 Algodón Yamp",price:79.92,link:"https://www.falabella.com.pe/falabella-pe/product/883615831/body-bebe-nina-pack-x7-algodon-yamp/883615834",cat:"Ropa de bebé"},
-{id:47,name:"Conjunto Bebé Niña Algodón Yamp",price:59.90,link:"https://www.falabella.com.pe/falabella-pe/product/883711345/conjunto-bebe-nina-algodon-yamp/883711348",cat:"Ropa de bebé"},
-{id:48,name:"Conjunto Bebé Niña Algodón Yamp",price:69.90,link:"https://www.falabella.com.pe/falabella-pe/product/883711227/conjunto-bebe-nina-algodon-yamp/883711228",cat:"Ropa de bebé"},
-{id:49,name:"Conjunto Bebé Niña Algodón Yamp",price:55.92,link:"https://www.falabella.com.pe/falabella-pe/product/883708087/conjunto-bebe-nina-algodon-yamp/883708088",cat:"Ropa de bebé"},
-{id:50,name:"Conjunto Bebé Niña 3 Piezas Carters",price:129.90,link:"https://www.falabella.com.pe/falabella-pe/product/21088961/conjunto-bebe-nina-3-piezas-carters/21088967",cat:"Ropa de bebé"},
-{id:51,name:"Conjunto Bebé Niña 2 Piezas Algodón Carters",price:99.90,link:"https://www.falabella.com.pe/falabella-pe/product/20994242/conjunto-bebe-nina-2-piezas-algodon-carters/20994243",cat:"Ropa de bebé"},
-{id:52,name:"Conjunto Bebé Niña 3 Piezas Carters",price:119.90,link:"https://www.falabella.com.pe/falabella-pe/product/21088825/conjunto-bebe-nina-3-piezas-carters/21088830",cat:"Ropa de bebé"},
-{id:53,name:"Conjunto Bebé Niña Algodón Yamp",price:48.93,link:"https://www.falabella.com.pe/falabella-pe/product/883619311/conjunto-bebe-nina-algodon-yamp/883649515",cat:"Ropa de bebé"},
-{id:54,name:"Conjunto 2 Piezas Bebé Niña Carters",price:119.90,link:"https://www.falabella.com.pe/falabella-pe/product/21407666/conjunto-2-piezas-bebe-nina-carters/21407667",cat:"Ropa de bebé"},
-{id:55,name:"Conjunto Bebé Niña Coniglio",price:79.90,link:"https://www.falabella.com.pe/falabella-pe/product/883707719/conjunto-bebe-nina-coniglio/883707722",cat:"Ropa de bebé"},
-{id:56,name:"Conjunto Bebé Niña 2 Piezas Algodón Carters",price:89.90,link:"https://www.falabella.com.pe/falabella-pe/product/21135506/conjunto-bebe-nina-2-piezas-algodon-carters/21135507",cat:"Ropa de bebé"},
+{id:46,name:"Body Bebé Niña Pack X7 Algodón Yamp",price:79.92,link:"https://www.falabella.com.pe/falabella-pe/product/883615831/body-bebe-nina-pack-x7-algodon-yamp/883615834",cat:"Ropa de bebé",size:"9-12 meses"},
+{id:47,name:"Conjunto Bebé Niña Algodón Yamp",price:59.90,link:"https://www.falabella.com.pe/falabella-pe/product/883711345/conjunto-bebe-nina-algodon-yamp/883711348",cat:"Ropa de bebé",size:"0-3 meses"},
+{id:48,name:"Conjunto Bebé Niña Algodón Yamp",price:69.90,link:"https://www.falabella.com.pe/falabella-pe/product/883711227/conjunto-bebe-nina-algodon-yamp/883711228",cat:"Ropa de bebé",size:"3-6 meses"},
+{id:49,name:"Conjunto Bebé Niña Algodón Yamp",price:55.92,link:"https://www.falabella.com.pe/falabella-pe/product/883708087/conjunto-bebe-nina-algodon-yamp/883708088",cat:"Ropa de bebé",size:"6-9 meses"},
+{id:50,name:"Conjunto Bebé Niña 3 Piezas Carters",price:129.90,link:"https://www.falabella.com.pe/falabella-pe/product/21088961/conjunto-bebe-nina-3-piezas-carters/21088967",cat:"Ropa de bebé",size:"9-12 meses"},
+{id:51,name:"Conjunto Bebé Niña 2 Piezas Algodón Carters",price:99.90,link:"https://www.falabella.com.pe/falabella-pe/product/20994242/conjunto-bebe-nina-2-piezas-algodon-carters/20994243",cat:"Ropa de bebé",size:"0-3 meses"},
+{id:52,name:"Conjunto Bebé Niña 3 Piezas Carters",price:119.90,link:"https://www.falabella.com.pe/falabella-pe/product/21088825/conjunto-bebe-nina-3-piezas-carters/21088830",cat:"Ropa de bebé",size:"3-6 meses"},
+{id:53,name:"Conjunto Bebé Niña Algodón Yamp",price:48.93,link:"https://www.falabella.com.pe/falabella-pe/product/883619311/conjunto-bebe-nina-algodon-yamp/883649515",cat:"Ropa de bebé",size:"9-12 meses"},
+{id:54,name:"Conjunto 2 Piezas Bebé Niña Carters",price:119.90,link:"https://www.falabella.com.pe/falabella-pe/product/21407666/conjunto-2-piezas-bebe-nina-carters/21407667",cat:"Ropa de bebé",size:"6-9 meses"},
+{id:55,name:"Conjunto Bebé Niña Coniglio",price:79.90,link:"https://www.falabella.com.pe/falabella-pe/product/883707719/conjunto-bebe-nina-coniglio/883707722",cat:"Ropa de bebé",size:"0-3 meses"},
+{id:56,name:"Conjunto Bebé Niña 2 Piezas Algodón Carters",price:89.90,link:"https://www.falabella.com.pe/falabella-pe/product/21135506/conjunto-bebe-nina-2-piezas-algodon-carters/21135507",cat:"Ropa de bebé",size:"3-6 meses"},
 {id:57,name:"Almohada de Lactancia Pre y Post Natal Focas Rosadas",price:249.90,link:"https://infanti.com.pe/products/almohada-de-lactancia-pre-y-post-natal-focas-rosadas",cat:"Lactancia y biberones"},
 {id:58,name:"Set Manicura Birdies Verde",price:144.90,link:"https://infanti.com.pe/collections/higiene-y-salud/products/8426420070249-set-manicura-birdies-verde-i2",cat:"Baño e higiene"},
 {id:59,name:"Set Cepillo y Peine Birdies Rosado",price:49.90,link:"https://infanti.com.pe/collections/higiene-y-salud/products/7726-set-cepiilo-y-peine-birdies-rosado",cat:"Baño e higiene"},
@@ -737,8 +848,9 @@ function renderGifts() {
       const res = reservedState[g.id - 1];
       return `<div class="gift-item${res?' comprado':''}" data-gid="${g.id}">
         <div class="gift-info">
-          <span class="gift-name">${escHtml(g.name)}</span>
-          <span class="gift-price">S/ ${g.price.toFixed(2)}</span>
+          <div class="gift-name">${escHtml(g.name)}</div>
+          ${g.size ? `<div class="size-badge">${escHtml(g.size)}</div>` : ''}
+          <div class="gift-price">S/ ${g.price.toFixed(2)}</div>
         </div>
         <div class="gift-actions">
           <a class="gift-btn" href="${g.link}" target="_blank" rel="noopener noreferrer">Ver</a>
@@ -748,34 +860,80 @@ function renderGifts() {
     }).join('')}</div>`
   ).join('');
   document.querySelectorAll('.btn-reservar').forEach(btn => {
-    btn.addEventListener('click', async () => {
+    btn.addEventListener('click', () => {
       const gid = parseInt(btn.dataset.gid);
       const gift = GIFTS.find(g => g.id === gid);
-      const itemEl = btn.closest('.gift-item');
-      itemEl.style.opacity = '.5';
-      try {
-        const res = await fetch(DB_URL);
-        const data = await res.json() || {};
-        if (data[gid - 1]) {
-          alert('¡Este regalo ya fue reservado! Por favor elige otro.');
-          itemEl.classList.add('comprado');
-          reservedState[gid - 1] = true;
-          itemEl.style.opacity = '';
-          return;
-        }
-        await fetch(DB_URL, { method: 'PATCH', body: JSON.stringify({ [gid - 1]: true }) });
-        itemEl.classList.add('comprado');
-        reservedState[gid - 1] = true;
-        itemEl.style.opacity = '';
-        const msg = encodeURIComponent(`¡Hola, Génesis! Quiero reservar el regalo #${gid}: ${gift.name}. 🎁`);
-        window.open(`https://wa.me/51900746481?text=${msg}`, '_blank');
-      } catch(err) {
-        alert('Error de conexión. Inténtalo de nuevo.');
-        itemEl.style.opacity = '';
+      document.getElementById('conf-nombre').textContent = gift.name;
+      const tallaEl = document.getElementById('conf-talla');
+      if (gift.size) {
+        tallaEl.textContent = gift.size;
+        tallaEl.style.display = 'inline-flex';
+      } else {
+        tallaEl.style.display = 'none';
       }
+      document.getElementById('conf-precio').textContent = `S/ ${gift.price.toFixed(2)}`;
+      pendingReserva = { gid, gift, itemEl: btn.closest('.gift-item') };
+      document.getElementById('modal-confirmar').classList.add('show');
     });
   });
 }
+
+let pendingReserva = null;
+
+async function ejecutarReserva() {
+  if (!pendingReserva) return;
+  const { gid, gift, itemEl } = pendingReserva;
+  pendingReserva = null;
+  document.getElementById('modal-confirmar').classList.remove('show');
+  itemEl.style.opacity = '.5';
+  try {
+    const checkRes = await fetch(DB_URL);
+    const data = await checkRes.json() || {};
+    if (data[gid - 1]) {
+      alert('¡Este regalo ya fue reservado! Por favor elige otro.');
+      itemEl.classList.add('comprado');
+      reservedState[gid - 1] = true;
+      itemEl.style.opacity = '';
+      return;
+    }
+    const writeRes = await fetch(DB_URL, {
+      method: 'PATCH',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ [gid - 1]: true })
+    });
+    if (writeRes.status === 401) {
+      console.error('Firebase 401: Las reglas de Realtime Database no permiten escritura. Ve a Firebase Console → Realtime Database → Reglas y permite .write: true temporalmente.');
+      alert('No se pudo guardar la reserva: permiso denegado en la base de datos.\n\nContacta al administrador para habilitar los permisos.');
+      itemEl.style.opacity = '';
+      return;
+    }
+    if (!writeRes.ok) {
+      console.error(`Firebase error HTTP ${writeRes.status}`);
+      throw new Error(`Firebase error: ${writeRes.status}`);
+    }
+    itemEl.classList.add('comprado');
+    reservedState[gid - 1] = true;
+    itemEl.style.opacity = '';
+    const message = `Hola, quiero reservar este regalo:\nProducto: ${gift.name}${gift.size ? `\nTalla: ${gift.size}` : ''}\nPrecio: S/ ${gift.price.toFixed(2)}${gift.link ? `\nLink: ${gift.link}` : ''}`;
+    window.open(`https://wa.me/51944038550?text=${encodeURIComponent(message)}`, '_blank');
+  } catch(err) {
+    console.error('Error al reservar:', err);
+    alert('Error de conexión. Inténtalo de nuevo.');
+    itemEl.style.opacity = '';
+  }
+}
+
+document.getElementById('btn-conf-ok').addEventListener('click', ejecutarReserva);
+document.getElementById('btn-conf-cancelar').addEventListener('click', () => {
+  document.getElementById('modal-confirmar').classList.remove('show');
+  pendingReserva = null;
+});
+document.getElementById('modal-confirmar').addEventListener('click', e => {
+  if (e.target === document.getElementById('modal-confirmar')) {
+    document.getElementById('modal-confirmar').classList.remove('show');
+    pendingReserva = null;
+  }
+});
 
 const btnLista = document.getElementById('btn-lista');
 const modalRegalos = document.getElementById('modal-regalos');
@@ -829,7 +987,7 @@ function showToast(msg) {
 // Adaptar texto del botón según dispositivo
 const btnYape = document.querySelector('.btn-yape');
 if (btnYape && !isRealMobileDevice()) {
-  btnYape.textContent = '📱 Copiar número';
+  btnYape.textContent = '📱 Copiar Yape';
 }
 
 async function handleYapeClick() {
