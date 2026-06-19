@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="format-detection" content="telephone=no">
 <title>Baby Shower · Aitana</title>
 <meta property="og:title" content="Baby Shower · Abigail Aitana">
 <meta property="og:description" content="Un dulce milagro viene en camino, acompáñanos a celebrar la llegada de nuestra bebé.">
@@ -472,6 +473,13 @@ body{font-family:'Cormorant Garamond',serif;background:url('bg_image.jpg') repea
   margin: 0 auto 14px;
   cursor: default;
   user-select: text;
+  pointer-events: none;
+}
+.yape-num, .yape-num * {
+  color: #df7d9d !important;
+  -webkit-text-fill-color: #df7d9d !important;
+  text-decoration: none !important;
+  cursor: default !important;
 }
 .btn-yape {
   display: inline-flex; align-items: center; gap: 6px;
@@ -624,7 +632,9 @@ body{font-family:'Cormorant Garamond',serif;background:url('bg_image.jpg') repea
         <img src="yape_qr.png" alt="QR Yape">
       </div>
     </div>
-    <p class="yape-num">📱 944 038 550</p>
+    <div class="yape-num" aria-label="Número de Yape: 944 038 550">
+      <span>📱</span><span>&#8203;9&#8203;4&#8203;4&#8203; &#8203;0&#8203;3&#8203;8&#8203; &#8203;5&#8203;5&#8203;0</span>
+    </div>
     <div class="btn-wrap">
       <button class="btn-yape" onclick="copyYapeNumber()">📱 Copiar número de Yape</button>
     </div>
